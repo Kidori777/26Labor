@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>메시지 4: 비밀한 휴거와 주님 안에 거함</title>
+<meta name="description" content="란 형제님 — 메시지 4: 비밀한 휴거와 주님 안에 거함 (마 24:40-41; 요일 2:27-28)">
+<meta property="og:title" content="메시지 4: 비밀한 휴거와 주님 안에 거함">
+<meta property="og:description" content="란 형제님 — 마 24:40-41; 요일 2:27-28. 이기는 믿는 이들의 휴거 시리즈 네 번째 메시지.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-deep:#0c0f22;
+    --bg-base:#12172c;
+    --bg-panel:#181f3c;
+    --bg-panel-soft:#151b36;
+    --gold:#c9a961;
+    --gold-bright:#e0c384;
+    --gold-dim:#8a7444;
+    --text-main:#ece7d8;
+    --text-soft:#b9b6c9;
+    --text-faint:#83809a;
+    --rule:rgba(201,169,97,0.28);
+    --serif:'Noto Serif KR', serif;
+    --sans:'Noto Sans KR', sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg-base);
+    color:var(--text-main);
+    font-family:var(--serif);
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+  }
+  #stars{position:fixed;inset:0;z-index:0;pointer-events:none;}
+  .wrap{position:relative;z-index:1;}
+
+  /* ---------- top nav ---------- */
+  .topnav{
+    position:sticky; top:0; z-index:50;
+    display:flex; align-items:center; justify-content:center; gap:28px;
+    padding:14px 20px;
+    background:rgba(12,15,34,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--rule);
+    font-family:var(--sans);
+    font-size:13px;
+    letter-spacing:0.02em;
+  }
+  .topnav a{color:var(--text-soft);text-decoration:none;transition:color .25s;}
+  .topnav a:hover{color:var(--gold-bright);}
+  .topnav .mark{color:var(--gold);font-weight:600;margin-right:4px;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    max-width:760px;margin:0 auto;
+    padding:90px 28px 60px;
+    text-align:center;
+  }
+  .hero .eyebrow{
+    font-family:var(--sans);
+    font-size:14px;
+    letter-spacing:0.08em;
+    color:var(--gold);
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(28px,5vw,42px);
+    font-weight:600;
+    line-height:1.45;
+    margin:0 0 22px;
+    color:var(--text-main);
+  }
+  .hero .author{
+    font-family:var(--sans);
+    font-size:15px;
+    color:var(--text-soft);
+    margin-bottom:6px;
+  }
+  .hero .scripture-tag{
+    font-family:var(--sans);
+    font-size:13px;
+    color:var(--text-faint);
+    margin-bottom:36px;
+  }
+  .hero-rule{
+    width:64px;height:1px;margin:0 auto 36px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  }
+
+  .scripture-block{
+    max-width:640px;margin:0 auto 8px;
+    background:var(--bg-panel-soft);
+    border:1px solid var(--rule);
+    border-radius:2px;
+    padding:26px 30px;
+    text-align:left;
+    margin-bottom:18px;
+  }
+  .scripture-block .ref{
+    font-family:var(--sans);
+    font-size:13px;
+    font-weight:600;
+    color:var(--gold-bright);
+    letter-spacing:0.03em;
+    margin-bottom:10px;
+  }
+  .scripture-block p{
+    margin:0;
+    font-size:16px;
+    color:var(--text-soft);
+    line-height:1.85;
+  }
+  .scripture-block sup{
+    color:var(--gold);
+    font-size:12px;
+    margin-right:2px;
+  }
+
+  /* ---------- content shell ---------- */
+  main{max-width:680px;margin:0 auto;padding:10px 28px 140px;}
+
+  .opening-label{
+    font-family:var(--sans);
+    font-size:13px;
+    letter-spacing:0.1em;
+    color:var(--gold);
+    text-align:center;
+    margin:70px 0 30px;
+    position:relative;
+  }
+  .opening-label::before,.opening-label::after{
+    content:"";display:inline-block;width:30px;height:1px;
+    background:var(--gold-dim);vertical-align:middle;margin:0 12px;
+  }
+
+  p.body-text{
+    font-size:16.5px;
+    color:var(--text-main);
+    margin:0 0 22px;
+    opacity:.98;
+  }
+
+  blockquote.prayer{
+    font-family:var(--serif);
+    font-size:16.5px;
+    color:var(--gold-bright);
+    border-left:2px solid var(--gold);
+    margin:8px 0 26px;
+    padding:6px 0 6px 22px;
+    background:linear-gradient(90deg, rgba(201,169,97,0.06), transparent 70%);
+  }
+
+  /* ---------- roman numeral section divider ---------- */
+  .roman-divider{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    margin:86px 0 34px;
+  }
+  .roman-divider .num{
+    font-family:var(--serif);
+    font-size:52px;
+    font-weight:600;
+    color:var(--gold);
+    line-height:1;
+    flex-shrink:0;
+  }
+  .roman-divider .line{flex:1;height:1px;background:var(--rule);}
+
+  .section-quote{
+    font-family:var(--serif);
+    font-size:17px;
+    color:var(--text-soft);
+    background:var(--bg-panel-soft);
+    border:1px solid var(--rule);
+    padding:22px 26px;
+    margin:0 0 40px;
+    border-radius:2px;
+  }
+  .section-quote .cite{
+    display:block;
+    margin-top:12px;
+    font-family:var(--sans);
+    font-size:12.5px;
+    color:var(--gold);
+    letter-spacing:0.03em;
+  }
+
+  /* ---------- outline point (A,B,C...) ---------- */
+  .outline-point{
+    display:flex;
+    gap:18px;
+    margin:36px 0 26px;
+    padding:20px 22px;
+    background:var(--bg-panel);
+    border:1px solid var(--rule);
+    border-left:3px solid var(--gold);
+    border-radius:2px;
+  }
+  .outline-point .letter{
+    font-family:var(--serif);
+    font-weight:700;
+    font-size:22px;
+    color:var(--gold-bright);
+    flex-shrink:0;
+    line-height:1.6;
+    min-width:28px;
+  }
+  .outline-point .op-text{
+    font-size:16px;
+    color:var(--text-main);
+    line-height:1.85;
+  }
+  .outline-point .ref{
+    display:block;
+    margin-top:8px;
+    font-family:var(--sans);
+    font-size:12.5px;
+    color:var(--text-faint);
+    letter-spacing:0.02em;
+  }
+
+  /* ---------- sub outline point ---------- */
+  .sub-point{
+    display:flex;
+    gap:14px;
+    margin:14px 0 14px 30px;
+    padding:14px 18px;
+    background:rgba(201,169,97,0.045);
+    border-left:2px solid var(--gold-dim);
+  }
+  .sub-point .marker{
+    font-family:var(--sans);
+    font-size:13px;
+    color:var(--gold);
+    flex-shrink:0;
+    margin-top:3px;
+  }
+  .sub-point .sp-text{
+    font-size:15.5px;
+    color:var(--text-soft);
+    line-height:1.8;
+  }
+  .sub-point .ref{
+    display:block;
+    margin-top:6px;
+    font-family:var(--sans);
+    font-size:12px;
+    color:var(--text-faint);
+  }
+
+  .story-block{
+    margin:22px 0 30px;
+    padding:6px 0 6px 20px;
+    border-left:1px solid var(--rule);
+  }
+
+  .closing{
+    margin-top:90px;
+    text-align:center;
+  }
+  .closing .amen{
+    font-family:var(--sans);
+    font-size:14px;
+    letter-spacing:0.12em;
+    color:var(--gold);
+  }
+
+  ::selection{background:rgba(201,169,97,0.35);color:#fff;}
+
+  .fade-up{opacity:0;transform:translateY(16px);transition:opacity .8s ease, transform .8s ease;}
+  .fade-up.visible{opacity:1;transform:translateY(0);}
+
+  #toTop{
+    position:fixed;
+    right:22px;bottom:22px;
+    width:46px;height:46px;
+    border-radius:50%;
+    background:var(--bg-panel);
+    border:1px solid var(--gold-dim);
+    color:var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;
+    font-size:18px;
+    opacity:0;pointer-events:none;
+    transition:opacity .3s;
+    z-index:60;
+    font-family:var(--sans);
+  }
+  #toTop.show{opacity:.9;pointer-events:auto;}
+
+  @media (max-width:560px){
+    .hero{padding:64px 20px 44px;}
+    main{padding:0 20px 100px;}
+    .outline-point{flex-direction:column;gap:6px;padding:18px;}
+    .roman-divider .num{font-size:40px;}
+    .sub-point{margin-left:10px;}
+  }
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+<div class="wrap">
+
+<nav class="topnav">
+  <a href="#top"><span class="mark">✦</span>처음</a>
+  <a href="#opening">서두의 말씀</a>
+  <a href="#section1">I. 데려가짐</a>
+  <a href="#section2">II. 거함</a>
+</nav>
+
+<div id="top"></div>
+
+<header class="hero">
+  <div class="eyebrow">메시지 4</div>
+  <h1>비밀한 휴거와<br>주님 안에 거함</h1>
+  <div class="author">란 형제님</div>
+  <div class="scripture-tag">마 24:40&ndash;41 · 요일 2:27&ndash;28</div>
+  <div class="hero-rule"></div>
+
+  <div class="scripture-block fade-up">
+    <div class="ref">마태복음 24장 40&ndash;41절</div>
+    <p><sup>40</sup>그때에 두 남자가 밭에 있는데, 한 사람은 데려가고, 한 사람은 남겨 둡니다. <sup>41</sup>두 여자가 맷돌질을 하고 있는데, 한 사람은 데려가고, 한 사람은 남겨 둡니다.</p>
+  </div>
+  <div class="scripture-block fade-up">
+    <div class="ref">요한일서 2장 27&ndash;28절</div>
+    <p><sup>27</sup>여러분으로 말하면, 그분에게서 받은 기름 바름이 여러분 안에 거하니, 아무도 여러분을 가르칠 필요가 없습니다. 그분의 기름 바름이 모든 것에 관하여 여러분을 가르칩니다. 이 기름 바름은 참되고 거짓되지 않습니다. 기름 바름이 여러분에게 가르쳐 준 대로 그분 안에 거하십시오. <sup>28</sup>이제 어린 자녀 여러분, 그분 안에 거하십시오. 그러면 그분께서 나타나실 때에 우리가 담대함을 가질 수 있고, 그분께서 오실 때에 그분에게서 떠나 부끄러움을 당하지 않을 것입니다.</p>
+  </div>
+</header>
+
+<main>
+
+<div id="opening"></div>
+<div class="opening-label fade-up">서두의 말씀</div>
+
+<p class="body-text fade-up">비밀스러운 휴거와 주님 안에 거함 앞의 새 메시지에서 우리는 여러 방면으로 휴거를 초점으로 거듭 살펴보았습니다. 이제 우리가 깨달아야 할 것은 휴거되려면 반드시 주님 안에 거해야 한다는 것입니다.</p>
+<p class="body-text fade-up">개요의 후반부에서는 거함에 초점을 맞춰 볼 것이지만 먼저 거함에 대한 간단한 소개가 필요합니다.</p>
+<p class="body-text fade-up">요한복음 15장에서 우리는 &ldquo;여러분이 내 안에 거하면 나도 여러분 안에 거하겠습니다&rdquo;라는 말씀을 읽습니다.</p>
+<p class="body-text fade-up">이것은 체험의 방면을 말합니다. 우리는 주님께서 어떤 일을 시작하실 때까지 기다렸다가 그분께서 내 안에 거하시면 그제야 내가 그분 안에 거하겠다고 생각해서는 안 됩니다. 순서는 그 반대입니다.</p>
+<p class="body-text fade-up">이것은 전적으로 우리 각 사람에게 달려 있습니다. 새날을 맞아 잠에서 깰 때 여러분이 아마 51%쯤 깨어서 지금 어디에 있고 몇 시인지를 알게 되는 순간 이렇게 말하십시오.</p>
+<blockquote class="prayer fade-up">&ldquo;주님, 또 다른 하루입니다. 오늘은 제가 당신 안에 거하고 당신께서 제 안에 거하시는 날입니다.&rdquo;</blockquote>
+<p class="body-text fade-up">여러분이 아셔야 할 것은 거함에 관하여 우리는 이미 꽤 익숙하지만, 나는 여전히 그리스도 자신께 초점을 맞추어 다시 말하고 싶습니다. 바로 이 순간 그분은 하늘에 계시며 보좌 위에 계십니다.</p>
+<p class="body-text fade-up">또한 동시에 그분은 여러 성경 구절에서 &ldquo;내가 여러분과 함께 있습니다. 또 내가 여기 있으며 또 이 시대가 종결될 때까지 여러분과 함께 있을 것입니다&rdquo;라고 알려 주셨습니다.</p>
+<p class="body-text fade-up">그러므로 그리스도는 보이지 않게 실제로 이곳에서 우리와 함께 계십니다.</p>
+<p class="body-text fade-up">또한 그리스도는 우리의 마음속에 그분의 거처를 더욱더 정하고 계십니다.</p>
+<p class="body-text fade-up">그러므로 비밀스러운 휴거, 곧 눈에 보이는 방식으로 이루어지지 않는 휴거를 체험하기 원하는 우리 모두는 반드시 주님 안에 거해야 합니다. 나는 이것을 처음부터 분명히 하고 싶습니다.</p>
+<p class="body-text fade-up">뒤에서는 이 부분에 왔을 때 세부적인 내용을 살펴볼 것입니다.</p>
+<p class="body-text fade-up">또한 여러분이 거하는 성도가 되기를 격려합니다. 여러분이 어떤 상황에서도 주님 안에 거하십시오.</p>
+<p class="body-text fade-up">무슨 일이 일어나더라도 이렇게 말하십시오. &ldquo;주님, 저는 여전히 당신과 하나이고 당신은 저와 하나이십니다.&rdquo;</p>
+<p class="body-text fade-up">개요는 조금 더 길지만 메시지의 시간은 같을 것입니다. 마지막에는 여러분이 함께 나누는 것으로 이 집회를 마칠 것입니다.</p>
+
+<div id="section1"></div>
+<div class="roman-divider fade-up"><div class="num">Ⅰ</div><div class="line"></div></div>
+
+<div class="section-quote fade-up">
+  &ldquo;그때에 두 남자가 밭에 있는데, 한 사람은 데려가고, 한 사람은 남겨 둡니다. 두 여자가 맷돌질을 하고 있는데, 한 사람은 데려가고, 한 사람은 남겨 둡니다.&rdquo;
+  <span class="cite">— 마 24:40&ndash;41</span>
+</div>
+
+<div class="outline-point fade-up">
+  <div class="letter">A</div>
+  <div class="op-text">이 구절들은 휴거와 관련된 사실들을 말하며, 어떤 믿는 이들은 휴거되고 다른 믿는 이들은 남겨질 것임을 입증한다.</div>
+</div>
+
+<p class="body-text fade-up">그때에 두 남자가 밭에 있는데 한 사람은 데려가고 한 사람은 남겨 둡니다.</p>
+<p class="body-text fade-up">두 여자가 맷돌질을 하고 있는데 한 사람은 데려가고 한 사람은 남겨 둡니다.</p>
+<p class="body-text fade-up">이 말씀은 온 땅에 살아 있는 성도들의 실제 상태를 묘사합니다.</p>
+<p class="body-text fade-up">이 구절들은 휴거와 관련된 사실들을 말해 주며, 어떤 믿는 이들은 휴거되고 다른 믿는 이들은 남겨진다는 것을 증명합니다. 그러므로 이 구절들은 지극히 중요합니다. 그러므로 나는 신약의 사도들을 따르고 있습니다.</p>
+<p class="body-text fade-up">그들은 자신들이 기도하는 것과 말씀의 사역을 꾸준히 계속한다고 말했습니다.</p>
+<p class="body-text fade-up">적어도 내 관점에서 나는 단지 &ldquo;이 형제님이 이렇게 말씀하셨고 저 형제님이 저렇게 말씀하셨다&rdquo;라고 하며 말씀을 전하고 있는 것은 아닙니다. 그 형제님들도 우리가 그렇게 말하기를 원하지 않습니다.</p>
+<p class="body-text fade-up">그들은 주님을 통하여 우리를 그분께로 이끌어 주었습니다.</p>
+<p class="body-text fade-up">여러분은 그들이 주님을 알고 체험하도록 도와준 것에 대해 주님께 감사할 수 있습니다.</p>
+<p class="body-text fade-up">그러나 모든 것이 실제로 이루어지게 하는 것은 여러분과 주님 사이의 개인적인 관계입니다.</p>
+<p class="body-text fade-up">이 성경 구절은 매우 중요합니다.</p>
+<p class="body-text fade-up">두 남자와 두 여자는 주님의 두 번째 오심 때 살아 있는 믿는 이들을 대표합니다.</p>
+<p class="body-text fade-up">그러므로 그들은 바로 지금 이곳에 살아 있는 우리 모두를 대표합니다.</p>
+<p class="body-text fade-up">이 구절들은 가끔이 아니라 항상 우리와 지금 직접 관련됩니다.</p>
+<p class="body-text fade-up">지금 이 순간에도 두 남자와 두 여자는 주님의 두 번째 오심 때 살아 있다가 대환란 전에 데려가져 휴거될 믿는 이들을 대표합니다.</p>
+<p class="body-text fade-up">우리는 어젯밤에도 이것을 언급했지만 지금 여기에서 더욱 강하게 강조하려고 합니다.</p>
+<p class="body-text fade-up">곧 대환란 전에 데려가져 휴거되는 것입니다. 우리는 우리 편에서 개인적인 결정을 내려야 합니다.</p>
+<p class="body-text fade-up">물론 우리 자신을 의지하여 선언할 수는 없지만 이렇게 말할 수는 있습니다.</p>
+<blockquote class="prayer fade-up">&ldquo;주님, 당신의 긍휼과 은혜로 우리는 대환란이 시작되기 전에 휴거되기를 선택했습니다. 당신의 인자하심 안에서 오직 당신만이 하실 수 있는 일을 해 주십시오. 우리가 휴거되어 대환란 동안 땅 위에 남아 있지 않게 해 주십시오. 주님, 진리를 주셔서 감사합니다. 이제 이 진리를 우리의 존재와 현재의 상황과 장래에 적용할 수 있는 역량도 주십시오.&rdquo;</blockquote>
+
+<div class="outline-point fade-up">
+  <div class="letter">B</div>
+  <div class="op-text">두 남자와 두 여자는 주님이 두 번째 오실 때 살아 있는 믿는 이들을 대표한다.</div>
+</div>
+
+<div class="outline-point fade-up">
+  <div class="letter">C</div>
+  <div class="op-text">데려가지는 것은 대환난 전에 휴거되는 것이다.
+    <span class="ref">— 마 24:21; 계 3:10</span>
+  </div>
+</div>
+
+<div class="sub-point fade-up">
+  <div class="marker">&#9670;</div>
+  <div class="sp-text">휴거는 하나님의 생명 안에서의 완전한 구원의 완결 단계, 곧 우리 몸의 변형이자 우리 몸의 구속이다.
+    <span class="ref">— 롬 5:10; 8:23; 빌 3:21</span>
+  </div>
+</div>
+
+<div class="sub-point fade-up">
+  <div class="marker">&#9670;</div>
+  <div class="sp-text">우리가 주님을 믿고 구원받은 후에, 우리가 받아들인 신성한 생명의 요구와 주님을 향한 우리의 강한 사랑 때문에 우리는 주님의 오심을 기다리는 생활을 추구하기를 갈망한다.
+    <span class="ref">— 살전 1:10; 2:19; 3:13; 4:15; 5:23</span>
+  </div>
+</div>
+
+<p class="body-text fade-up">2번에서는 우리가 주님을 믿고 구원받은 뒤에는 두 가지가 매우 중요하다고 말합니다.</p>
+<p class="body-text fade-up">하나는 우리가 받은 신성한 생명의 요구이고 또 다른 하나는 주님을 향한 우리 사랑의 강렬함입니다.</p>
+<p class="body-text fade-up">이 두 가지 때문에 우리는 주님의 오심을 기다리는 생활을 추구하게 됩니다.</p>
+<p class="body-text fade-up">이제 이 항목들을 좀 더 검토해 보기로 합시다.</p>
+<p class="body-text fade-up">우리가 주님을 믿고 구원받은 뒤에 우리 모두는 구원을 받았습니다.</p>
+<p class="body-text fade-up">우리 모두는 믿음으로 구원받았습니다. 우리가 받은 신성한 생명은 우리에게 어떤 요구를 합니다.</p>
+<p class="body-text fade-up">그러나 우리 안에 거하시는 그리스도께서 그 요구를 수행할 수 있도록 우리에게 또한 능력을 주십니다.</p>
+<p class="body-text fade-up">우리는 감사하는 마음으로 이것을 깨달아야 합니다. &ldquo;주님, 우리는 단순히 당신께서 우리에게 주신 신성한 생명을 받아들입니다.&rdquo; 우리는 또한 강렬함과 사랑이라는 두 단어를 함께 보아야 합니다.</p>
+<p class="body-text fade-up">이것은 단지 &ldquo;나는 당신을 사랑합니다. 나는 괜찮은 사람이니 정말 당신을 사랑합니다&rdquo;라고 말하는 피상적인 그런 사랑이 아닙니다. 그것이 무슨 사랑이겠습니까?</p>
+<p class="body-text fade-up">우리는 주님을 향한 이 사랑의 강렬함을 깨달아야 하며, 우리 편에서도 주님을 향한 사랑이 더욱 강렬해져야 합니다. 우리는 그분께 정직하게 이렇게 말할 수 있습니다.</p>
+<blockquote class="prayer fade-up">&ldquo;주님, 갈수록 당신을 더 사랑합니다. 당신께서 먼저 나를 사랑하셨기 때문에 당신을 사랑합니다. 또한 당신 자신이 사랑이십니다. 하나님은 사랑이십니다. 이 사랑을 받았기 때문에 나는 기쁘게 당신을 사랑합니다.&rdquo;</blockquote>
+<p class="body-text fade-up">주님을 사랑한 결과로 우리는 그분의 오심을 기다리는 생활을 추구하기 원합니다.</p>
+<p class="body-text fade-up">나는 우리 각 사람이 평범한 일상생활 속에서도 내재적으로 &lsquo;나는 주님의 오심을 기다리고 있다&rsquo;라는 느낌을 갖기 바랍니다.</p>
+
+<div class="story-block fade-up">
+<p class="body-text">니 형제님이 매우 젊었을 때 영국에서 온 나이 든 자매님 한 분이 있었습니다.</p>
+<p class="body-text">그 자매님은 영국에서 말씀을 전하는 한 사역자 형제님과 서로 사랑했습니다.</p>
+<p class="body-text">그러나 자매님은 &ldquo;나는 주님을 따라 중국에서 그분을 섬겨야 합니다&rdquo;라고 말해야 했고, 그 형제님은 &ldquo;나는 영국에 남아서 말씀을 전해야 합니다&rdquo;라고 말했습니다. 그래서 자매님은 거의 감추어진 방식으로 중국에 머물렀습니다. 1920년대에 많은 청년이 구원을 받았습니다. 그중 몇 사람이 그 자매님과 함께 모였고, 자매님은 그들을 훈련하고 가르쳤습니다. 그러나 점차 한 사람이 떠나고 또 한 사람이 떠났습니다.</p>
+<p class="body-text">그들은 이 훈련을 견디지 못했습니다. 오직 니 형제님만 남아 계속 전진하셨습니다.</p>
+<p class="body-text">M. E. 바브 자매님은 니 형제님의 존재를 만졌고 그를 목양했습니다.</p>
+<p class="body-text">만일 그 자매님이 없었다면 오늘 우리가 이곳에 있지 못했을 것입니다. 왜냐하면 니 형제님이 없었다면 이 형제님도 없었을 것이고, 이 형제님의 우리에 대한 사역도 없었을 것이기 때문입니다.</p>
+<p class="body-text">세상의 상황이 여성들을 더 낮은 위치에 두는 것에 대해 나는 매우 유감스럽게 생각합니다. 하나님의 관점에서는 그렇지 않습니다. 남자와 여자는 같은 수준에 있습니다.</p>
+<p class="body-text">결국 그 두 분만 남았습니다. 니 형제님하고 에미 바브 자매님이시겠죠. 어느 날 이 두 분이 함께 길을 걷다가 모퉁이를 돌게 되었습니다. 그때 자매님은 진지하게 말씀하셨습니다. &ldquo;우리가 이 모퉁이를 돌 때 주님을 만날지도 모릅니다. 그분께서 오고 계십니다.&rdquo; 이렇게 말씀하셨습니다.</p>
+<p class="body-text">또 후에 자매님이 세상을 떠날 때가 되었을 때 니 형제님은 곁에 함께 계셨고, 그때 자매님은 주님께로 가셨습니다. 또 자매님은 자신의 성경을 니 형제님에게 주기를 원하셨습니다.</p>
+<p class="body-text">이 일을 생각할 때 사람의 눈에는 알려지지 않고 평범해 보이는 성도들이 있다는 느낌이 듭니다.</p>
+<p class="body-text">그러나 그들에게는 휴거와 거함만이 아니라 생명 안에서 성숙하여 다른 믿는 이들을 참되게 목양할 수 있는 분깃이 있습니다. 우리 모두는 목양을 받아야 합니다. 목양은 모든 것을 포함한 부드러운 돌봄입니다.</p>
+</div>
+
+<p class="body-text fade-up">그 결과 우리 안에 주님을 향한 사랑이 생기며 우리는 주님의 오심을 기다리는 생활을 추구하기 원하게 됩니다. 나는 우리 중 많은 이가 주님과의 내적인 사랑의 관계 때문에 날마다 이렇게 말한다고 믿습니다.</p>
+<p class="body-text fade-up">&ldquo;주님, 우리는 당신의 오심을 기다립니다.&rdquo; 우리가 &ldquo;주님, 속히 오십시오&rdquo;라고 기도하는 것이 우리 편에서 매우 다정한 기도가 될 것입니다. 그러나 주님은 이렇게 말씀하셔야 할지도 모릅니다.</p>
+<p class="body-text fade-up">&ldquo;신부가 아직 준비되지 않았는데 내가 어떻게 올 수 있겠느냐? 나는 신부가 준비되기를 기다리고 있다.&rdquo; 주님은 결혼을 위하여 감추어진 방식으로 오고 계십니다. 그분은 자신의 신부를 얻으러 오십니다.</p>
+<p class="body-text fade-up">그러므로 이 시대의 끝에 혼인의 때를 바라보면서 주님께서 땅에 오시기 전에 우리는 그 혼인에 참여하는 이들이 되기를 원합니다. 지금 우리는 주님이 오시기를 기다리고 있습니다.</p>
+
+<div class="outline-point fade-up">
+  <div class="letter">3</div>
+  <div class="op-text">이처럼 주님을 사랑하고 그분의 오심을 기다리는 생활 가운데서, 우리는 성경에 계시되고 예언된 것에 따라 주님의 임재 안으로 휴거되어 그분과 함께 기쁘게 만나기를 기대한다.
+    <span class="ref">— 마 24:40&ndash;41; 눅 17:31&ndash;36; 21:36</span>
+  </div>
+</div>
+
+<p class="body-text fade-up">그분과 함께 기쁘게 만나기를 기대합니다. 주님께서 우리 안에 거하시는 것으로 말미암아 우리 중 많은 이가 저와 같은 내적인 느낌을 가질 수 있다고 믿습니다. &ldquo;주님, 저는 당신을 기쁘게 만나기를 기다립니다. 당신과 함께 기쁘게 만나고 싶습니다.&rdquo; 주님께서 오실 때 우리는 그분의 얼굴과 얼굴을 마주 대하여 보게 될 것입니다. 그것은 우리가 지금까지 누린 그 어떤 때보다 가장 사랑스럽고 즐거운 시간이 될 것입니다.</p>
+<p class="body-text fade-up">그분께서 우리를 어떻게 맞아주실지는 아무도 모릅니다. 그러나 여러분은 바로 그곳에 있기를 원하지 않습니까? 그 순간 그곳에 있기 위해 어떠한 대가를 치러야 하더라도 우리는 기꺼이 지불해야 합니다.</p>
+<p class="body-text fade-up">주님께서 그분 자신을 나타내실 때 우리는 그분과 함께 기뻐할 것입니다.</p>
+<p class="body-text fade-up">데려가진 사람과 남겨진 사람의 차이는 생명의 성숙에 있습니다.</p>
+<p class="body-text fade-up">한 사람은 생명 안에서 성숙했고, 다른 한 사람은 성숙하지 않았습니다.</p>
+<p class="body-text fade-up">여기에서 휴거의 또 다른 중요한 방면이 나옵니다.</p>
+<p class="body-text fade-up">이제 우리는 성숙이 무엇이며, 생명 안에서 성숙하기 위해 우리에게 무엇이 이루어져야 하는지를 살펴보아야 합니다. 데려가진 사람과 남겨진 사람의 차이는 생명의 성숙에 있습니다.</p>
+<p class="body-text fade-up">한 사람은 생명 안에서 성숙했고, 다른 한 사람은 성숙하지 않았다는 뜻입니다.</p>
+<p class="body-text fade-up">그러면 성숙하였다는 뜻이 무엇입니까? 사람의 생명만 보더라도 성숙의 뜻은 감추어져 있지 않습니다.</p>
+<p class="body-text fade-up">예를 들어 9살에는 성숙하지 않았고, 14살에도 성숙하지 않았습니다. 18살이면 성인으로 여겨지지만 사실 아직 성숙하지 않은 경우가 많습니다. 사람은 나이와 신체 면에서는 성장할 수 있습니다.</p>
+<p class="body-text fade-up">그러나 인류 가운데 나이가 많고 다 자랐어도 성숙하지 않은 사람이 수없이 많습니다.</p>
+<p class="body-text fade-up">휴거된 사람과 그렇지 않은 사람 사이의 차이는 생명의 성숙에 달려 있습니다.</p>
+<p class="body-text fade-up">단지 &ldquo;나는 주님을 사랑합니다. 나는 교회 생활 안에 있었고 이런 일 저런 일을 해왔습니다&rdquo;라고 말하는 것으로는 충분하지 않습니다.</p>
+<p class="body-text fade-up">주님은 &ldquo;그래 맞다. 그것은 사실이다. 그러나 너는 아직 성숙하지 않았다. 그러므로 땅에 남아 있어야 한다&rdquo;라고 말씀하실 수도 있습니다. 아마 그런 사람에게는 다음 3년 반 동안 성숙에 이르도록 자랄 기회가 있을 것입니다.</p>
+<p class="body-text fade-up">그러나 사실 많은 성도, 즉 95%의 성도들은 그다음 천년 동안의 성숙에 이를 것입니다.</p>
+
+<div class="story-block fade-up">
+<p class="body-text">1959년경 대학에 다닐 때부터 친구로 지낸 한 형제님이 있었습니다.</p>
+<p class="body-text">우리는 계속 연락을 주고받았습니다. 그는 내가 3년 동안 신학을 공부하러 간다는 것을 알고 있었습니다.</p>
+<p class="body-text">또 그 후 내가 기독교의 체계를 떠나 주님의 회복 안에 있게 된 것을 알고는 나를 따라왔습니다.</p>
+<p class="body-text">그는 내가 있는 곳에 있기를 원했습니다. 겉으로 보기에는 그가 기독교를 떠난 것 같았지만, 사실 그는 남은 일생 동안 한 발은 회복 안에 두고 또 다른 한 발은 기독교 안에 두고 있었습니다.</p>
+<p class="body-text">이쪽에도 절대적이지 않았고, 저쪽에도 절대적이지 않은 채 약 30년을 그렇게 지냈습니다.</p>
+<p class="body-text">그러다가 그가 자동차를 운전하던 중 맞은편 차와 충돌하여 즉시 목숨을 잃었다는 소식을 들었습니다.</p>
+<p class="body-text">그것이 그의 마지막이었습니다.</p>
+</div>
+
+<p class="body-text fade-up">주님이 오시기까지 아직 일정의 시간이 남아 있다고 하더라도 내 마음에는 사랑해 돌보는 느낌이 있습니다. 나는 많은 장례 집회에 참석하며 어떤 성도가 자신의 여정을 마쳤다는 것을 보았습니다.</p>
+<p class="body-text fade-up">어떤 이들은 생명 안에서 성숙한 상태로 이 땅을 떠났습니다. 그들은 휴거될 준비가 된 성도들이며 이기고 있는 성도들입니다. 사실 모든 것은 우리가 어떻게 끝마치는가에 달려 있습니다.</p>
+<p class="body-text fade-up">우리가 죽음으로 생을 마칠 때든, 주님께서 오심으로 이 시대를 마칠 때든 마지막 상태가 중요합니다.</p>
+<p class="body-text fade-up">이제 우리의 시간은 제한되어 있습니다. 왕국이 나타나고 있으며 또 다른 다스림의 시대가 다가오고 있기 때문입니다. 그러므로 성도님들은 주님과의 개인적인 관계 안에서 그분께 직접 간구할 필요가 있습니다.</p>
+<blockquote class="prayer fade-up">&ldquo;주님, 저는 지금 여기에서 성숙에 이르도록 자라고 싶습니다. 이것이 무엇을 의미하고 무슨 일이 일어날지 다 알지는 못하지만 당신의 인자하심 안에서 필요한 모든 것을 이루어 주십시오. 제가 성숙의 정도까지 자라고 몸 안에서 몸을 위하여 성숙한 생명을 살며 다른 이들을 목양하고 또한 목양을 받게 해 주십시오.&rdquo;</blockquote>
+<p class="body-text fade-up">오늘 여기에 70세가 넘은 성도들이 있다면 제가 특별히 말씀을 드리고 싶습니다.</p>
+<p class="body-text fade-up">여러분의 건강이 여전히 좋기를 바랍니다. 그러나 우리 모두는 인간 생명의 끝부분에 와 있다는 것을 아셔야 합니다. 바로 이때가 여러분의 온 일생에서 가장 중요하고 가장 귀한 시간이 될 수 있습니다.</p>
+<p class="body-text fade-up">저는 수년 전이나 수십 년 전의 추억으로 살고 있지 않습니다.</p>
+<p class="body-text fade-up">오히려 우리의 존재를 계속 유지하고 훈련하면서 &ldquo;주님, 성숙하게 하심을 감사합니다&rdquo;라고 우리는 말해야 합니다. 나는 생애 맨 마지막에 성숙기에 이른 사랑스러운 형제님들을 알고 있습니다.</p>
+<p class="body-text fade-up">그러나 그들은 그 성숙을 적용하거나 그것에 관해 다른 이들을 목양할 시간이 없었습니다.</p>
+<p class="body-text fade-up">60세 이상 된 성도들, 심지어 이 형제님은 80세가 넘은 이들을 언급한 적도 계십니다.</p>
+<p class="body-text fade-up">사도 요한이 이곳에 있다면 그는 90대에 사역을 시작했으므로 &ldquo;90대가 되면 정말 영적인 영역에 있게 됩니다&rdquo;라고 말할지도 모릅니다. 그는 그 나이에 여러 서신과 많은 것을 기록했습니다.</p>
+
+<div class="outline-point fade-up">
+  <div class="letter">D</div>
+  <div class="op-text">마태복음 24장 40절부터 41절은 비밀한 휴거, 곧 준비된 이들, 성숙한 이들의 휴거를 가리킨다.</div>
+</div>
+
+<div class="sub-point fade-up">
+  <div class="marker">&#9670;</div>
+  <div class="sp-text">데려가지는 이와 남겨지는 이의 차이는 생명의 성숙에 있다. 한 사람은 생명 안에서 성숙했고 다른 사람은 그렇지 않다.
+    <span class="ref">— 히 6:1</span>
+  </div>
+</div>
+
+<div class="sub-point fade-up">
+  <div class="marker">&#9670;</div>
+  <div class="sp-text">성숙되는 것은 하룻밤 사이에 되는 일이 아니다. 주님의 오심을 위하여 우리는 자신을 예비하고, 그분을 사랑하고, 그분 안에서 자라야 한다. 그럴 때 그분께서 나타나실 때 우리가 성숙되어 휴거될 수 있다.</div>
+</div>
+
+<p class="body-text fade-up">제가 말하려는 요점은 생명의 성숙입니다. 이것이 우리의 존재 안에 새겨져야 합니다.</p>
+<p class="body-text fade-up">성숙하는 것은 하룻밤 사이에 이루어지는 일이 아닙니다.</p>
+<p class="body-text fade-up">주님의 오심을 위하여 우리는 자신을 준비하고 그분을 사랑하며 그분 안에서 자라고 그분의 나타나심을 사랑해야 합니다. 그럴 때 우리는 성숙하여 휴거될 수 있습니다.</p>
+<p class="body-text fade-up">좀 더 자세히 보기로 하죠. 왜냐하면 이것이 중점이기 때문입니다.</p>
+<p class="body-text fade-up">성숙하는 것은 하룻밤 사이에 이루어지는 일이 아닙니다. 성숙에는 긴 시간이 필요합니다. 꼭 20년이 걸려야 하는 것은 아니지만 적어도 몇 년은 걸릴 것입니다. 하룻밤 사이에 이루어지는 것은 결코 아닙니다.</p>
+<p class="body-text fade-up">그러므로 우리가 이 말씀을 읽을 때 우리는 &ldquo;주님, 저는 자신을 준비해야 합니다&rdquo;라고 말할 때 &ldquo;거기 준비에는 무엇이 포함됩니까? 제가 무엇을 해야 합니까?&rdquo;라고 주님께 여쭈어야 합니다.</p>
+<p class="body-text fade-up">우리가 주님께 여쭙는다면 그분은 이렇게 말씀하실 수 있습니다.</p>
+<p class="body-text fade-up">&ldquo;준비되는 것의 한 방면은 십자가가 너의 자아에 적용되는 것을 체험하는 것이다. 또한 너의 영이 내 존재에서 가장 강한 부분이 되는 것이 중요하다.&rdquo; 그러므로 우리는 주님을 사랑하고 그분 안에서 자라야만 합니다. 이것은 우리가 그분과 하나 되어야 한다는 뜻입니다.</p>
+<p class="body-text fade-up">우리는 여기에 있고 그분은 저기에 계시는 것이 아니라 연합된 영 안에서 그분 안에 있게 됩니다.</p>
+<p class="body-text fade-up">신성한 영과 우리의 거듭난 영이 함께 연합되어 우리가 생명 안에서 자랄 수 있습니다.</p>
+<p class="body-text fade-up">그럴 때 주님께서 나타나실 때 우리는 성숙하여 휴거될 수 있습니다. 이제 우리에게 분명해졌습니다.</p>
+<p class="body-text fade-up">이미 말했지만 대환란 전에 휴거되기 원한다면 그전에 성숙에 이르도록 자라야 합니다.</p>
+<p class="body-text fade-up">영적인 성숙이 우리 안에서 발전하기에 너무 어린 사람은 없습니다. 성숙의 영역에는 여러 정도가 있기 때문에 많은 안배가 있게 됩니다.</p>
+<p class="body-text fade-up">인간의 성장도 마찬가지입니다. 어떤 사람은 마흔에 성숙하고 다른 사람은 50이나 60에 성숙합니다.</p>
+<p class="body-text fade-up">단지 나이를 먹는 것이 아니라 성장하면서 더 성숙해지는 것입니다. 우리는 발전하고 배우는 것을 중단해서는 안 됩니다. 성숙에는 여러 종류가 있지만 우리는 휴거될 수 있을 만큼 성숙한 지점에 도달해야 합니다.</p>
+<p class="body-text fade-up">어떤 사람은 아마 &ldquo;나는 주님을 사랑하고 주님께 헌신했으며 휴거되고 싶습니다&rdquo;라고 말할 수 있겠죠.</p>
+<p class="body-text fade-up">그럴 때 주님은 &ldquo;그래, 네 말을 내가 들었다. 그러나 너는 아직 성숙하지 않았다. 대환란 전에 휴거되기 원한다면 성숙기에 이르도록 자라야 한다&rdquo;라고 말씀하시겠습니다.</p>
+<p class="body-text fade-up">내가 이미 언급했듯이 어젯밤부터 오늘 아침까지 세 번째 단계의 성숙의 연구 자료를 요청하는 이메일을 제가 서너 통을 받았습니다. 아마 내가 다시 사무실로 돌아가면 보내기 시작할 수 있을 것입니다.</p>
+<p class="body-text fade-up">그러니 오늘 오후에 곧바로 답장이 올 거라고 기대하지는 마십시오. 시간이 조금 걸릴 것입니다. 여러분이 답장을 받지 못하면 다시 이메일을 보내 &ldquo;란 형제님, 제가 이 자료를 요청한 것을 기억해 주십시오&rdquo;라고 말하십시오. 그러면 저는 &ldquo;알려주어서 고맙습니다. 여기 보내드립니다&rdquo;라고 답할 것입니다.</p>
+<p class="body-text fade-up">우리는 이와 같이 즐겁게 대화할 수 있을 것입니다.</p>
+<p class="body-text fade-up">내가 내적인 성숙을 강조하는 동안 여러분은 집으로 가는 길에 운전하거나 또는 비행기를 타거나 또는 걸으면서 이 문제를 주님께 가져가시기 바랍니다.</p>
+<blockquote class="prayer fade-up">&ldquo;주님, 이기는 성도들을 위하여 감추어진 방식으로 오시기 전에 제가 성숙할 수 있도록 오직 당신만이 하실 수 있는 일을 해 주십시오.&rdquo;</blockquote>
+<p class="body-text fade-up">하나님 아버지께서 기쁘게 여러분을 이렇게 돌보실 것이라고 확신합니다.</p>
+<p class="body-text fade-up">그리고 우리가 보게 될 한 가지는 이것입니다.</p>
+<p class="body-text fade-up">주님은 &ldquo;성숙기에 이르도록 자라기 원한다면 거하는 생활을 해야 한다&rdquo;라고 말씀하실 것입니다.</p>
+<p class="body-text fade-up">이것은 단지 하나의 요구 조건이 아니라 성숙에 이르게 하는 수단입니다.</p>
+<p class="body-text fade-up">이것은 매우 도움이 되는 말씀입니다. 휴거되기를 기대한다면 우리는 일상의 의무에 신실해야 합니다.</p>
+<p class="body-text fade-up">여기서 말하는 것은 어떤 특별한 영적 의무만이 아니라 가정과 직장에서 수행해야 하는 인간 생활의 일상적인 의무와 많은 실제적인 일들입니다. 우리는 동시에 균형 잡힌 합당한 인간 생활을 해야 합니다. 우리 모두는 잠을 자야 하죠. 그러나 &ldquo;나는 피곤하니 14시간을 자야 합니다&rdquo;라고 지나치게 말해서는 안 됩니다.</p>
+<p class="body-text fade-up">그렇게 자면 하루에 깨어 있는 시간이 10시간뿐일 것입니다. 그리고 4시간 반쯤 지난 뒤 &ldquo;또 일을 많이 했으니 낮잠을 자야겠습니다&rdquo;라고 할 수도 있습니다. 우리는 자신의 나이에 따라 정상적이어야 합니다.</p>
+<p class="body-text fade-up">여러분 중 많은 사람은 잠들면 7시간 반이나 8시간쯤 자시겠죠. 그러나 우리처럼 나이가 든 성도들은 잠든 지 3시간 반 만에 깨어 완전히 정신이 들 때가 있습니다. 실은 나도 어젯밤에 그랬습니다.</p>
+<p class="body-text fade-up">제가 그 시간에 &lsquo;이제 무엇을 해야 하지?&rsquo;라고 생각하면서 주님을 앙망할 때 주님께서는 &ldquo;내가 여기 있다. 이 시간들을 구속하여라. 나에게 말하고 또 이 시간에 나와 교통할 수 있다&rdquo;라고 하시는 것 같았습니다.</p>
+<p class="body-text fade-up">그러면 주님과 교통하다가도 다시 또 잠들 수 있습니다. 때로는 몇 시간 동안 깨어 있어서 아침 일찍 일어나기가 어려울 때도 있습니다. 또 6시 반까지 일어나 준비하고 또 출근해야 하는 실제적인 상황들도 있습니다. 그래서 내가 균형 잡힌 인간 생활을 강조하는 것입니다. 우리에게는 잠뿐 아니라 쉬는 시간도 필요합니다. 많은 사람이 아주 열심히 철저하게 일합니다.</p>
+<p class="body-text fade-up">일을 마치고 돌아온 뒤에는 자신에게 휴식이 되는 어떤 시간을 가져야 됩니다. 그것은 무언가를 읽는 시간일 수도 있겠죠. 1962년부터 우리 가운데서 앞장서셨던 가장 성숙한 형제님들 중 한 분이 계셨는데 지금 그분은 주님 품에 계십니다. 그 형제님은 쉴 때 음악을 들으셨습니다. 그러면서도 여전히 주님과 하나였습니다.</p>
+<p class="body-text fade-up">이것은 단지 하나의 예입니다. 제가 모든 종류의 음악을 들으라고 말하는 것은 아닙니다.</p>
+<p class="body-text fade-up">무엇이든 균형 잡힌 생활 안에서 여러분에게 참된 휴식이 되도록 돕는 것들이 필요합니다.</p>
+
+<div class="outline-point fade-up">
+  <div class="letter">E</div>
+  <div class="op-text">마태복음 24장 40절부터 41절에 있는 주님의 말씀은 우리가 그분의 오심을 기다리고 휴거되기를 기대하면서, 일상적인 의무에 신실하여 합당하게 균형 잡힌 인간 생활을 해야 한다는 것을 보여 준다.
+    <span class="ref">— 비교 살후 3:6&ndash;15</span>
+  </div>
+</div>
+
+<p class="body-text fade-up">주님의 오심을 위해 준비되려면 우리는 물질적인 영역과 신성한 영역 이 두 영역 안에서 동시에 살아야 합니다. 앞에서도 이것을 조금 말했지만 이제 적용해 보겠습니다.</p>
+<p class="body-text fade-up">우리는 땅에 속한 것과 하늘에 속한 것, 또 법리적인 것과 유기적인 것, 객관적인 것과 주관적인 것, 물질적인 것과 비밀한 것의 대조를 깊이 인상받음으로써 신성하고 비밀한 영역을 귀히 여겨야 합니다.</p>
+<p class="body-text fade-up">이것들은 두 방면들입니다. 물질적인 영역과 신성한 영역입니다. 삼일 하나님 자신이 신성하고 비밀한 영역이십니다. 성도 여러분, 이것은 단지 교리가 아니라 그분의 존재 자체이십니다.</p>
+<p class="body-text fade-up">삼일 하나님 자신이 신성하고 비밀한 영역이십니다.</p>
+<p class="body-text fade-up">이 영역 안에서 우리는 하나님의 유기적인 구원을 체험하고 신성한 생명의 교통 안에서 살고 있습니다.</p>
+<p class="body-text fade-up">다시 한번 보죠. 이 영역 안에서 우리는 하나님의 유기적인 구원을 체험하고 신성한 생명의 교통 안에서 삽니다. 이것이 구원의 방면들입니다. 신성한 생명의 교통이란 무엇입니까?</p>
+<p class="body-text fade-up">이것이 바로 요한일서 1장 3절과 7절이 말하는 것입니다.</p>
+<p class="body-text fade-up">다시 말하지만 이것을 쓴 사도 요한은 90대였고 모든 성도에게 영적인 아버지와 같았습니다.</p>
+<p class="body-text fade-up">그는 서신의 시작에서 &ldquo;우리의 교통은 아버지와 또 그분의 아들 예수 그리스도와 함께하는 것입니다&rdquo;라고 말했습니다. 그리고 7절은 같은 요점을 더 발전시켜 우리가 생명과 빛을 따라 살고 행하는 것을 보여 줍니다.</p>
+<p class="body-text fade-up">요일 1장 3절로 돌아가면 우리는 아버지와 그분의 아들과 교통합니다.</p>
+<p class="body-text fade-up">주님의 상 집회가 끝날 무렵 우리는 한 찬송을 불렀고 두 번째로 불렀던 찬송은 좋았습니다.</p>
+<p class="body-text fade-up">그때 우리의 존재 안에서 &lsquo;나는 하나님 아버지와 교통하고 있다&rsquo;라는 것을 깨달았기를 바랍니다.</p>
+<p class="body-text fade-up">우리의 교통은 바로 거기서 시작합니다.</p>
+<p class="body-text fade-up">먼저는 하나님 아버지와 교통할 때 서로간에 참된 교통을 가질 수 있습니다.</p>
+<p class="body-text fade-up">우리는 두 영역을 모두 가져야 합니다. 곧 아버지와의 교통과 서로간의 교통입니다.</p>
+<p class="body-text fade-up">복합되신 영은 신성하고 비밀한 영역이십니다. 우리는 주님과 한 영 되어 이 영역 안에 사는 것을 배워야 합니다.</p>
+<p class="body-text fade-up">요한일서의 두 구절은 이 점에 있어서 매우 중요합니다. 영은 영적인 영역이십니다. 우리는 모두 여기서 배우고 있으므로 부끄러워할 것이 없습니다. 우리는 주님과 한 영이 되어 이 영역 안에서 사는 것을 지금 배우고 있습니다.</p>
+
+<div class="sub-point fade-up"><div class="marker">1</div><div class="sp-text">우리는 땅에 속한 것과 하늘에 속한 것, 법리적인 것과 유기적인 것, 객관적인 것과 주관적인 것, 물질적인 것과 비밀한 것의 대조를 깊이 인상받음으로 신성하고 비밀한 영역을 귀하게 여겨야 한다.</div></div>
+<div class="sub-point fade-up"><div class="marker">2</div><div class="sp-text">삼일 하나님 자신이 신성하고 비밀한 영역이시다. <span class="ref">— 요 14:10&ndash;11</span></div></div>
+<div class="sub-point fade-up"><div class="marker">3</div><div class="sp-text">이 영역 안에서 우리는 하나님의 유기적인 구원을 체험하고(롬 5:10 하) 신성한 생명의 교통 안에서 산다. <span class="ref">— 요일 1:3, 7</span></div></div>
+<div class="sub-point fade-up"><div class="marker">4</div><div class="sp-text">복합되신 영은 신성하고 비밀한 영역이시며, 우리는 주님과 한 영이 됨으로 이 영역 안에서 사는 것을 배워야 한다. <span class="ref">— 고전 6:17; 요일 2:20, 27</span></div></div>
+<div class="sub-point fade-up"><div class="marker">5</div><div class="sp-text">그 영은 죄들의 용서, 구속, 구원, 화목, 의롭다 하심, 영원한 생명, 신성한 본성, 높여지고 부활한 사람의 본성, 그리고 삼일 하나님 자신을 포함하는 복음의 총체적인 복이시다.</div></div>
+
+<p class="body-text fade-up">이제 5번에 왔습니다. 그 영은 복음의 총체적인 복이십니다. 그 영 안에는 용서, 구속, 구원, 화목, 의롭다 하심, 영원한 생명, 신성한 본성, 높여지고 부활한 인간 본성, 그리고 삼일 하나님 자신이 포함되어 있습니다.</p>
+<p class="body-text fade-up">제가 제 펜을 거기다 두고 왔나요? 저에게 좀 주시겠습니까? 좋습니다. 나는 물건을 잘 잃어버리지만 도와주는 이들 덕분에 이 모든 것을 견딜 수가 있습니다.</p>
+<p class="body-text fade-up">이제 우리는 둘째 요점 거함에 이르렀습니다.</p>
+<p class="body-text fade-up">어린 자녀 여러분, 그분 안에 거하십시오. 그러면 그분께서 나타나실 때에 우리가 담대함을 가지게 되고 그분께서 오실 때에 그분에게서 떠나 수치를 당하지 않을 것입니다.</p>
+<p class="body-text fade-up">이 한 구절은 나에게 참으로 많은 의미가 있습니다.</p>
+<p class="body-text fade-up">90대인 요한이 &ldquo;어린 자녀 여러분&rdquo;이라고 말한 방식도 의미가 아주 깊습니다.</p>
+<p class="body-text fade-up">영적으로 말하면 60이 넘은 성도들조차도 요한의 관점에서는 여전히 그의 자녀들이었습니다.</p>
+<p class="body-text fade-up">그분 안에 거하십시오. 내가 처음에 말했듯이 거함은 우리가 날마다 시작하는 것입니다.</p>
+<p class="body-text fade-up">우리가 잠에서 깰 때 이렇게 말합니다. &ldquo;어린 자녀 여러분, 그분 곧 하나님 아버지와 그분의 아들 안에 거하십시오.&rdquo;</p>
+
+<div id="section2"></div>
+<div class="roman-divider fade-up"><div class="num">Ⅱ</div><div class="line"></div></div>
+
+<div class="section-quote fade-up">
+  &ldquo;어린 자녀 여러분, 그분 안에 거하십시오. 그러면 그분께서 나타나실 때에 우리가 담대함을 가질 수 있고, 그분께서 오실 때에 그분에게서 떠나 부끄러움을 당하지 않을 것입니다.&rdquo;
+  <span class="cite">— 요일 2:28</span>
+</div>
+
+<p class="body-text fade-up">밭에 있던 한 남자는 휴거될 준비가 되어 있고, 맷돌질하던 한 자매도 휴거될 준비가 되어 있을 수 있습니다. 그들은 존재 자체로는 준비되어 있었지만 주님께서 그들을 휴거시키러 오시는 바로 그 순간에도 주님 안에 거하고 있어야만 합니다. 단지 &ldquo;나는 지금 성숙했고 기다리고 있다&rdquo;라는 것만으로는 부족합니다.</p>
+<p class="body-text fade-up">그분께서 오실 때 우리는 그분 안에 거하고 있어야 합니다. 그분께서 오실 때 우리가 거하고 있지 않다면 휴거되지 못할 것입니다. 그래서 메시지의 후반부는 분명하게 거함에 초점을 맞추고 있습니다.</p>
+<p class="body-text fade-up">모든 문장을 살펴보면서 우리의 존재를 열 때 우리는 날마다 주님 안에 거할 수 있습니다.</p>
+<p class="body-text fade-up">우리가 그분 안에 거하면 그분은 또 우리 안에 거하십니다. 우리는 하루라는 시간을 구속할 수도 있고 하루를 잃어버릴 수도 있습니다. 그것은 오늘 우리가 어느 정도 주님 안에 거하는지에 달려 있습니다.</p>
+<p class="body-text fade-up">하루를 시작할 때에 우리는 &ldquo;주님, 새 날입니다. 오늘 우리는 당신 안에 거하고 당신은 우리 안에 거하실 것입니다&rdquo;라고 말할 수 있습니다. 그리고 밤 10시 반이나 지나서 잠자리에 들 때 이렇게 말한다면 얼마나 귀하겠습니까? &ldquo;주님, 감사합니다. 오늘은 거하는 하루였습니다. 그러한 날을 주셔서 감사합니다. 이제 제가 잠들 때 저를 덮으시고 보호해 주십시오. 내가 또다시 깨어나면 당신 안에 거하는 것을 또 시작하겠습니다.&rdquo; 나는 우리가 잠든 동안에도 각 사람을 보호하는 천사가 있다고 생각합니다.</p>
+<p class="body-text fade-up">그리스도 안에 거하는 것은 그분 안에 거주하는 것입니다. &lsquo;거하다&rsquo;와 &lsquo;거주하다&rsquo;를 함께 연결해 보십시오.</p>
+
+<div class="outline-point fade-up">
+  <div class="letter">A</div>
+  <div class="op-text">그리스도 안에 거하는 것은 그분 안에 머무는 것, 곧 그분과의 교통 안에 계속 머무는 것이며, 그 결과 우리 안에 거하시는 하나님을 체험하고 누리게 되는 것이다.
+    <span class="ref">— 요 15:4&ndash;5; 요일 2:27</span>
+  </div>
+</div>
+
+<div class="sub-point fade-up">
+  <div class="marker">&#9670;</div>
+  <div class="sp-text">그리스도 안에 거하는 것은 신성한 삼일성 안에서 사는 것이다.
+    <span class="ref">— 요일 2:6, 24, 27&ndash;28; 3:6, 24; 4:13</span>
+  </div>
+</div>
+
+<div class="sub-point fade-up">
+  <div class="marker">&#9670;</div>
+  <div class="sp-text">가지와 포도나무가 서로 안에 거하는 것은 우리의 생각이나 감정이나 의지 안에서가 아니라, 신성한 영께서 내주하시는 우리의 거듭난 사람의 영 안에서 일어난다.
+    <span class="ref">— 요 15:5; 롬 8:16; 비교 엡 2:22</span>
+  </div>
+</div>
+
+<p class="body-text fade-up">우리가 그분 안에 거한다는 것은 그분 안에 거주한다는 뜻이고, 그분 안에 거주한다면 또한 그분 안에 거하는 것입니다. 그리스도 안에 거하는 것은 그분 안에 거주하고 그분과의 교통 안에 머무는 것입니다.</p>
+<p class="body-text fade-up">그럴 때 우리는 우리 안에 거하시는 하나님을 체험하고 누릴 수 있습니다.</p>
+<p class="body-text fade-up">여기서 체험한다는 말은 우리의 영과 관련되고, 누린다는 말은 우리의 혼과 관련됩니다.</p>
+<p class="body-text fade-up">우리가 영을 훈련할 때 체험이 있게 되고, 그 체험에 근거하여 혼 안에서 누림을 갖게 됩니다.</p>
+<p class="body-text fade-up">그러므로 우리는 거할 때 그분을 체험하고 누리게 됩니다.</p>
+<p class="body-text fade-up">이것이 얼마나 놀라운 영역입니까? 그리스도 안에 거하는 것은 신성한 삼일성 안에 사는 것입니다.</p>
+<p class="body-text fade-up">이것은 거함에 대한 매우 깊은 묘사입니다. 체험은 단지 주님과 함께 즐거운 시간을 보내는 그냥 평범한 일이 아닙니다. 그보다 훨씬 더 깊습니다. 그리스도 안에 거하는 것은 신성한 삼일성 안에 사는 것입니다.</p>
+<p class="body-text fade-up">여기에는 거함과 삶, 그리고 상호 거함이 있습니다. 상호 거함은 양편 모두를 포함합니다.</p>
+<p class="body-text fade-up">우리가 그분 안에 거하고 그분께서 우리 안에 거하십니다.</p>
+<p class="body-text fade-up">가지와 포도나무의 상호 거함은 우리의 생각이나 감정이나 의지 안에서 이루어지는 것이 아니라 신성한 영께서 내주하시는 우리의 거듭난 사람의 영 안에서 이루어집니다.</p>
+<p class="body-text fade-up">우리 모두에게는 거듭난 사람의 영이 있고, 그 영 안에 신성한 영께서 거하십니다.</p>
+<p class="body-text fade-up">그리스도께서 우리 안에 거하시게 하는 것은 신성한 삼일성과 함께 사는 것이며, 우리 생활의 모든 방면에서 그리스도의 임재를 우리의 존재와 인격으로 삼는 것입니다. 그리스도께서 우리 안에 거하시는 것은 우리가 신성한 삼일성과 함께 살 수 있도록 합니다.</p>
+<p class="body-text fade-up">다시 말씀을 드립니다. 우리의 생활의 모든 방면에서 그리스도의 임재를 우리의 존재와 인격으로 삼는 것은, 그리스도께서 우리 안에 거하시는 것은 우리가 신성한 삼일성과 함께 살 수 있도록 합니다.</p>
+<p class="body-text fade-up">우리는 왕이시며 왕국이신 그리스도 안에 거해야 합니다. 그럴 때 그분은 우리 안에 거하시며 우리를 그분의 왕후와 왕궁, 곧 그분의 영광스러운 교회로 만드실 수 있습니다. 이것이 주님께서 찾고 계시는 것입니다.</p>
+<p class="body-text fade-up">그분의 관점에서 각 지방에 있는 교회는 그분에게 영광스러운 교회입니다.</p>
+<p class="body-text fade-up">그리스도를 우리의 거처로 삼아 그분 안에 거하고, 우리를 그분의 거처로 삼아 우리 안에 거하시도록 허락하는 것은 과정을 거치시고 완결되신 삼일 하나님과 구속받고 거듭난 믿는 이들이 이루는 우주적인 합병체의 실재 안에 사는 것입니다.</p>
+<p class="body-text fade-up">이것은 얼마나 놀라운 말씀입니까? 조금 더 시간 여유가 있음을 감사드립니다.</p>
+<p class="body-text fade-up">그리스도 안에 거하고 그리스도를 우리의 거처로 삼는 것은 함께 갑니다.</p>
+<p class="body-text fade-up">그리스도께서 우리의 거처이시므로 우리는 그리스도 안에서 살고 거주합니다. 이것이 거함의 뜻입니다.</p>
+<p class="body-text fade-up">그리고 우리는 그분께서 우리 안에 거하시도록 허락해야 합니다.</p>
+<p class="body-text fade-up">여기서 허락한다는 말이 아주 중요합니다. 우리의 자아가 너무 강할 때 우리는 그분께서 거하시도록 허락하지 않습니다. 우리 편에서만 하려고 하면서 그분께서 그분 편에서 하시도록 허락하지 않는다는 것입니다.</p>
+<p class="body-text fade-up">바로 이것은 우주적인 합병체의 실재인 과정을 거치시고 완결되신 삼일 하나님을 우리가 말하고 있습니다. 우리는 단지 삼일 하나님을 접촉하는 것만이 아닙니다. 과정을 거치고 완결되신 삼일 하나님을 접촉하는 것입니다.</p>
+
+<div class="outline-point fade-up">
+  <div class="letter">B</div>
+  <div class="op-text">그리스도께서 우리 안에 거하시게 하는 것은 신성한 삼일성과 함께 사는 것이며, 그리스도의 임재를 우리의 존재와 생활의 모든 방면으로 갖는 것이다.
+    <span class="ref">— 마 1:23; 18:20; 28:20; 딤후 4:22; 고후 2:10; 고전 7:24</span>
+  </div>
+</div>
+
+<div class="outline-point fade-up">
+  <div class="letter">C</div>
+  <div class="op-text">우리는 우리의 왕이시며 우리의 왕궁이신 그리스도 안에 거해야 한다. 그럴 때 그분은 우리 안에 거하시어 우리를 그분의 왕후이자 그분의 왕궁, 곧 그분의 영광스러운 교회가 되게 하실 수 있다.
+    <span class="ref">— 시 45:8, 13; 요 15:4&ndash;5; 엡 5:27; 계 22:5</span>
+  </div>
+</div>
+
+<div class="outline-point fade-up">
+  <div class="letter">D</div>
+  <div class="op-text">그리스도를 우리의 거처로 취하여 그분 안에 거하고, 그분께서 우리를 그분의 거처로 취하여 우리 안에 거하시도록 하는 것은, 과정을 거치시고 완결되신 삼일 하나님과 구속받고 거듭난 믿는 이들의 우주적인 합병체의 실재 안에서 사는 것이다.
+    <span class="ref">— 요 14:2, 10&ndash;11, 17, 20, 23</span>
+  </div>
+</div>
+
+<div class="outline-point fade-up">
+  <div class="letter">E</div>
+  <div class="op-text">우리는 그리스도를 사랑함으로 그리스도 안에 거하여 그분께서 우리 안에 거하시게 한다.
+    <span class="ref">— 요 14:21, 23</span>
+  </div>
+</div>
+
+<div class="outline-point fade-up">
+  <div class="letter">F</div>
+  <div class="op-text">우리는 모든 것을 포함한 기름 바름의 내적인 가르침을 주의함으로 그리스도 안에 거하여 그분께서 우리 안에 거하시게 한다.
+    <span class="ref">— 요일 2:27</span>
+  </div>
+</div>
+
+<div class="outline-point fade-up">
+  <div class="letter">G</div>
+  <div class="op-text">우리는 우리 밖에 있는 성경의 항상 있는 말씀과 우리 안에 계신 그 영이신 현재의 말씀을 대함으로 그리스도 안에 거하여 그분께서 우리 안에 거하시게 한다.
+    <span class="ref">— 요 5:39&ndash;40; 6:63; 고후 3:6; 계 2:7</span>
+  </div>
+</div>
+
+<p class="body-text fade-up">삼일 하나님은 우리가 그분 안에서 거하고 그분께서 우리 안에 거하실 수 있도록 필요한 모든 과정들을 통과하셨습니다. 이렇게 그분은 구속받고 거듭난 믿는 이들과 함께 우주적인 합병체를 이루십니다.</p>
+<p class="body-text fade-up">우리는 그리스도를 사랑함으로 그분 안에 거하며, 그 결과 그분께서 우리 안에 거하시게 합니다.</p>
+<p class="body-text fade-up">그분을 사랑하는 것은 상호 거함과 관련됩니다. 우리는 그리스도 안에 거하고 거함과 사랑은 손을 맞잡고 함께 갑니다.</p>
+<p class="body-text fade-up">또한 우리는 내적인 모든 것을 포함한 기름 바름의 가르침을 주의함으로 그리스도 안에 거하며 그분께서 우리 안에 거하시게 합니다. 이것은 그 영께서 우리에게 기름 바르시는 것입니다.</p>
+<p class="body-text fade-up">우리가 그리스도 안에 거하고 그분께서 우리 안에 거하실 때 모든 것을 포함하신 분께서 우리의 온 존재를 적시십니다.</p>
+<p class="body-text fade-up">우리는 밖에 있는 성경에 항상 있는 말씀과 우리 안에서 그 영께서 주시는 현재의 말씀을 대함으로 그리스도 안에 거하며 그분께서 우리 안에 거하시게 합니다. 이것이 우리가 신약의 구절들을 기도로 읽어야 하는 이유입니다. 우리가 그분 안에 거할 때 그분은 우리 안에 거하십니다. 내가 강조하는 것은 우리가 먼저 거하기 시작한다는 것입니다. 우리가 성경에 있는 항상 있는 말씀을 대할 때 그분께서 우리 안에 거하실 수 있습니다.</p>
+<p class="body-text fade-up">그래서 우리에게 성경이 필요하며 성경의 여러 구절을 기도로 읽어야 합니다.</p>
+<p class="body-text fade-up">성경은 우리 밖에 있습니다. 처음에 이 말씀은 객관적인 것입니다. 우리가 구절들을 읽을 때 그것들은 우리 밖에 있습니다. 그러나 이것들은 정상적인 시작입니다.</p>
+<p class="body-text fade-up">그러나 많은 형제들은 말씀을 계속 객관적으로 자기 밖에만 둘 경우가 있습니다.</p>
+<p class="body-text fade-up">우리는 주님께서 참으로 우리 안에 계시기를 갈망하는 자매들에게서 배워야 합니다.</p>
+<p class="body-text fade-up">우리 편에 거함만이 아니라 그분 편에 거함도 있어야 합니다. 우리 밖에는 기록된 말씀이 있고, 우리 안에는 그 영의 현재의 말씀이 있습니다. 그 영께서 그 말씀을 우리에게 적용하실 때 양편의 거함이 더욱 깊어집니다.</p>
+<p class="body-text fade-up">우리 편에서는 그리스도 안에 거하고, 그리스도는 그 영으로서 우리 안에 거하십니다.</p>
+
+<div class="sub-point fade-up">
+  <div class="marker">1</div>
+  <div class="sp-text">밖에 있는 기록된 말씀을 통해 우리는 비밀하신 주님에 대한 설명과 정의와 표현을 얻고, 안에 있는 살아 있는 말씀을 통해 우리는 거하시는 그리스도와 실재적인 주님의 임재를 체험한다.
+    <span class="ref">— 엡 5:26; 6:17&ndash;18</span>
+  </div>
+</div>
+
+<p class="body-text fade-up">밖에 있는 기록된 말씀을 통해 우리는 비밀하신 주님에 대한 설명과 정의와 표현을 얻습니다.</p>
+<p class="body-text fade-up">또 안에 있는 살아 있는 말씀을 통해 우리는 거하시는 그리스도를 체험하고 실재적인 주님의 임재를 갖습니다.</p>
+<p class="body-text fade-up">그분은 우리에게 실재적인 주님이 되십니다.</p>
+
+<div class="sub-point fade-up">
+  <div class="marker">2</div>
+  <div class="sp-text">우리가 주님의 항상 있는 기록된 말씀 안에 거한다면, 그분의 즉각적이고 살아 있는 말씀들이 우리 안에 거할 것이다.
+    <span class="ref">— 요 8:31; 15:7; 요일 2:14</span>
+  </div>
+</div>
+
+<p class="body-text fade-up">그래서 우리 모두는 성경의 특정한 한 권을 기도로 읽을 필요가 있습니다. 나는 끝으로 여러분이 주님과의 개인적인 관계를 갖도록 이 몫을 나누고 싶습니다. 하루 중 몇 분의 여유가 생길 때 한두 구절을 기도로 읽으십시오. 우리가 주님의 항상 있는 기록된 말씀 안에 거하면 그분의 즉각적이며 살아 있는 말씀들이 우리 안에 거할 것입니다. 즉각적인 말씀, 살아 있는 말씀이 우리 안에 거한다는 것을 주목하시기 바랍니다.</p>
+<p class="body-text fade-up">우리가 읽은 어떤 특정한 구절이 하루 종일 우리 안에서 살아 움직일 수 있습니다.</p>
+<p class="body-text fade-up">주님은 &ldquo;나는 이 말씀과 함께 네 안에 거하고 있다&rdquo;라고 하시는 것 같습니다. 여러분이 &ldquo;제 마음의 거처를 정하십시오. 제 마음의 거처를 정하십시오&rdquo;라고 기도로 읽을 때 주님은 &ldquo;내가 네 안에 거하고 있으므로 이 말씀을 지금 즉각적으로 살아 있게 너에게 적용하고 있다&rdquo;라고 말씀하십니다.</p>
+
+<div class="story-block fade-up">
+<p class="body-text">이제 마지막으로 2~3분 동안 말하고 싶습니다. 여러분 각 사람에게는 다른 누구에게도 없는 특별한 그리스도의 분깃이 있습니다. 여러분이 12살이든 92살이든 마찬가지입니다. 교회 생활의 지체 안에서 이것을 깨달으시기 바랍니다. 여러분에게는 다른 누구에게도 없는 분깃이 있습니다.</p>
+<p class="body-text">나는 여러 교회 집회에서 모든 지체가 &lsquo;나에게 나의 몫이 있다&rsquo;라는 느낌을 갖기 바랍니다.</p>
+<p class="body-text">우리는 자신을 다른 사람과 비교해서는 안 됩니다.</p>
+<p class="body-text">한편으로 힘이 있고 인도하는 형제들은 때때로 지나칠 수가 있습니다. 기도 집회에서 한 사람이 이것을 기도하고 저것을 기도하며 15번이나 계속 기도해서 다른 사람들에게 기회가 거의 없게 할 수도 있습니다.</p>
+<p class="body-text">집회에 있는 다른 사람들은 &ldquo;그렇습니다. 형제님, 그것들은 기도처럼 들리지만 참된 기도가 아닐 수 있습니다&rdquo;라고 느낄 수도 있습니다. 우리는 기도의 참된 실재가 무엇인지를 배워야 합니다.</p>
+<p class="body-text">거함이나 목양이나 그 밖의 모든 일도 마찬가지입니다. 나는 성도들이 이것을 깨닫기를 바라며 소망과 사랑과 돌봄으로 지금 충만합니다.</p>
+<p class="body-text">이것이 나의 마지막 말입니다. 여러분은 특별한 방식으로 그리스도를 소유하고 있으며 다른 누구에게도 없는 당신만의 분깃을 가지고 있습니다. 이제 나의 시간은 끝났습니다.</p>
+<p class="body-text">두 형제님이 각각 강화하는 말씀을 한 뒤에 여러분은 한 25분 정도의 시간이 있을 것입니다.</p>
+<p class="body-text">우리에게는 여러분의 그리스도의 몫이 필요하므로 여러분 안에 거하시는 그리스도를 따르기만 하십시오.</p>
+<p class="body-text">그리고 우리 모두 다시 주님께 자신을 드리며 이렇게 말합시다.</p>
+</div>
+
+<blockquote class="prayer fade-up">&ldquo;주님, 우리를 훈련해 주십시오. 저는 당신 안에 거하고 당신께서 제 안에 거하시기를 원합니다. 제가 당신 안에 거하고 있을 때 당신께서 오신다면 저를 휴거해 주십시오. 저는 보좌에서 당신을 뵙기 원합니다. 아멘.&rdquo;</blockquote>
+
+<div class="closing fade-up">
+  <div class="amen">✦ &nbsp; 아 멘 &nbsp; ✦</div>
+</div>
+
+</main>
+</div>
+
+<div id="toTop">&#8593;</div>
+
+<script>
+// ---------- star canvas ----------
+(function(){
+  const canvas = document.getElementById('stars');
+  const ctx = canvas.getContext('2d');
+  let w, h, stars = [];
+  function resize(){
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = document.documentElement.scrollHeight;
+    const count = Math.floor((w*h)/9000);
+    stars = [];
+    for(let i=0;i<count;i++){
+      stars.push({
+        x: Math.random()*w,
+        y: Math.random()*h,
+        r: Math.random()*1.2+0.3,
+        phase: Math.random()*Math.PI*2,
+        speed: 0.006 + Math.random()*0.014
+      });
+    }
+  }
+  function draw(t){
+    ctx.clearRect(0,0,w,h);
+    for(const s of stars){
+      const alpha = 0.15 + 0.5*(0.5+0.5*Math.sin(t*s.speed + s.phase));
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+      ctx.fillStyle = 'rgba(201,169,97,'+alpha.toFixed(3)+')';
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+  requestAnimationFrame(draw);
+})();
+
+// ---------- scroll reveal ----------
+(function(){
+  const els = document.querySelectorAll('.fade-up');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.08, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(el=>io.observe(el));
+})();
+
+// ---------- to top ----------
+(function(){
+  const btn = document.getElementById('toTop');
+  window.addEventListener('scroll', ()=>{
+    if(window.scrollY > 700) btn.classList.add('show');
+    else btn.classList.remove('show');
+  });
+  btn.addEventListener('click', ()=>window.scrollTo({top:0, behavior:'smooth'}));
+})();
+</script>
+</body>
+</html>

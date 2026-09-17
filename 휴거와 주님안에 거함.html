@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>노동절 특별집회 — 휴거와 주님 안에 거함</title>
+<meta name="description" content="2026년 9월 5일 노동절 특별집회 전체 메시지 — 휴거와 주님 안에 거함. 대환난 전 휴거, 이기는 믿는 이들의 휴거, 혼과 영의 분리, 비밀한 휴거와 주님 안에 거함, 네 편의 메시지 전문.">
+<meta property="og:title" content="노동절 특별집회 — 휴거와 주님 안에 거함">
+<meta property="og:description" content="2026년 9월 5일 노동절 특별집회 전체 메시지. 대환난 전 휴거부터 주님 안에 거하는 삶까지, 네 편의 메시지 전문을 담았습니다.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#141b2e;
+    --navy-mid:#212a47;
+    --navy-soft:#2b3660;
+    --gold:#c99a4e;
+    --gold-light:#e6c583;
+    --gold-dim:#9c7c46;
+    --cream:#f8f3e6;
+    --cream-2:#f0e8d4;
+    --cream-3:#e8dec2;
+    --ink:#241c11;
+    --ink-soft:#4d4230;
+    --cream-text:#f3ecd9;
+    --cream-text-soft:#cbc0a3;
+    --max-w: 700px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Noto Serif KR', serif;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+
+  a{ color:inherit; }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    background:linear-gradient(180deg, var(--navy-deep) 0%, var(--navy-mid) 55%, var(--navy-soft) 100%);
+    padding: 8vh 6vw 12vh;
+    text-align:center;
+  }
+  #dawn-canvas{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    z-index:1;
+    opacity:0.55;
+  }
+  .hero-glow{
+    position:absolute;
+    left:50%;
+    bottom:-10%;
+    width:140%;
+    height:60%;
+    transform:translateX(-50%);
+    background:radial-gradient(ellipse at center, rgba(201,154,78,0.35) 0%, rgba(201,154,78,0.08) 45%, rgba(20,27,46,0) 72%);
+    pointer-events:none;
+    z-index:1;
+  }
+  .hero-content{
+    position:relative;
+    z-index:2;
+    max-width:760px;
+  }
+  .hero-date{
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:0.92rem;
+    font-weight:500;
+    letter-spacing:0.04em;
+    color:var(--gold-light);
+    margin:0 0 1.4rem;
+  }
+  .hero-title{
+    font-family:'Noto Serif KR', serif;
+    font-weight:900;
+    font-size:clamp(2.1rem, 6vw, 3.6rem);
+    line-height:1.32;
+    color:var(--cream-text);
+    margin:0 0 1.1rem;
+    letter-spacing:-0.01em;
+  }
+  .hero-title .accent{ color:var(--gold-light); }
+  .hero-sub{
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:clamp(0.95rem, 2vw, 1.08rem);
+    color:var(--cream-text-soft);
+    line-height:1.8;
+    max-width:520px;
+    margin:0 auto;
+  }
+  .hero-scroll{
+    position:absolute;
+    bottom:6vh;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:0.5rem;
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:0.78rem;
+    color:var(--cream-text-soft);
+    text-decoration:none;
+  }
+  .hero-scroll .arrow{
+    width:1px;
+    height:28px;
+    background:linear-gradient(180deg, transparent, var(--gold-light));
+    position:relative;
+    animation: scrollpulse 2.2s ease-in-out infinite;
+  }
+  @keyframes scrollpulse{
+    0%,100%{opacity:0.35; transform:scaleY(0.8);}
+    50%{opacity:1; transform:scaleY(1);}
+  }
+
+  /* ---------- STICKY NAV ---------- */
+  .toc{
+    position:sticky;
+    top:0;
+    z-index:20;
+    background:rgba(248,243,230,0.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--cream-3);
+  }
+  .toc-inner{
+    max-width:920px;
+    margin:0 auto;
+    display:flex;
+    gap:0.5rem;
+    padding:0.7rem 1rem;
+    overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .toc-inner::-webkit-scrollbar{ display:none; }
+  .chip{
+    flex:0 0 auto;
+    display:flex;
+    align-items:center;
+    gap:0.55rem;
+    padding:0.5rem 0.9rem;
+    border-radius:999px;
+    border:1px solid var(--cream-3);
+    background:var(--cream);
+    text-decoration:none;
+    color:var(--ink-soft);
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:0.86rem;
+    white-space:nowrap;
+    transition:border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+  }
+  .chip-num{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:1.35rem;
+    height:1.35rem;
+    border-radius:50%;
+    background:var(--cream-3);
+    color:var(--ink-soft);
+    font-size:0.74rem;
+    font-weight:700;
+    flex:0 0 auto;
+    transition:background 0.2s ease, color 0.2s ease;
+  }
+  .chip.active{
+    border-color:var(--gold-dim);
+    color:var(--ink);
+    background:var(--cream-2);
+  }
+  .chip.active .chip-num{
+    background:var(--gold);
+    color:var(--navy-deep);
+  }
+  .chip-title{
+    max-width:16ch;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  /* ---------- MESSAGE SECTIONS ---------- */
+  main{
+    max-width:var(--max-w);
+    margin:0 auto;
+    padding:0 6vw;
+  }
+  .message{
+    padding: 4.6rem 0 3.2rem;
+    border-bottom:1px solid var(--cream-3);
+  }
+  .message:last-of-type{ border-bottom:none; }
+
+  .msg-head{ margin-bottom:2.4rem; }
+  .msg-num{
+    display:inline-block;
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:0.82rem;
+    font-weight:600;
+    letter-spacing:0.03em;
+    color:var(--gold-dim);
+    margin-bottom:0.7rem;
+  }
+  .msg-title{
+    font-family:'Noto Serif KR', serif;
+    font-weight:700;
+    font-size:clamp(1.5rem, 3.4vw, 2rem);
+    line-height:1.4;
+    margin:0 0 0.6rem;
+    color:var(--ink);
+  }
+  .speaker{
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:0.9rem;
+    color:var(--ink-soft);
+    margin:0 0 0.5rem;
+  }
+  .msg-refs{
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:0.88rem;
+    color:var(--ink-soft);
+    margin:0;
+  }
+
+  /* Verse block */
+  .verse-block{
+    margin:0 0 2.6rem;
+    padding-left:1.1rem;
+    border-left:2px solid var(--gold);
+  }
+  .verse{
+    margin-bottom:1.1rem;
+  }
+  .verse:last-child{ margin-bottom:0; }
+  .verse-ref{
+    display:block;
+    font-family:'Noto Sans KR', sans-serif;
+    font-weight:700;
+    font-size:0.85rem;
+    color:var(--gold-dim);
+    margin-bottom:0.28rem;
+  }
+  .verse-text{
+    display:block;
+    font-size:0.98rem;
+    line-height:1.9;
+    color:var(--ink-soft);
+  }
+
+  /* Outline */
+  .outline-wrap{ margin-top:0.5rem; }
+  ol.outline{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  ol.outline.lvl1{
+    display:flex;
+    flex-direction:column;
+    gap:1.7rem;
+  }
+  ol.outline.lvl1 > li{
+    padding-top:1.5rem;
+    border-top:1px solid var(--cream-3);
+  }
+  ol.outline.lvl1 > li:first-child{
+    padding-top:0;
+    border-top:none;
+  }
+  ol.outline.lvl2{
+    margin-top:0.9rem;
+    padding-left:1.15rem;
+    border-left:1px solid var(--cream-3);
+    display:flex;
+    flex-direction:column;
+    gap:0.95rem;
+  }
+  ol.outline.lvl3{
+    margin-top:0.7rem;
+    padding-left:1.15rem;
+    border-left:1px solid var(--cream-3);
+    display:flex;
+    flex-direction:column;
+    gap:0.7rem;
+  }
+  .outline p{
+    margin:0;
+    line-height:1.9;
+  }
+  .outline .marker{
+    font-family:'Noto Serif KR', serif;
+    font-weight:700;
+    color:var(--gold-dim);
+    margin-right:0.45rem;
+  }
+  .lvl1 > li > p{
+    font-size:1.12rem;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .lvl1 > li > p .marker{
+    color:var(--gold);
+    font-size:1.14rem;
+  }
+  .lvl2 .ptext{
+    font-size:1rem;
+    color:var(--ink);
+  }
+  .lvl3 .ptext{
+    font-size:0.95rem;
+    color:var(--ink-soft);
+  }
+
+  /* reveal */
+  .reveal{
+    opacity:0;
+    transform:translateY(14px);
+    transition:opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.in{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  /* footer */
+  footer{
+    max-width:var(--max-w);
+    margin:0 auto;
+    padding:3rem 6vw 5rem;
+    text-align:center;
+  }
+  .footer-rule{
+    width:36px;
+    height:2px;
+    background:var(--gold);
+    margin:0 auto 1.2rem;
+  }
+  footer p{
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:0.84rem;
+    color:var(--ink-soft);
+    line-height:1.8;
+    margin:0.2rem 0;
+  }
+
+  @media (max-width: 560px){
+    .hero{ padding:10vh 7vw 14vh; }
+    .chip-title{ max-width:11ch; }
+    ol.outline.lvl2, ol.outline.lvl3{ padding-left:0.85rem; }
+    .message{ padding:3.4rem 0 2.4rem; }
+    main{ padding:0 6.5vw; }
+  }
+
+  :focus-visible{
+    outline:2px solid var(--gold-dim);
+    outline-offset:2px;
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <canvas id="dawn-canvas" aria-hidden="true"></canvas>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="hero-date">2026년 9월 5일 · 노동절 특별집회</p>
+    <h1 class="hero-title">휴거와<br><span class="accent">주님 안에 거함</span></h1>
+    <p class="hero-sub">대환난 전에 휴거됨 · 이기는 믿는 이들의 휴거 · 혼과 영의 분리 · 비밀한 휴거와 주님 안에 거함</p>
+  </div>
+  <a href="#msg1" class="hero-scroll" aria-label="첫 번째 메시지로 이동">
+    <span>메시지 보기</span>
+    <span class="arrow" aria-hidden="true"></span>
+  </a>
+</header>
+
+<nav class="toc" aria-label="메시지 목차">
+  <div class="toc-inner">
+    <a href="#msg1" class="chip" data-target="msg1"><span class="chip-num">1</span><span class="chip-title">대환난 전에 휴거됨</span></a>
+<a href="#msg2" class="chip" data-target="msg2"><span class="chip-num">2</span><span class="chip-title">이기는 믿는 이들의 휴거</span></a>
+<a href="#msg3" class="chip" data-target="msg3"><span class="chip-num">3</span><span class="chip-title">혼과 영의 분리</span></a>
+<a href="#msg4" class="chip" data-target="msg4"><span class="chip-num">4</span><span class="chip-title">비밀한 휴거와 주님 안에 거함</span></a>
+  </div>
+</nav>
+
+<main>
+
+    <section class="message" id="msg1">
+      <div class="msg-inner">
+        <div class="msg-head">
+          <span class="msg-num">메시지 1</span>
+          <h2 class="msg-title">대환난 전에 휴거됨</h2>
+          <p class="speaker">란 켄거스형제님</p>
+          <p class="msg-refs">성경 말씀: 마 24:40-44; 눅 17:31-36; 21:36; 계 14:1-5</p>
+        </div>
+        <div class="verse-block">
+<div class="verse">
+<span class="verse-ref">마 24:40-44</span>
+<span class="verse-text">40 그때에 두 남자가 밭에 있는데, 한 사람은 데려가고, 한 사람은 남겨 둡니다. 41 두 여자가 맷돌질을 하고 있는데, 한 사람은 데려가고, 한 사람은 남겨 둡니다. 42 그러므로 깨어 있도록 하십시오. 왜냐하면 여러분의 주님께서 어느 날에 오실지 알지 못하기 때문입니다. 43 그러나 이것을 아십시오. 집주인이 도둑이 어느 시각에 올지를 알았더라면 깨어 있어 자기 집을 뚫고 들어오지 못하게 하였을 것입니다. 44 그러므로 여러분도 예비하고 있도록 하십시오. 왜냐하면 여러분이 생각하지 않은 시각에 사람의 아들이 올것이기 때문입니다.</span>
+</div>
+<div class="verse">
+<span class="verse-ref">눅 17:31-36</span>
+<span class="verse-text">31 그날에 지붕 위에 있는 사람은 그의 물건들이 집 안에 있더라도 그것들을 가지러 내려가지말고, 밭에 있는 사람도 마찬가지로 뒤에 있는 것들로 돌아가지 마십시오. 32 롯의 아내를 기억하십시오. 33 자기의 혼 생명을 보존하려는 사람은 혼 생명을 잃을 것이고, 자기의 혼 생명을 잃는 사람은 그것을 보존할것입니다. 34 내가 여러분에게 말합니다. 그날 밤 두 사람이 한 침상에 있을 것인데, 한 사람은 데려가고 다른 한 사람은 남겨 둘 것입니다. 35 두 여자가 함께 맷돌질하고 있을 것인데, 한 사람은 데려가고 다른 한 사람은 남겨 둘 것입니다. 36 두 남자가 밭에 있을 것인데, 한 사람은 데려가고 다른 한 사람은 남겨 둘 것입니다.</span>
+</div>
+<div class="verse">
+<span class="verse-ref">눅 21:36</span>
+<span class="verse-text">그러므로 여러분은 장차 일어날 이 모든 일을 능히 피할 수 있고 사람의 아들 앞에 설 수 있도록, 늘 간구하며 항상 깨어 있도록 하십시오.</span>
+</div>
+<div class="verse">
+<span class="verse-ref">계 14:1-5</span>
+<span class="verse-text">1 또 내가 보니, 어린양께서 시온 산에 서 계시고 그분과 함께 십사만 사천 명이 서 있는데, 그들의 이마에는 어린양의 이름과 그분의 아버지의 이름이 기록되어 있었습니다. 2 내가 하늘에서 나오는 한 음성을 들었는데, 많은 물소리와도 같고 큰 천둥소리와도 같았습니다. 내가 들은 그 음성은 수금 연주자들이 수금을 타는 소리와도 같았습니다. 3 그들이 보좌 앞과 네 생물과 장로들 앞에서 새 노래를 부르니, 땅에서 값을 치르고 사 온 십사만 사천 명 외에는 아무도 그 노래를 배울 수 없었습니다. 4 그들은 여자들로 더럽힌 적이 없는 순결한 이들입니다. 그들은 어린양께서 어디로 가시든지 그분을 따라가는 사람들이며, 하나님과 어린양께 첫 열매로 드려지도록 사람들 가운데서 사 온 이들입니다. 5 그들의 입에서는 거짓말이 발견되지 않았습니다. 그들은 흠이 없습니다.</span>
+</div>
+</div>
+        <div class="outline-wrap">
+          <ol class="outline lvl1">
+<li>
+<p><span class="marker">I.</span><span class="ptext">휴거:</span></p>
+<ol class="outline lvl2">
+<li>
+<p><span class="marker">A.</span><span class="ptext">휴거는 이 시대가 끝나기 전에 가장 중요한 문제이다.</span></p>
+</li>
+<li>
+<p><span class="marker">B.</span><span class="ptext">'휴거'라는 말은 요한복음 14 장 1 절부터 3 절 끝부분에 있는 '영접하다'라는 말과 같은 의미이다. "내가 다시 와서 여러분을 나 자신에게로 영접할 것입니다."</span></p>
+</li>
+<li>
+<p><span class="marker">C.</span><span class="ptext">휴거의 의미는 주님의 임재 안으로 데려가지는 것이다. 우리가 그분의 임재 안으로 데려가려면 오늘 그분의 임재 안에 있어야 한다 — 눅 21:36.</span></p>
+</li>
+<li>
+<p><span class="marker">D.</span><span class="ptext">휴거는 주로 우리의 누림을 위한 것이 아니라 하나님의 누림을 위한 것이다(계 19:7-9). 휴거는 원수를 패배시키고 하나님을 만족시키기 위한 것이다 — 계 12:9-10.</span></p>
+</li>
+<li>
+<p><span class="marker">E.</span><span class="ptext">우리는 우리를 휴거시키셔야 할 하나님의 필요가 있다는 것을 깨달아야 한다. 우리는 원수와 싸우기 위해 하늘로 휴거되어야 한다 — 계 12:9; 17:14; 19:14, 19-21; 요 12:31.</span></p>
+</li>
+<li>
+<p><span class="marker">F.</span><span class="ptext">휴거는 우리만을 위한 것이 아니다. 휴거는 하나님의 경륜과 하나님의 전략을 위한 것이다 — 계 11:15; 20:4, 6.</span></p>
+</li>
+<li>
+<p><span class="marker">G.</span><span class="ptext">우리는 우리의 행복을 위해서가 아니라 하나님의 목적을 성취하기 위해 하늘로 휴거되어야 한다 — 계 3:12;19:7; 21:2.</span></p>
+</li>
+<li>
+<p><span class="marker">H.</span><span class="ptext">밀을 거두어들이는 것, 곧 수확하는 것은 밀을 밭에서 데려가는 것이다:</span></p>
+<ol class="outline lvl3">
+<li>
+<p><span class="marker">1.</span><span class="ptext">주 예수님은 세상인 밭에서 우리를 데려가실 것이다.</span></p>
+</li>
+<li>
+<p><span class="marker">2.</span><span class="ptext">이것은 모든 참된 믿는 이들이 땅에서 데려가질 것임을 의미한다 — 마 24:40-44; 계 7:9; 11:12; 12:5;14:1-5; 15:2.</span></p>
+</li>
+<li>
+<p><span class="marker">3.</span><span class="ptext">밭은 세상을 상징하고(마 13:38), 셋째 하늘은 농부의 집을 상징한다.</span></p>
+</li>
+<li>
+<p><span class="marker">4.</span><span class="ptext">공중(곳간)은 하늘들과 세상 사이에 있다.</span></p>
+</li>
+<li>
+<p><span class="marker">5.</span><span class="ptext">데살로니가전서 4 장 17 절의 공중은 마태복음 13 장 30 절의 곳간에 해당한다.</span></p>
+</li>
+<li>
+<p><span class="marker">6.</span><span class="ptext">우리가 휴거라고 부르는, 하나님의 곡식을 이렇게 거두어들임으로 주 예수님은 왕국의 실재를 왕국의 출현 안으로 옮기실 것이다 — 마 13:43.</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">I.</span><span class="ptext">성경에서 우리는 휴거의 두 방면, 곧 이기는 이들의 휴거와 대다수의 믿는 이들의 휴거를 본다 — 마 13:24-30, 36-43; 계 14:16.</span></p>
+</li>
+<li>
+<p><span class="marker">J.</span><span class="ptext">레위기 23 장 10 절부터 11 절과 출애굽기 23 장 19 절에서 우리는 휴거의 예표, 곧 밭의 곡식이 익는 예표를 본다:</span></p>
+<ol class="outline lvl3">
+<li>
+<p><span class="marker">1.</span><span class="ptext">어떤 곡식은 일찍 익고, 다른 곡식은 늦게 익는다.</span></p>
+</li>
+<li>
+<p><span class="marker">2.</span><span class="ptext">먼저 익는 것들이 첫 열매들이다.</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">K.</span><span class="ptext">요한계시록 14 장은 이기는 믿는 이들인 첫 열매들이 대환난 전에 휴거되고(1-5 절), 대다수의 믿는 이들인 수확물은 대환난을 통과한 후 대환난 끝에 휴거된다는 것을 분명히 보여 준다 — 14-16 절.</span></p>
+</li>
+<li>
+<p><span class="marker">L.</span><span class="ptext">주님의 다시 오심을 기다리는 합당한 길은 정상적인 생활을 하는 것이다.</span></p>
+</li>
+<li>
+<p><span class="marker">M.</span><span class="ptext">우리는 물질적인 영역과 신성하고 비밀한 영역 안에 동시에 사는, 신성하고 비밀한 사람들이 되어야 한다 —요 3:12-13; 히 4:16.</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">II.</span><span class="ptext">누가복음 17 장 31 절부터 36 절은 휴거의 부름에 대한 우리의 반응을 말한다:</span></p>
+<ol class="outline lvl2">
+<li>
+<p><span class="marker">A.</span><span class="ptext">이 구절들은 죄악된 것들이 아니라 땅에 속한 것들에 몰두해 있는 혼 생명을 묘사한다. 여기에서 주님의 당부는 믿는 이들이 실지 생활에서 이기는 것과 관련된다 — 34-36 절.</span></p>
+</li>
+<li>
+<p><span class="marker">B.</span><span class="ptext">살아 있는 믿는 이들이 이기는 이들의 휴거에 참여하는지는 떠나라는 부름에 대한 그들의 반응에 달려 있다. 휴거는 은밀하고 예기치 않게 일어날 것이다 — 31 절:</span></p>
+<ol class="outline lvl3">
+<li>
+<p><span class="marker">1.</span><span class="ptext">이 부름은 주님과 함께한 우리의 이전 생활과 아무 관계가 없는, 마지막 순간의 기적적인 변화를 우리 안에 산출하지 않을 것이다.</span></p>
+</li>
+<li>
+<p><span class="marker">2.</span><span class="ptext">그 순간 우리는 우리 마음의 참된 보물이 무엇인지 발견하게 될 것이다. 이 보물이 주님 자신이라면 우리는 뒤를 돌아보지 않을 것이다 — 32 절.</span></p>
+</li>
+<li>
+<p><span class="marker">3.</span><span class="ptext">주님 자신 외의 모든 것과 모든 사람에게서 영 안에서 철저히 분리되도록, 우리는 십자가가 우리 안에서 역사하도록 해야 한다 — 31 절.</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">C.</span><span class="ptext">어떤 이들은 이 시대의 방종한 생활이 주는 정신을 못 차리게 하는 영향을 이겼기 때문에 데려가져서 주님의 파루시아(임재)를 누리도록 휴거된다 — 26-30, 34-36 절.</span></p>
+</li>
+<li>
+<p><span class="marker">D.</span><span class="ptext">누가복음 21 장 34 절부터 36 절에서 주 예수님은 우리에게 자신을 조심하고, "장차 일어날 이 모든 일을 능히 피할 수 있고 사람의 아들 앞에 설 수 있도록" 늘 간구하며 항상 깨어 있으라고 경고하신다(36 절).</span></p>
+</li>
+</ol>
+</li>
+</ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="message" id="msg2">
+      <div class="msg-inner">
+        <div class="msg-head">
+          <span class="msg-num">메시지 2</span>
+          <h2 class="msg-title">이기는 믿는 이들의 휴거</h2>
+          
+          <p class="msg-refs">성경 말씀: 마 24:42, 44; 눅 21:36; 딤후 4:8; 계 3:10; 12:5</p>
+        </div>
+        <div class="verse-block">
+<div class="verse">
+<span class="verse-ref">마 24:42</span>
+<span class="verse-text">그러므로 깨어 있도록 하십시오. 왜냐하면 여러분의 주님께서 어느 날에 오실지 알지 못하기 때문입니다.</span>
+</div>
+<div class="verse">
+<span class="verse-ref">마 24:44</span>
+<span class="verse-text">그러므로 여러분도 예비하고 있도록 하십시오. 왜냐하면 여러분이 생각하지 않은 시각에 사람의 아들이 올 것이기 때문입니다.</span>
+</div>
+<div class="verse">
+<span class="verse-ref">눅 21:36</span>
+<span class="verse-text">그러므로 여러분은 장차 일어날 이 모든 일을 능히 피할 수 있고 사람의 아들 앞에 설 수 있도록, 늘 간구하며 항상 깨어 있도록 하십시오.</span>
+</div>
+<div class="verse">
+<span class="verse-ref">딤후 4:8</span>
+<span class="verse-text">이제 후로는 나를 위하여 의의 면류관이 준비되어 있습니다. 의로운 재판장이신 주님께서 그날에 그것을 나에게 보상으로 주실 것인데, 나에게만 아니라 그분께서 나타나시는 것을 사랑한 모든 사람에게 주실것입니다.</span>
+</div>
+<div class="verse">
+<span class="verse-ref">계 3:10</span>
+<span class="verse-text">네가 나의 인내의 말을 지켰기 때문에, 나도 너를 지켜 주어, 땅에 거하는 사람들을 시험하기 위해 온 땅에 닥쳐올 시련의 때를 면하게 해 주겠다.</span>
+</div>
+<div class="verse">
+<span class="verse-ref">계 12:5</span>
+<span class="verse-text">그 여자가 아들, 곧 쇠지팡이로 모든 민족을 다스릴 사내아이를 낳았으며, 그 아이는 하나님과 하나님의 보좌로 이끌려 올라갔습니다.</span>
+</div>
+</div>
+        <div class="outline-wrap">
+          <ol class="outline lvl1">
+<li>
+<p><span class="marker">I.</span><span class="ptext">이기는 믿는 이들이 휴거되어야 하는 하나님의 필요:</span></p>
+<ol class="outline lvl2">
+<li>
+<p><span class="marker">A.</span><span class="ptext">우리는 하나님의 필요를 충족하기 위해, 곧 하나님의 원수에게 하나님의 심판을 집행하기 위해 하늘들로 휴거되어야 한다. "그 큰 용, 곧 옛 뱀, 마귀라고도 하고 사탄이라고도 하는 자, 온 땅을 미혹하는 자가 땅으로 내던져졌고, 그의 천사들도 그와 함께 내던져졌습니다." — 계 12:9; 비교 요 12:31.</span></p>
+</li>
+<li>
+<p><span class="marker">B.</span><span class="ptext">그리스도는 모든 원수를 대항해 싸우신 후 땅에 하나님의 왕국, 곧 천년왕국을 세우시고 그분의 이기는 믿는 이들과 함께 천 년 동안 왕으로서 다스리실 것이다. "내가 또 하늘에서 큰 음성이 이렇게 말하는 것을 들었습니다. '이제 우리 하나님의 구원과 능력과 왕국과 그분의 그리스도의 권위가 나타났다. 왜냐하면 우리 형제들을 고발하던 자, 우리 하나님 앞에서 밤낮으로 그들을 고발하던 자가 내던져졌기 때문이다.'" — 계12:10.</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">II.</span><span class="ptext">우리가 휴거되어야 할 필요:</span></p>
+<ol class="outline lvl2">
+<li>
+<p><span class="marker">A.</span><span class="ptext">"땅과 바다에는 화가 닥친다! 마귀가 자기에게 시간이 얼마 남지 않은 것을 알고 몹시 화가 나서 너희에게 내려갔기 때문이다." — 계 12:12.</span></p>
+</li>
+<li>
+<p><span class="marker">B.</span><span class="ptext">대환난 동안 땅에서 일어날 모든 재난과 고난은 땅에 닥칠 이 환난을 피하기 위해 우리가 휴거될 필요가 있음을 말해 준다. "그때에 큰 환난이 있을 것인데, 세상이 시작된 때부터 지금까지 그런 환난이 없었고 앞으로도 결코 없을 것입니다." — 마 24:21.</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">III.</span><span class="ptext">주님의 약속:</span></p>
+<ol class="outline lvl2">
+<li>
+<p><span class="marker">A.</span><span class="ptext">"늘 간구하며 항상 깨어 있도록 하십시오. 그러면 장차 일어날 이 모든 일을 능히 피할 수 있고 사람의 아들 앞에 설 수 있을 것입니다."(눅 21:36)는 땅에 닥칠 환난을 피하기 위해 휴거되어야 할 필요가 있는 이들에게 주신 주님의 약속이다.</span></p>
+</li>
+<li>
+<p><span class="marker">B.</span><span class="ptext">주님은 그분의 인내의 말을 지킨 믿는 이들을 온 땅에 닥쳐올 시련의 때에서 지켜 주시겠다고 약속하신다. "네가 나의 인내의 말을 지켰기 때문에, 나도 너를 지켜 주어, 땅에 거하는 사람들을 시험하기 위해 온 땅에 닥쳐올 시련의 때를 면하게 해 주겠다." — 계 3:10.</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">IV.</span><span class="ptext">휴거의 때:</span></p>
+<ol class="outline lvl2">
+<li>
+<p><span class="marker">A.</span><span class="ptext">이기는 믿는 이들이 휴거를 통해 시련의 때를 면하게 되므로, 이 휴거는 반드시 시련의 때, 곧 대환난 전에 일어나야 한다. "나도 너를 지켜 … 시련의 때를 면하게 해 주겠다." — 계 3:10.</span></p>
+</li>
+<li>
+<p><span class="marker">B.</span><span class="ptext">요한계시록 12 장은 이기는 믿는 이들이 마지막 삼 년 반, 곧 대환난 전에 휴거된다는 것을 보여 준다 — 5-6,14, 17 절.</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">V.</span><span class="ptext">장소:</span></p>
+<ol class="outline lvl2">
+<li>
+<p><span class="marker">A.</span><span class="ptext">이기는 믿는 이들이 휴거될 때 그들은 사람의 아들 앞에 서게 된다. 이것은 그들이 하늘들로 휴거되어 승천하신 주님 앞에 서게 된다는 뜻이다. "사람의 아들 앞에 설 수 있도록" — 눅 21:36.</span></p>
+</li>
+<li>
+<p><span class="marker">B.</span><span class="ptext">이기는 믿는 이들은 셋째 하늘에 있는 하나님의 보좌로 휴거된다. "하나님과 하나님의 보좌로 이끌려 올라갔습니다." — 계 12:5.</span></p>
+</li>
+<li>
+<p><span class="marker">C.</span><span class="ptext">"시온 산에"(계 14:1)는 이기는 믿는 이들이 하늘에 있는 시온 산, 곧 하나님께서 거하시고 다스리시는 하나님의 거처로 휴거될 것을 보여 준다.</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">VI.</span><span class="ptext">요구 조건들:</span></p>
+<ol class="outline lvl2">
+<li>
+<p><span class="marker">A.</span><span class="ptext">"늘 간구하며 항상 깨어 있도록 하십시오."(눅 21:36). 대환난 전에 휴거되어 대환난을 피하기 위한 한 가지 요구 조건은 매 순간 주님 앞에서 살고 매일 주님과 함께 행하며 어떤 면에서도 느슨하지 않도록, 늘 간구하며 항상 깨어 있는 것이다.</span></p>
+</li>
+<li>
+<p><span class="marker">B.</span><span class="ptext">대환난 전 휴거를 누리려면 우리는 주님의 오심을 위해 깨어 있고 준비되어 있어야 한다. "깨어 있도록 하십시오. … 예비하고 있도록 하십시오."(마 24:42, 44). 우리는 "자기 주인이 … 돌아오는 것을 기다리는" 노예들과 같아야 한다(눅 12:36).</span></p>
+</li>
+<li>
+<p><span class="marker">C.</span><span class="ptext">깨어 있고 준비되어 주님을 기다리는 믿는 이는 주님을 사랑하고 그분께서 나타나시는 것을 사랑하는 사람이어야 한다. "그분께서 나타나시는 것을 사랑한 모든 사람" — 딤후 4:8.</span></p>
+</li>
+<li>
+<p><span class="marker">D.</span><span class="ptext">주님의 인내의 말을 지키는 것은 대환난을 피하도록 휴거되는 것과 관련된 요구 조건이다. "네가 나의 인내의 말을 지켰기 때문에" — 계 3:10.</span></p>
+</li>
+<li>
+<p><span class="marker">E.</span><span class="ptext">이기는 믿는 이들은 오늘 이기며 주님의 일을 끝까지 지킨다. "이기는 이와 나의 일을 끝까지 지키는 이" — 계2:26.</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">VII.</span><span class="ptext">그러므로 이것은 우리에게 복된 소망이다!</span></p>
+</li>
+</ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="message" id="msg3">
+      <div class="msg-inner">
+        <div class="msg-head">
+          <span class="msg-num">메시지 3</span>
+          <h2 class="msg-title">혼과 영의 분리</h2>
+          
+          <p class="msg-refs">성경 말씀: 히 3:12-13; 4:1-2, 12-13</p>
+        </div>
+        <div class="verse-block">
+<div class="verse">
+<span class="verse-ref">히 3:12-13</span>
+<span class="verse-text">12 형제님들, 여러분 가운데 누구든지 믿지 않는 악한 마음을 품고 살아 계신 하나님에게서 떨어져 나가지 않도록 조심하십시오. 13 오히려 '오늘'이라고 하는 동안에 매일 서로 권유하여, 여러분 가운데 아무도 죄의 속임수로 굳어지지 않도록 하십시오.</span>
+</div>
+<div class="verse">
+<span class="verse-ref">히 4:1-2</span>
+<span class="verse-text">1 그러므로 그분의 안식에 들어갈 약속이 남아 있는데도 여러분 가운데 누가 거기에 이르지 못한 것처럼 보이지 않도록 두려워합시다. 2 그들과 마찬가지로 우리도 좋은 소식을 들었습니다. 그러나 그들이 들은 말씀은 그들에게 유익이 되지 못했는데, 그것은 그 말씀을 들은 사람들이 믿음으로 그 말씀과 결합되지 않았기 때문입니다.</span>
+</div>
+<div class="verse">
+<span class="verse-ref">히 4:12-13</span>
+<span class="verse-text">12 왜냐하면 하나님의 말씀은 살아 있고 효력이 있으며 양날이 선 어떤 칼보다 더 날카로워서 혼과 영 그리고 관절과 골수까지 찔러 쪼개고, 심지어 마음의 생각과 의도도 분별해 낼 수 있기 때문입니다. 13 하나님 앞에 드러나지 않는 피조물은 하나도 없고, 모든 것이 우리가 결산해야 할 분의 눈앞에 벌거벗은 채로 밝히 드러나 있습니다.</span>
+</div>
+</div>
+        <div class="outline-wrap">
+          <ol class="outline lvl1">
+<li>
+<p><span class="marker">I.</span><span class="ptext">우리는 믿지 않는 악한 마음을 품고 살아 계신 하나님에게서 떨어져 나가지 않도록 조심해야 한다:</span></p>
+<ol class="outline lvl2">
+<li>
+<p><span class="marker">A.</span><span class="ptext">불신은 살아 계시고 신실하시며 전능하신 하나님을 모욕하고, 우리가 우리의 안식일의 안식이신 그리스도 안으로 들어가는 것을 막기 때문에 매우 악하다 — 히 3:10; 시 103:7.</span></p>
+</li>
+<li>
+<p><span class="marker">B.</span><span class="ptext">하나님은 살아 계시고 신실하시지만, 악한 마음은 하나님을 향해 굳어져 있고 그 불신으로 인해 우리는 하나님에게서 돌아서게 된다 — 히 3:7-8, 12.</span></p>
+</li>
+<li>
+<p><span class="marker">C.</span><span class="ptext">우리의 믿음보다 하나님을 더 존귀하게 하는 것은 없고, 우리의 불신보다 하나님을 더 불명예스럽게 하고 모욕하는 것은 없다 — 민 13:31-33; 14:7-9, 24, 30.</span></p>
+</li>
+<li>
+<p><span class="marker">D.</span><span class="ptext">하나님을 기쁘시게 하는 믿음의 사람들이 되려면 우리는 믿음의 영을 훈련하고, 우리의 마음을 주님께로 돌이켜 두며, 우리 믿음의 창시자이시며 완성자이신 예수님을 주목해야 한다 — 히 11:6; 12:2; 고후 4:13.</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">II.</span><span class="ptext">"하나님의 말씀은 살아 있고 효력이 있으며 양날이 선 어떤 칼보다 더 날카로워서 혼과 영 그리고 관절과 골수까지 찔러 쪼개고, 심지어 마음의 생각과 의도도 분별해 낼 수 있습니다." — 히 4:12:</span></p>
+<ol class="outline lvl2">
+<li>
+<p><span class="marker">A.</span><span class="ptext">이스라엘 자손은 하나님의 완전한 구원에 참여하는 신약의 믿는 이들인 우리의 예표이다(고전 10:6 상, 11):</span></p>
+<ol class="outline lvl3">
+<li>
+<p><span class="marker">1.</span><span class="ptext">첫째 단계에서 우리는 그리스도를 받아들이고 구속받아 세상에서 구출된다. 이것은 이스라엘 자손이 이집트에서 구출된 것과 같다.</span></p>
+</li>
+<li>
+<p><span class="marker">2.</span><span class="ptext">둘째 단계에서 우리는 주님을 따르면서 방황하는 사람이 된다. 이것은 이스라엘 자손이 광야에서 방황한 것과 같다. 우리의 방황은 항상 우리의 혼 안에서 일어난다.</span></p>
+</li>
+<li>
+<p><span class="marker">3.</span><span class="ptext">셋째 단계에서 우리는 그리스도께 완전히 참여하고 그리스도를 완전히 누린다. 이것은 이스라엘 자손이 좋은 땅의 풍성에 참여하고 그것을 누린 것과 같다. 이것은 우리의 영 안에서 체험된다.</span></p>
+</li>
+<li>
+<p><span class="marker">4.</span><span class="ptext">히브리 믿는 이들은 그들의 히브리 종교를 어떻게 해야 할지를 생각 안에서 망설이며 고민하고 있었다. 그들의 생각 안에서 이러한 우유부단함은 혼 안에서의 방황이었고, 영 안에서 그리스도를 체험하는 것이 아니었다.</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">B.</span><span class="ptext">히브리서의 저자는 히브리 믿는 이들에게 혼의 방황 가운데서 머뭇거리지 말고, 하늘에 속한 그리스도께 참여하고 그분을 누리기 위해 그들의 영 안으로 힘써 나아가라고 권면했다:</span></p>
+<ol class="outline lvl3">
+<li>
+<p><span class="marker">1.</span><span class="ptext">하늘의 보좌에 앉아 계신 바로 그 그리스도(롬 8:34)께서 지금 또한 우리 안에(10 절), 곧 하나님의 거처가 있는 우리의 영 안에 계신다(딤후 4:22) — 엡 2:22.</span></p>
+</li>
+<li>
+<p><span class="marker">2.</span><span class="ptext">하나님의 집이자 하나님의 거처이며 하늘의 문인 벧엘에서 그리스도는 땅을 하늘에 연결하고 하늘을 땅에 가져오는 사다리이시다 — 창 28:12-17; 요 1:51.</span></p>
+</li>
+<li>
+<p><span class="marker">3.</span><span class="ptext">오늘 우리의 영은 하나님의 거처가 있는 곳이므로 이제 하늘의 문이다. 여기에서 그리스도는 땅에 있는 사람들인 우리를 하늘에 연결하시고 하늘을 우리에게 가져오시는 사다리이시다.</span></p>
+</li>
+<li>
+<p><span class="marker">4.</span><span class="ptext">그러므로 언제든지 우리가 우리의 영으로 돌이킬 때, 우리는 하늘의 문을 통해 들어가 하늘에 속한 사다리이신 그리스도를 통해 하늘에 있는 은혜의 보좌를 접촉한다 — 히 4:16.</span></p>
+</li>
+<li>
+<p><span class="marker">5.</span><span class="ptext">우유부단한 히브리 믿는 이들은 혼 안에서 방황하며 그들의 영을 소홀히 했지만, 신약은 전적으로 우리의 혼이 아니라 우리의 영 안에 있는 문제이다 — 롬 8:16; 딤후 4:22; 갈 6:18.</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">C.</span><span class="ptext">히브리 믿는 이들의 혼은 우유부단한 생각과 하나님의 구원의 길에 관한 의심과 자기 이익을 고려하는 것과 함께, 살아 있고 효력이 있으며 찔러 쪼개는 하나님의 말씀으로 파쇄되어야 했다. 이것은 그들의 영과 혼을 분리시키기 위한 것이었다:</span></p>
+<ol class="outline lvl3">
+<li>
+<p><span class="marker">1.</span><span class="ptext">골수가 관절 깊숙한 곳에 감추어져 있는 것처럼, 영은 혼 깊은 곳에 있다 — 시 51:6; 벧전 3:4.</span></p>
+</li>
+<li>
+<p><span class="marker">2.</span><span class="ptext">골수를 관절에서 분리하려면 주로 관절을 파쇄해야 하는 것처럼, 영을 혼에서 분리하려면 혼이 파쇄되어야 한다.</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">D.</span><span class="ptext">우리가 성경을 읽을 때마다 말씀은 우리의 혼과 영을 분리하고 우리의 생각과 의도를 분별할 만큼 살아 있고, 힘 있게 운행하며, 날카로워야 한다. 그리하여 어떤 것이 자아에서 나오고 자아를 위한 것이며 어떤 것이 하나님에게서 나오고 하나님을 위한 것인지 드러내야 한다:</span></p>
+<ol class="outline lvl3">
+<li>
+<p><span class="marker">1.</span><span class="ptext">말씀이 살아 있고 효력이 있으려면 우리는 영 안에서 모든 기도로 말씀과 믿음을 결합해야 한다 — 히4:2; 엡 6:17-18.</span></p>
+</li>
+<li>
+<p><span class="marker">2.</span><span class="ptext">하나님의 살아 있는 말씀은 우리의 존재를 찔러 들어와, 우유부단한 생각과 방황하는 혼에서 우리를 구출하여 우리의 영 안에서 안식일의 안식이신 그리스도 안으로 이끌어야 한다.</span></p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="message" id="msg4">
+      <div class="msg-inner">
+        <div class="msg-head">
+          <span class="msg-num">메시지 4</span>
+          <h2 class="msg-title">비밀한 휴거와 주님 안에 거함</h2>
+          
+          <p class="msg-refs">성경 말씀: 마 24:40-41; 요일 2:27-28</p>
+        </div>
+        <div class="verse-block">
+<div class="verse">
+<span class="verse-ref">마 24:40-41</span>
+<span class="verse-text">40 그때에 두 남자가 밭에 있는데, 한 사람은 데려가고, 한 사람은 남겨 둡니다. 41 두 여자가 맷돌질을 하고 있는데, 한 사람은 데려가고, 한 사람은 남겨 둡니다.</span>
+</div>
+<div class="verse">
+<span class="verse-ref">요일 2:27-28</span>
+<span class="verse-text">27 여러분으로 말하면, 그분에게서 받은 기름 바름이 여러분 안에 거하니, 아무도 여러분을 가르칠 필요가 없습니다. 그분의 기름 바름이 모든 것에 관하여 여러분을 가르칩니다. 이 기름 바름은 참되고 거짓되지 않습니다. 기름 바름이 여러분에게 가르쳐 준 대로 그분 안에 거하십시오. 28 이제 어린 자녀 여러분, 그분 안에 거하십시오. 그러면 그분께서 나타나실 때에 우리가 담대함을 가질 수 있고, 그분께서 오실 때에 그분에게서 떠나 부끄러움을 당하지 않을 것입니다.</span>
+</div>
+</div>
+        <div class="outline-wrap">
+          <ol class="outline lvl1">
+<li>
+<p><span class="marker">I.</span><span class="ptext">"그때에 두 남자가 밭에 있는데, 한 사람은 데려가고, 한 사람은 남겨 둡니다. 두 여자가 맷돌질을 하고 있는데, 한 사람은 데려가고, 한 사람은 남겨 둡니다." — 마 24:40-41:</span></p>
+<ol class="outline lvl2">
+<li>
+<p><span class="marker">A.</span><span class="ptext">이 구절들은 휴거와 관련된 사실들을 말하며, 어떤 믿는 이들은 휴거되고 다른 믿는 이들은 남겨질 것임을 입증한다.</span></p>
+</li>
+<li>
+<p><span class="marker">B.</span><span class="ptext">두 남자와 두 여자는 주님이 두 번째 오실 때 살아 있는 믿는 이들을 대표한다.</span></p>
+</li>
+<li>
+<p><span class="marker">C.</span><span class="ptext">데려가지는 것은 대환난 전에 휴거되는 것이다 — 마 24:21; 계 3:10:</span></p>
+<ol class="outline lvl3">
+<li>
+<p><span class="marker">1.</span><span class="ptext">휴거는 하나님의 생명 안에서의 완전한 구원의 완결 단계, 곧 우리의 몸의 변형이자 우리 몸의 구속이다 — 롬 5:10; 8:23; 빌 3:21.</span></p>
+</li>
+<li>
+<p><span class="marker">2.</span><span class="ptext">우리가 주님을 믿고 구원받은 후에, 우리가 받아들인 신성한 생명의 요구와 주님을 향한 우리의 강한 사랑 때문에 우리는 주님의 오심을 기다리는 생활을 추구하기를 갈망한다 — 살전 1:10; 2:19; 3:13; 4:15; 5:23.</span></p>
+</li>
+<li>
+<p><span class="marker">3.</span><span class="ptext">이처럼 주님을 사랑하고 그분의 오심을 기다리는 생활 가운데서, 우리는 성경에 계시되고 예언된 것에 따라 주님의 임재 안으로 휴거되어 그분과 함께 기쁘게 만나기를 기대한다 — 마 24:40-41; 눅 17:31-36; 21:36.</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">D.</span><span class="ptext">마태복음 24 장 40 절부터 41 절은 비밀한 휴거, 곧 준비된 이들, 성숙한 이들의 휴거를 가리킨다:</span></p>
+<ol class="outline lvl3">
+<li>
+<p><span class="marker">1.</span><span class="ptext">데려가지는 이와 남겨지는 이의 차이는 생명의 성숙에 있다. 한 사람은 생명 안에서 성숙했고 다른 사람은 그렇지 않다 — 히 6:1.</span></p>
+</li>
+<li>
+<p><span class="marker">2.</span><span class="ptext">성숙되는 것은 하룻밤 사이에 되는 일이 아니다. 주님의 오심을 위하여 우리는 자신을 예비하고, 그분을 사랑하고, 그분 안에서 자라야 한다. 그럴 때 그분께서 나타나실 때 우리가 성숙되어 휴거될 수 있다.</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">E.</span><span class="ptext">마태복음 24 장 40 절부터 41 절에 있는 주님의 말씀은 우리가 그분의 오심을 기다리고 휴거되기를 기대하면서, 일상적인 의무에 신실하여 합당하게 균형 잡힌 인간 생활을 해야 한다는 것을 보여 준다 — 비교 살후 3:6-15.</span></p>
+</li>
+<li>
+<p><span class="marker">F.</span><span class="ptext">주님의 오심을 위해 준비되려면 우리는 두 영역, 곧 물질적인 영역과 신성한 영역 안에서 동시에 살아야 한다:</span></p>
+<ol class="outline lvl3">
+<li>
+<p><span class="marker">1.</span><span class="ptext">우리는 땅에 속한 것과 하늘에 속한 것, 법리적인 것과 유기적인 것, 객관적인 것과 주관적인 것, 물질적인 것과 비밀한 것의 대조를 깊이 인상받음으로 신성하고 비밀한 영역을 귀하게 여겨야 한다.</span></p>
+</li>
+<li>
+<p><span class="marker">2.</span><span class="ptext">삼일 하나님 자신이 신성하고 비밀한 영역이시다 — 요 14:10-11.</span></p>
+</li>
+<li>
+<p><span class="marker">3.</span><span class="ptext">이 영역 안에서 우리는 하나님의 유기적인 구원을 체험하고(롬 5:10 하) 신성한 생명의 교통 안에서 산다 — 요일 1:3, 7.</span></p>
+</li>
+<li>
+<p><span class="marker">4.</span><span class="ptext">복합되신 영은 신성하고 비밀한 영역이시며, 우리는 주님과 한 영이 됨으로 이 영역 안에서 사는 것을 배워야 한다 — 고전 6:17; 요일 2:20, 27.</span></p>
+</li>
+<li>
+<p><span class="marker">5.</span><span class="ptext">그 영은 죄들의 용서, 구속, 구원, 화목, 의롭다 하심, 영원한 생명, 신성한 본성, 높여지고 부활한 사람의 본성, 그리고 삼일 하나님 자신을 포함하는 복음의 총체적인 복이시다.</span></p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">II.</span><span class="ptext">"어린 자녀 여러분, 그분 안에 거하십시오. 그러면 그분께서 나타나실 때에 우리가 담대함을 가질 수 있고, 그분께서 오실 때에 그분에게서 떠나 부끄러움을 당하지 않을 것입니다." — 요일 2:28:</span></p>
+<ol class="outline lvl2">
+<li>
+<p><span class="marker">A.</span><span class="ptext">그리스도 안에 거하는 것은 그분 안에 머무는 것, 곧 그분과의 교통 안에 계속 머무는 것이며, 그 결과 우리 안에 거하시는 하나님을 체험하고 누리게 되는 것이다 — 요 15:4-5; 요일 2:27:</span></p>
+<ol class="outline lvl3">
+<li>
+<p><span class="marker">1.</span><span class="ptext">그리스도 안에 거하는 것은 신성한 삼일성 안에서 사는 것이다 — 요일 2:6, 24, 27-28; 3:6, 24; 4:13.</span></p>
+</li>
+<li>
+<p><span class="marker">2.</span><span class="ptext">가지와 포도나무가 서로 안에 거하는 것은 우리의 생각이나 감정이나 의지 안에서가 아니라, 신성한 영께서 내주하시는 우리의 거듭난 사람의 영 안에서 일어난다 — 요 15:5; 롬 8:16; 비교 엡 2:22.</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="marker">B.</span><span class="ptext">그리스도께서 우리 안에 거하시게 하는 것은 신성한 삼일성과 함께 사는 것이며, 그리스도의 임재를 우리의 존재와 생활의 모든 방면으로 갖는 것이다 — 마 1:23; 18:20; 28:20; 딤후 4:22; 고후 2:10; 고전 7:24.</span></p>
+</li>
+<li>
+<p><span class="marker">C.</span><span class="ptext">우리는 우리의 왕이시며 우리의 왕궁이신 그리스도 안에 거해야 한다. 그럴 때 그분은 우리 안에 거하시어 우리를 그분의 왕후이자 그분의 왕궁, 곧 그분의 영광스러운 교회가 되게 하실 수 있다 — 시 45:8, 13; 요 15:4-5; 엡 5:27; 계 22:5.</span></p>
+</li>
+<li>
+<p><span class="marker">D.</span><span class="ptext">그리스도를 우리의 거처로 취하여 그분 안에 거하고, 그분께서 우리를 그분의 거처로 취하여 우리 안에 거하시도록 하는 것은, 과정을 거치시고 완결되신 삼일 하나님과 구속받고 거듭난 믿는 이들의 우주적인 합병체의 실재 안에서 사는 것이다 — 요 14:2, 10-11, 17, 20, 23.</span></p>
+</li>
+<li>
+<p><span class="marker">E.</span><span class="ptext">우리는 그리스도를 사랑함으로 그리스도 안에 거하여 그분께서 우리 안에 거하시게 한다 — 요 14:21, 23.</span></p>
+</li>
+<li>
+<p><span class="marker">F.</span><span class="ptext">우리는 모든 것을 포함한 기름 바름의 내적인 가르침을 주의함으로 그리스도 안에 거하여 그분께서 우리 안에 거하시게 한다 — 요일 2:27.</span></p>
+</li>
+<li>
+<p><span class="marker">G.</span><span class="ptext">우리는 우리 밖에 있는 성경의 항상 있는 말씀과 우리 안에 계신 그 영이신 현재의 말씀을 대함으로 그리스도 안에 거하여 그분께서 우리 안에 거하시게 한다 — 요 5:39-40; 6:63; 고후 3:6; 계 2:7:</span></p>
+<ol class="outline lvl3">
+<li>
+<p><span class="marker">1.</span><span class="ptext">밖에 있는 기록된 말씀을 통해 우리는 비밀하신 주님에 대한 설명과 정의와 표현을 얻고, 안에 있는 살아 있는 말씀을 통해 우리는 거하시는 그리스도와 실지적인 주님의 임재를 체험한다 — 엡 5:26; 6:17-18.</span></p>
+</li>
+<li>
+<p><span class="marker">2.</span><span class="ptext">우리가 주님의 항상 있는 기록된 말씀 안에 거한다면, 그분의 즉각적이고 살아 있는 말씀들이 우리 안에 거할 것이다 — 요 8:31; 15:7; 요일 2:14.</span></p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+        </div>
+      </div>
+    </section>
+</main>
+
+<footer>
+  <div class="footer-rule"></div>
+  <p>2026년 9월 5일 노동절 특별집회</p>
+  <p>전체 주제 — 휴거와 주님 안에 거함</p>
+</footer>
+
+<script>
+(function(){
+  // Sticky nav active-state tracking
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var sections = Array.prototype.slice.call(document.querySelectorAll('.message'));
+  var revealTargets = Array.prototype.slice.call(document.querySelectorAll('.msg-head, .verse-block'));
+  revealTargets.forEach(function(el){ el.classList.add('reveal'); });
+
+  if ('IntersectionObserver' in window) {
+    var navObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var id = entry.target.id;
+        var chip = document.querySelector('.chip[data-target="' + id + '"]');
+        if (!chip) return;
+        if (entry.isIntersecting) {
+          chips.forEach(function(c){ c.classList.remove('active'); });
+          chip.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    sections.forEach(function(s){ navObserver.observe(s); });
+
+    var revealObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealTargets.forEach(function(el){ revealObserver.observe(el); });
+  } else {
+    revealTargets.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // Dawn canvas: slow ascending light particles, subtle stars fading toward the horizon glow
+  var canvas = document.getElementById('dawn-canvas');
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (canvas && canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var w, h, particles = [], stars = [];
+
+    function resize(){
+      w = canvas.offsetWidth;
+      h = canvas.offsetHeight;
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function initField(){
+      particles = [];
+      var count = w < 560 ? 22 : 42;
+      for (var i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * w,
+          y: h * 0.35 + Math.random() * h * 0.65,
+          r: 0.6 + Math.random() * 1.6,
+          speed: 0.12 + Math.random() * 0.3,
+          drift: (Math.random() - 0.5) * 0.15,
+          alpha: 0.15 + Math.random() * 0.4,
+          twinkle: Math.random() * Math.PI * 2
+        });
+      }
+      stars = [];
+      var starCount = w < 560 ? 30 : 55;
+      for (var j = 0; j < starCount; j++) {
+        stars.push({
+          x: Math.random() * w,
+          y: Math.random() * h * 0.5,
+          r: 0.5 + Math.random() * 1,
+          alpha: 0.2 + Math.random() * 0.5,
+          twinkle: Math.random() * Math.PI * 2
+        });
+      }
+    }
+
+    resize();
+    initField();
+    window.addEventListener('resize', function(){
+      resize();
+      initField();
+    });
+
+    var t = 0;
+    function frame(){
+      t += 0.016;
+      ctx.clearRect(0, 0, w, h);
+
+      stars.forEach(function(s){
+        var flick = 0.5 + 0.5 * Math.sin(t * 0.8 + s.twinkle);
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(230,197,131,' + (s.alpha * flick).toFixed(3) + ')';
+        ctx.fill();
+      });
+
+      particles.forEach(function(p){
+        p.y -= p.speed;
+        p.x += p.drift;
+        if (p.y < -10) {
+          p.y = h + 10;
+          p.x = Math.random() * w;
+        }
+        var flick = 0.6 + 0.4 * Math.sin(t * 1.1 + p.twinkle);
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(230,197,131,' + (p.alpha * flick).toFixed(3) + ')';
+        ctx.fill();
+      });
+
+      if (!reduceMotion) {
+        window.requestAnimationFrame(frame);
+      }
+    }
+    frame();
+  }
+})();
+</script>
+
+</body>
+</html>

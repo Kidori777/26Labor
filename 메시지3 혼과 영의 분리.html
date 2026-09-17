@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>메시지 3 · 혼과 영의 분리</title>
+<meta name="description" content="히브리서 3:12-13, 4:1-2, 12-13 — 혼과 영의 분리, 하늘의 문이신 그리스도, 생명의 체험의 세 단계. 란 형제님 메시지.">
+<meta property="og:title" content="메시지 3 · 혼과 영의 분리">
+<meta property="og:description" content="히브리서 3:12-13, 4:1-2, 12-13 — 혼과 영의 분리, 하늘의 문이신 그리스도, 생명의 체험의 세 단계. 란 형제님 메시지.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-1:#181022;   /* 불신/굳어진 마음 - 차가운 남보라 */
+    --bg-2:#241a12;   /* 말씀의 검 - 구릿빛 앰버 */
+    --bg-3:#0f1a2c;   /* 하늘의 문 / 은혜의 보좌 - 짙은 인디고 */
+    --bg-4:#2a1414;   /* 마지막 때 경고 - 녹슨 진홍 */
+    --bg-5:#241608;   /* 찬양 / 형제들 - 따뜻한 금빛 */
+    --ink:#f3ead9;
+    --ink-dim:#c9bfae;
+    --gold:#e3b464;
+    --gold-bright:#f5cd82;
+    --line:rgba(227,180,100,0.25);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Noto Sans KR',sans-serif;
+    color:var(--ink);
+    background:var(--bg-1);
+    overflow-x:hidden;
+    line-height:1.9;
+    letter-spacing:-0.01em;
+    transition:background-color 1.2s ease;
+  }
+  #bgcanvas{
+    position:fixed;inset:0;
+    width:100%;height:100%;
+    z-index:0;
+    opacity:0.55;
+    pointer-events:none;
+  }
+  .page{position:relative;z-index:1;}
+
+  /* ===== HERO ===== */
+  .hero{
+    min-height:92vh;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;
+    padding:8vh 6vw;
+    position:relative;
+  }
+  .hero .kicker{
+    font-size:0.85rem;
+    letter-spacing:0.35em;
+    color:var(--gold);
+    text-transform:uppercase;
+    margin-bottom:1.8rem;
+    opacity:0;
+    animation:fadeUp 1.4s ease forwards 0.2s;
+  }
+  .hero h1{
+    font-family:'Noto Serif KR',serif;
+    font-weight:900;
+    font-size:clamp(2.4rem,7vw,4.6rem);
+    line-height:1.25;
+    background:linear-gradient(120deg,#f5cd82,#f3ead9 45%,#e3b464);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    opacity:0;
+    animation:fadeUp 1.4s ease forwards 0.5s;
+  }
+  .hero .sub{
+    margin-top:1.6rem;
+    font-size:1.05rem;
+    color:var(--ink-dim);
+    font-weight:300;
+    opacity:0;
+    animation:fadeUp 1.4s ease forwards 0.9s;
+  }
+  .hero .meta{
+    margin-top:2.6rem;
+    display:flex;gap:1.2rem;flex-wrap:wrap;justify-content:center;
+    opacity:0;
+    animation:fadeUp 1.4s ease forwards 1.2s;
+  }
+  .meta span{
+    border:1px solid var(--line);
+    padding:0.5rem 1.1rem;
+    border-radius:999px;
+    font-size:0.85rem;
+    color:var(--gold-bright);
+    background:rgba(227,180,100,0.06);
+  }
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(22px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+  .scrolldown{
+    position:absolute;bottom:4vh;left:50%;transform:translateX(-50%);
+    width:1px;height:60px;
+    background:linear-gradient(var(--gold),transparent);
+    opacity:0.5;
+  }
+
+  /* ===== SCRIPTURE BLOCK ===== */
+  .scripture-block{
+    max-width:760px;margin:0 auto;
+    padding:4rem 6vw;
+  }
+  .scripture-block h2{
+    font-family:'Noto Serif KR',serif;
+    font-weight:700;
+    font-size:1.3rem;
+    color:var(--gold-bright);
+    margin-bottom:1.6rem;
+    border-left:3px solid var(--gold);
+    padding-left:1rem;
+  }
+  .verse{
+    background:rgba(255,255,255,0.03);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:1.8rem 2rem;
+    margin-bottom:1.2rem;
+  }
+  .verse .ref{
+    font-weight:700;color:var(--gold);
+    font-size:0.95rem;margin-bottom:0.6rem;
+    display:block;
+    font-family:'Noto Serif KR',serif;
+  }
+  .verse p{color:var(--ink);font-size:1.02rem;}
+
+  /* ===== SECTION ===== */
+  section.content{
+    max-width:820px;
+    margin:0 auto;
+    padding:3rem 6vw 5rem;
+  }
+  .section-title{
+    font-family:'Noto Serif KR',serif;
+    font-weight:900;
+    font-size:clamp(1.6rem,4vw,2.3rem);
+    color:var(--gold-bright);
+    margin:4rem 0 1.6rem;
+    padding-bottom:1rem;
+    border-bottom:1px solid var(--line);
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity 0.9s ease, transform 0.9s ease;
+  }
+  .section-title.visible{opacity:1;transform:translateY(0);}
+
+  .outline-item{
+    margin:1.6rem 0;
+    padding-left:1.4rem;
+    border-left:2px solid var(--line);
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity 0.8s ease, transform 0.8s ease;
+  }
+  .outline-item.visible{opacity:1;transform:translateY(0);}
+  .outline-item .label{
+    font-family:'Noto Serif KR',serif;
+    color:var(--gold);
+    font-weight:700;
+    margin-right:0.5rem;
+  }
+  .outline-item p{color:var(--ink);}
+  .outline-item .cite{
+    display:block;margin-top:0.4rem;
+    font-size:0.85rem;color:var(--ink-dim);
+  }
+
+  .sub-outline{
+    margin:1.6rem 0 1.6rem 1.2rem;
+    padding-left:1.2rem;
+    border-left:1px dashed var(--line);
+  }
+  .sub-outline p{margin-bottom:0.9rem;color:var(--ink-dim);}
+
+  .para{
+    margin:1.3rem 0;
+    color:var(--ink);
+    font-weight:300;
+    font-size:1.02rem;
+    opacity:0;
+    transform:translateY(16px);
+    transition:opacity 0.9s ease, transform 0.9s ease;
+  }
+  .para.visible{opacity:1;transform:translateY(0);}
+  .para strong{color:var(--gold-bright);font-weight:600;}
+
+  .prayer-quote{
+    margin:1.8rem 0;
+    padding:1.5rem 1.8rem;
+    background:rgba(227,180,100,0.07);
+    border-left:3px solid var(--gold);
+    border-radius:0 12px 12px 0;
+    font-family:'Noto Serif KR',serif;
+    font-size:1.02rem;
+    color:var(--gold-bright);
+  }
+
+  .footnote-box{
+    margin:1.6rem 0;
+    padding:1.3rem 1.6rem;
+    background:rgba(255,255,255,0.03);
+    border:1px solid var(--line);
+    border-radius:10px;
+    font-size:0.92rem;
+    color:var(--ink-dim);
+  }
+  .footnote-box .num{color:var(--gold);font-weight:700;margin-right:0.4rem;}
+
+  .testimony{
+    margin:2.2rem 0;
+    padding:2rem;
+    background:linear-gradient(160deg,rgba(227,180,100,0.09),rgba(227,180,100,0.02));
+    border:1px solid var(--line);
+    border-radius:16px;
+  }
+  .testimony .tag{
+    display:inline-block;
+    font-size:0.78rem;
+    letter-spacing:0.2em;
+    color:var(--gold);
+    text-transform:uppercase;
+    margin-bottom:0.9rem;
+  }
+
+  .divider{
+    width:100%;height:1px;
+    background:linear-gradient(90deg,transparent,var(--line),transparent);
+    margin:4rem 0;
+  }
+
+  .msg-divider{
+    max-width:820px;margin:6rem auto 0;
+    padding:0 6vw;
+    text-align:center;
+  }
+  .msg-divider .line{
+    height:1px;width:120px;margin:0 auto 1.6rem;
+    background:var(--gold);opacity:0.5;
+  }
+  .msg-divider .num{
+    font-family:'Noto Serif KR',serif;
+    font-size:0.95rem;color:var(--gold);
+    letter-spacing:0.3em;text-transform:uppercase;
+  }
+  .msg-divider h2{
+    font-family:'Noto Serif KR',serif;
+    font-weight:900;
+    font-size:clamp(1.8rem,5vw,2.8rem);
+    margin-top:1rem;
+    color:var(--gold-bright);
+  }
+
+  footer{
+    text-align:center;
+    padding:4rem 6vw 5rem;
+    color:var(--ink-dim);
+    font-size:0.85rem;
+  }
+
+  @media (max-width:600px){
+    .verse{padding:1.4rem 1.4rem;}
+    section.content{padding:2rem 6vw 3rem;}
+  }
+</style>
+</head>
+<body>
+
+<canvas id="bgcanvas"></canvas>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero" id="zone-1">
+    <div class="kicker">Message Three</div>
+    <h1>혼과 영의 분리</h1>
+    <div class="sub">란 형제님</div>
+    <div class="meta">
+      <span>히브리서 3:12-13</span>
+      <span>히브리서 4:1-2</span>
+      <span>히브리서 4:12-13</span>
+    </div>
+    <div class="scrolldown"></div>
+  </div>
+
+  <!-- SCRIPTURE -->
+  <div class="scripture-block" id="zone-1b">
+    <h2>성경 말씀</h2>
+    <div class="verse">
+      <span class="ref">히브리서 3:12-13</span>
+      <p>12 형제님들, 여러분 가운데 누구든지 믿지 않는 악한 마음을 품고 살아 계신 하나님에게서 떨어져 나가지 않도록 조심하십시오. 13 오히려 ‘오늘’이라고 하는 동안에 매일 서로 권유하여, 여러분 가운데 아무도 죄의 속임수로 굳어지지 않도록 하십시오.</p>
+    </div>
+    <div class="verse">
+      <span class="ref">히브리서 4:1-2</span>
+      <p>1 그러므로 그분의 안식에 들어갈 약속이 남아 있는데도 여러분 가운데 누가 거기에 이르지 못한 것처럼 보이지 않도록 두려워합시다. 2 그들과 마찬가지로 우리도 좋은 소식을 들었습니다. 그러나 그들이 들은 말씀은 그들에게 유익이 되지 못했는데, 그것은 그 말씀을 들은 사람들이 믿음으로 그 말씀과 결합되지 않았기 때문입니다.</p>
+    </div>
+    <div class="verse">
+      <span class="ref">히브리서 4:12-13</span>
+      <p>12 왜냐하면 하나님의 말씀은 살아 있고 효력이 있으며 양날이 선 어떤 칼보다 더 날카로워서 혼과 영 그리고 관절과 골수까지 찔러 쪼개고, 심지어 마음의 생각과 의도도 분별해 낼 수 있기 때문입니다. 13 하나님 앞에 드러나지 않는 피조물은 하나도 없고, 모든 것이 우리가 결산해야 할 분의 눈앞에 벌거벗은 채로 밝히 드러나 있습니다.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- OUTLINE + BODY -->
+  <section class="content" id="zone-2">
+
+    <h2 class="section-title">I. 믿지 않는 악한 마음을 품고 하나님에게서 떨어져 나가지 않도록</h2>
+
+    <div class="outline-item">
+      <p><span class="label">A.</span> 불신은 살아 계시고 신실하시며 전능하신 하나님을 모욕하고, 우리가 우리의 안식일의 안식이신 그리스도 안으로 들어가는 것을 막기 때문에 매우 악하다.<span class="cite">히 3:10; 시 103:7</span></p>
+    </div>
+    <div class="outline-item">
+      <p><span class="label">B.</span> 하나님은 살아 계시고 신실하시지만, 악한 마음은 하나님을 향해 굳어져 있고 그 불신으로 인해 우리는 하나님에게서 돌아서게 된다.<span class="cite">히 3:7-8, 12</span></p>
+    </div>
+    <div class="outline-item">
+      <p><span class="label">C.</span> 우리의 믿음보다 하나님을 더 존귀하게 하는 것은 없고, 우리의 불신보다 하나님을 더 불명예스럽게 하고 모욕하는 것은 없다.<span class="cite">민 13:31-33; 14:7-9, 24, 30</span></p>
+    </div>
+    <div class="outline-item">
+      <p><span class="label">D.</span> 하나님을 기쁘시게 하는 믿음의 사람들이 되려면 우리는 믿음의 영을 훈련하고, 우리의 마음을 주님께로 돌이켜 두며, 우리 믿음의 창시자이시며 완성자이신 예수님을 주목해야 한다.<span class="cite">히 11:6; 12:2; 고후 4:13</span></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3 style="font-family:'Noto Serif KR',serif;color:var(--gold-bright);margin:2rem 0 1rem;">서두의 말씀</h3>
+
+    <p class="para">우리 모두가 방금 읽은 제목입니다. 그러나 제가 지적하고 싶은 것은 이것이 여러분 각 사람에게 일어날 것이라는 점입니다. 혼과 영의 분리(The Dividing of Soul and Spirit).</p>
+    <p class="para">마태복음 24장에는 밭에서 일하고 있는 두 남자가 있습니다. 한 사람은 데려가고 다른 한 사람은 남겨집니다. 또 두 여자가 맷돌질을 하고 있는데, 한 사람은 데려가고 다른 한 사람은 남겨집니다.</p>
+    <p class="para">이 구절들은 혼과 영의 분리와 관련하여 무엇을 의미합니까?</p>
+    <p class="para">주된 요점은 우리가 동시에 두 영역 안에 있어야 한다는 것입니다.</p>
+    <p class="para">그러므로 한 면에서는 밭에 있는 두 남자와 두 여자처럼, 물질적이고 평범하며 인간적인 일상생활 가운데서 우리의 일을 하고 있습니다. 그런데 그들이 일하고 있는 동안 왜 한 사람은 휴거되고 다른 한 사람은 남겨졌습니까? 자매들의 경우도 마찬가지입니다. 이것은 다른 것, 곧 앞의 첫 두 개의 개요와 관련됩니다.</p>
+    <p class="para">그런 일이 일어나려면 우리는 동시에 두 영역 안에서 살고 있어야 합니다.</p>
+    <p class="para">그러므로 그들이 두 영역 안에서 살고 있고 주님께서 이기는 성도들을 휴거하시기 위해 오실 때, 왜 한 사람은 남겨지게 됩니까? 그 사람이 동시에 두 영역 안에 있지 않기 때문입니다. 이것은 주님께서 이것을 제 존재에 적용하시기 수십 년 전의 저의 체험과도 관련됩니다. 제가 이미 언급했듯이, 몇 시간 동안 일을 하고 나서 점심시간이 되면 자유로워지고, 그때 주님과 함께 기도하고 교통할 수 있습니다. 그러나 그 두 가지를 동시에 할 수는 없습니다. 그러나 우리가 혼과 영의 분리를 체험할 때, 우리는 동시에 두 영역 안에서 살기 시작합니다. 아멘.</p>
+    <p class="para">휴거되기를 갈망하고 휴거되기를 소망하는 사람은 누구든지 반드시 이 두 영역 안에 있어야 하며 이 두 영역 안에서 살아야 합니다. 그렇지 않으면, 우리 안에서 혼과 영, 이 둘이 분리되어 있지 않다면 우리가 일하고 있는 동안 우리는 주님 안에 거하고 있지 않으며, 주님께서 우리를 만지실 수 없습니다.</p>
+    <p class="para">그러나 우리가 두 영역 안에 있고, 주님께서 우리를 휴거하실 때가 되면, 우리는 이미 그 영역 안에 있기 때문에 즉시 반응할 것입니다. 그러므로 이것이 우리가 방금 읽은 구절들의 의미입니다.</p>
+    <p class="para">그러나 사랑하는 모든 성도 여러분, 이것은 여러분에게 적용되는 것이며, 주님께서 성숙한 성도들을 휴거하시기 위해 오실 때 이것은 극도로 중요한 문제가 될 것입니다. 그러므로 이것이 이 메시지 전체의 주된 사상입니다. 제가 개요를 따라 계속 나아갈 때, 다시 한번 내주하시는 그리스도께 열려 있으십시오.</p>
+    <p class="para">왜냐하면 그분의 편에서는 여러분의 혼과 영을 분리하여 여러분이 동시에 이 두 영역 안에서 살 수 있도록 하실 준비가 되어 있기 때문입니다. 동시에 이것은 여러분을 휴거될 수 있는 상황 안에 둡니다. 주님께서 오셔서 우리를 보좌로 데려가실 수 있습니다. 그렇지 않으면 우리가 전에 이야기했던 것처럼 마지막 삼 년 반 동안 땅에 남아 있게 될 것입니다. 제가 생각하기에는 여러분이 충분히 알고 있을 것입니다. 이것은 단지 우리에게 상기시키기 위한 것입니다. 그러므로 우리가 이 집회에서 이 개요를 통과하고, 제가 계속해서 언급하게 될 메시지들을 통과할 때, 다만 주님께서 여러분 안에서 빛 비추시도록 하여 여러분이 두 영역 안에서 살아야 한다는 것을 깨닫게 하십시오. 그리고 여러분이 이 두 영역에 대한 이해를 갖게 되기를 바랍니다.</p>
+
+    <div class="prayer-quote">
+      오늘 밤 잠들기 전에 이렇게 말해 보시기를 권합니다.<br><br>
+      “주님, 당신의 방식으로, 당신의 때에, 제 존재의 이 두 부분을 분리해 주십시오. 저는 같은 시간에, 같은 장소에서 두 영역 안에서 살기를 원합니다. 제 편에서 저는 휴거를 위해 준비되어 있기를 원합니다.”
+    </div>
+
+    <p class="para">이제 한 요점 한 요점씩 살펴보겠습니다.</p>
+
+    <div class="divider"></div>
+
+    <h3 style="font-family:'Noto Serif KR',serif;color:var(--gold-bright);margin:2rem 0 1rem;">I. 우리는 불신의 악한 마음을 품고 살아 계신 하나님에게서 떨어져 나가지 않도록 주의해야 한다</h3>
+
+    <p class="para">우리는 불신의 악한 마음을 품고 살아 계신 하나님에게서 떨어져 나가지 않도록 주의해야 합니다.</p>
+    <p class="para">우리는 악한 마음, 악한 마음을 주의해야 합니다. 여러분의 마음을 분석하려고 하지 마십시오. 다만 이렇게 말하십시오.</p>
+
+    <div class="prayer-quote">
+      “주님, 제가 거듭거듭 언급했듯이, 주님, 저는 당신의 거처가 되도록 제 마음을 당신께 엽니다. 저는 불신의 마음을 원하지 않습니다. 주님, 제가 믿는 마음, 믿음의 마음을 갖도록 훈련해 주십시오. 아멘.”
+    </div>
+
+    <p class="para"><strong>A.</strong> 불신이 그토록 악한 것은 불신이 살아 계시고 신실하시며 전능하신 하나님을 모욕하고, 우리가 우리의 안식일의 안식이신 그리스도 안으로 들어가는 것을 막기 때문이다 — 히 3:10; 시 103:7.</p>
+
+    <div class="verse">
+      <span class="ref">히브리서 3:10</span>
+      <p>그래서 나는 그 세대에 대하여 언짢아하며 말하였다. ‘그들은 항상 마음이 빗나가서 나의 길을 알지 못하였다.’</p>
+    </div>
+    <div class="verse">
+      <span class="ref">시편 103:7</span>
+      <p>그분은 자신의 길을 모세에게, 자신의 행적을 이스라엘 자손에게 알리셨다.</p>
+    </div>
+
+    <p class="para">불신이 그토록 악한 것은 그것이 살아 계시고 신실하시며 전능하신 하나님을 모욕하고, 우리가 우리의 안식일의 안식이신 그리스도 안으로 들어가는 것을 막기 때문입니다.</p>
+
+    <p class="para"><strong>B.</strong> 하나님은 살아 계시고 신실하시지만, 악한 마음은 하나님을 향하여 굳어져 있으며, 그 마음의 불신은 우리로 하여금 하나님에게서 돌아서게 한다 — 히 3:7-8, 12.</p>
+    <p class="para">하나님은 살아 계시고 신실하시지만 악한 마음은 그분을 향하여 굳어져 있습니다. 그리고 이 불신은 우리로 하여금 그분에게서 돌아서게 합니다. 그러므로 여기서 우리는 이것이 얼마나 결정적인 문제인지 보아야 합니다. 살아 있고 신실한 것, 신실한 것. 우리는 불신 안에 있기를 원하지 않고, 반대로 믿음으로 충만하게 살기를 원합니다.</p>
+
+    <p class="para"><strong>C.</strong> 우리의 믿음보다 하나님을 더 존중하는 것은 없으며, 우리의 불신보다 하나님을 더 불명예스럽게 하고 모욕하는 것은 없다 — 민 13:31-33; 14:7-9, 24, 30.</p>
+    <p class="para">우리의 믿음보다 하나님을 더 존귀하게 하는 것은 없습니다. 그리고 우리의 불신보다 그분을 더 불명예스럽게 하고 모욕하는 것은 없습니다. 속에서 이렇게 기도할 수 있습니다.</p>
+
+    <div class="prayer-quote">
+      “주님, 우리는 부드러운 방식으로 기도합니다. 어떤 일에서든 제가 불신 안에 있는 것에서 저를 구원해 주십시오.”
+    </div>
+
+    <p class="para"><strong>D.</strong> 하나님을 기쁘시게 하는 믿음의 사람들이 되기 위해서, 우리는 우리의 믿음의 영을 훈련하고, 우리의 마음을 계속 주님께로 향하게 하며, 우리 믿음의 창시자이시며 완성자이신 예수님을 주목해야 한다 — 히 11:6; 12:2; 고후 4:13.</p>
+    <p class="para">하나님을 기쁘시게 하는 믿음의 사람들이 되기 위해서 우리는 우리의 믿음의 영을 훈련해야 합니다.</p>
+    <p class="para">이 구절들, 이 진술은 매우 중요합니다. 우리의 믿음의 영을 훈련하십시오.</p>
+    <p class="para">우리에게는 믿음의 영이 있지만 우리의 믿음의 영을 훈련해야 합니다. 우리 모두에게는 믿음의 영이 있습니다.</p>
+    <p class="para">그러나 우리가 우리의 영 안에 있지 않다면 우리에게 필요한 믿음을 갖지 못할 수도 있습니다.</p>
+    <p class="para">그리고 우리의 마음을 계속 주님께 향하게 해야 합니다. 얼마나 귀한지요.</p>
+    <p class="para">이 마음을 계속 주님께 향하게 하면서, 믿음의 창시자이시며 완성자이신 예수님을 바라보아야 합니다. 다른 모든 것에서 눈을 돌려 예수님을 바라보는 것입니다. 시간이 있을 때 히브리서 12장 2절을 보신다면, 이 구절이 여러분을 정말 만질 것이라는 것을 깨닫게 될 것입니다. 우리는 수많은 다른 것들을 바라보는 대신 그것들에서 눈을 돌리기를 원합니다.</p>
+
+    <div class="verse">
+      <span class="ref">히브리서 12:2</span>
+      <p>우리 믿음의 창시자이시며 완성자이신 예수님을 주목합시다.</p>
+    </div>
+
+    <div class="footnote-box"><span class="num">[4]</span> ‘주목합시다’로 번역된 이 헬라어 단어는 다른 모든 목표에서 돌이켜 주의를 집중하여 바라보는 것을 가리킨다. 히브리 믿는 이들은 그들의 환경 가운데 있는 모든 것에서, 그들의 옛 종교인 유대교와 그 박해에서, 또한 땅에 속한 모든 것에서 돌이켜, 이제 하늘에서 하나님의 보좌 오른편에 앉아 계신 예수님을 주목해야 했다.</div>
+
+    <p class="para">우리 모두는 믿음의 창시자와 믿음의 완성자가 삼일 하나님 자신이라는 것을 합당하게 이해해야 합니다.</p>
+    <p class="para">그러므로 우리의 믿음은 강화되고 적용되어야 합니다. 이것은 극도로 중요합니다. 우리 모두에게 믿음이 있습니다. 그러나 이 말씀에 따르면 우리에게는 우리 믿음의 창시자와 완성자가 필요합니다.</p>
+    <p class="para">우리의 믿음이 이러한 정도까지 발전되기를 바랍니다.</p>
+    <p class="para">이제 우리는 개요의 주된 요점에 왔습니다. 우리는 이 구절을 방금 다시 읽었습니다. 제가 여러분에게 다시 읽어 드리겠습니다.</p>
+
+  </section>
+
+  <!-- ===== ZONE 3 : SWORD / GRACE THRONE ===== -->
+  <section class="content" id="zone-3">
+
+    <h2 class="section-title">II. 하나님의 말씀은 혼과 영을 찔러 쪼갠다</h2>
+
+    <div class="verse">
+      <span class="ref">히브리서 4:12</span>
+      <p>왜냐하면 하나님의 말씀은 살아 있고 효력이 있으며 양날이 선 어떤 칼보다 더 날카로워서, 혼과 영 그리고 관절과 골수까지 찔러 쪼개고, 심지어 마음의 생각과 의도도 분별해 낼 수 있기 때문입니다.</p>
+    </div>
+
+    <p class="para">주님께서 우리 안에서 빛 비추시고 우리가 우리의 영을 훈련하고 있을 때, 우리는 마음의 생각과 의도를 분별할 수 있습니다. 그리고 우리는 하나님의 생각과 의도가 아닌 생각과 의도를 갖기를 원하지 않습니다.</p>
+    <p class="para">우리는 우리의 마음에 관하여, 우리 모두가 알고 있는 것처럼 이렇게 말하기 원합니다.</p>
+
+    <div class="prayer-quote">
+      “당신의 거처입니다. 당신께서 여기에 살고 계십니다. 왜냐하면 당신께서 우리의 마음 안에 살고 계시기 때문입니다. 바로 이 순간의 생각과 의도를 자유롭게 분별해 주십시오.” 이것 때문에 괴로워하지 마십시오.
+    </div>
+
+    <p class="para">그러나 주님은 우리 마음 안에 있는 우리의 생각과 의도를 알고 계십니다. 우리 가운데 많은 사람에게 주님은 “너는 나를 누리고 있다. 너는 나를 체험하고 있다.”라고 판단하실 수 있습니다.</p>
+    <p class="para">혹은 — 이것은 우리 각 사람에게 때때로 일어나는 일인데 — 여러분의 생각이 지난 1분 정도 동안 다른 곳으로 가 버렸을 수도 있습니다. 저는 아침에 성도들을 가르칠 때 이런 일이 일어나는 것을 보았습니다.</p>
+    <p class="para">그래서 저는 그들에게 다만 이렇게 말합니다. “그냥 돌아오십시오.” 자기 자신과 싸우지 마십시오.</p>
+    <p class="para">그냥 돌아오십시오. 그리스도께서 여러분 안에서 자라고 계십니다. 결국 여러분의 영은 여러분 존재의 가장 강한 부분이 될 것입니다. 그러므로 지난 2분 동안 여러분이 아무것도 듣지 않고 단지 다른 어떤 것을 생각하고 있었다면, 저는 이렇게 말합니다. “자, 돌아오십시오. 아직 늦지 않았습니다.”</p>
+    <p class="para">저도 그것이 어떤 것인지 압니다. 우리 모두가 같습니다. 우리의 영이 너무나 강해져서 그 어떤 것도 그 기능을 잃게 할 수 없을 때까지 그렇습니다.</p>
+
+    <div class="outline-item">
+      <p><span class="label">A.</span> 이스라엘 자손은 하나님의 완전한 구원에 참여하는 신약의 믿는 이들인 우리의 예표이다.<span class="cite">고전 10:6상, 11</span></p>
+    </div>
+    <div class="sub-outline">
+      <p>첫째 단계에서 우리는 그리스도를 받아들이고 구속받아 세상에서 구출된다. 이것은 이스라엘 자손이 이집트에서 구출된 것과 같다.</p>
+      <p>둘째 단계에서 우리는 주님을 따르면서 방황하는 사람이 된다. 이것은 이스라엘 자손이 광야에서 방황한 것과 같다. 우리의 방황은 항상 우리의 혼 안에서 일어난다.</p>
+      <p>셋째 단계에서 우리는 그리스도께 완전히 참여하고 그리스도를 완전히 누린다. 이것은 이스라엘 자손이 좋은 땅의 풍성에 참여하고 그것을 누린 것과 같다. 이것은 우리의 영 안에서 체험된다.</p>
+      <p>히브리 믿는 이들은 그들의 히브리 종교를 어떻게 해야 할지를 생각 안에서 망설이며 고민하고 있었다. 그들의 생각 안에서 이러한 우유부단함은 혼 안에서의 방황이었고, 영 안에서 그리스도를 체험하는 것이 아니었다.</p>
+    </div>
+
+    <p class="para">이스라엘 자손은 하나님의 완전한 구원에 참여하는 데 있어서 신약의 믿는 이들인 우리의 예표입니다.</p>
+    <p class="para">하나님의 완전한 구원에 참여하는 것입니다. 부분적인 구원만이 아닙니다. 수백만, 수백만의 성도들이 어느 정도의 구원을 가지고 있습니다. 그들은 거듭났지만 하나님의 완전한 구원을 가지고 있지는 않습니다.</p>
+    <p class="para">그러므로 다시 한번 자신을 분석하지 마십시오. 다만 이렇게 말하십시오.</p>
+
+    <div class="prayer-quote">
+      “주님, 제가 완전한 구원 안에 있다는 것을 제게 분명하게 해 주십시오. 당신의 완전한 구원이 제 안에서, 저와 함께 기능하고 있습니다.”<br><br>
+      “주님, 저는 제 온 존재가 기능하여 당신의 완전한 구원의 일부가 되기를 원합니다.”
+    </div>
+
+    <p class="para">이제 이러한 종류의 구원에는 세 단계가 있습니다.</p>
+    <p class="para">첫 번째 단계에서 우리는 그리스도를 받아들이고 구속받으며 세상에서 구출됩니다. 이것은 이스라엘 자손이 이집트에서 구출된 것과 같습니다.</p>
+    <p class="para">두 번째 단계에서 우리는 주님을 따르면서 방황하는 사람들이 됩니다. 이스라엘 자손이 광야에서 방황한 것처럼, 우리의 방황은 언제나 우리의 혼 안에서 일어납니다.</p>
+    <p class="para">우리의 혼은 상당히 활동적입니다. 매우 활동적입니다. 그러나 이것은 하나의 단계입니다. 우리 모두는 이 단계를 통과해야 했습니다. 우리는 언제나 우리의 혼 안에서, 우리의 혼이라는 장소 안에서 방황하고 있습니다.</p>
+    <p class="para">그러나 우리 모두는 세 번째 요점에 이르게 될 것입니다.</p>
+    <p class="para">세 번째 단계에서 우리는 그리스도께 완전히 참여하고 그분을 충만하게 누립니다. 이스라엘 자손이 좋은 땅의 풍성을 누렸던 것과 같습니다. 이것은 우리의 영 안에서 체험됩니다.</p>
+    <p class="para">좋은 땅의 풍성은 실재로 그리스도의 모든 것을 포함하심을 가리킵니다.</p>
+
+    <div class="testimony">
+      <span class="tag">부연 설명</span>
+      <p class="para" style="opacity:1;transform:none;">제가 다시 잠깐 멈추고 제 안에 있는 또 하나의 부담을 말씀드리겠습니다.</p>
+      <p class="para" style="opacity:1;transform:none;">대다수의 성도들은 모든 것을 포함하신 그리스도에 관하여 배웠습니다. 그것은 미국에서 리 형제님의 기능과 봉사가 시작된 아주 초기부터 있었습니다.</p>
+      <p class="para" style="opacity:1;transform:none;">위트니스 리는 1962년 미국으로 이주하여 본격적인 미국 사역을 시작했으며, 그해 1962년 12월 22일부터 31일까지 미국 캘리포니아주 로스앤젤레스(LA)에서 열린 집회에서 신명기에 나타난 가나안 좋은 땅을 배경으로 이 메시지들을 전했습니다. 이 메시지들은 이후 1969년에 책으로 공식 출간되어 영어권 국가에 주님의 회복 사역을 알리는 중요한 계기가 되었습니다.</p>
+      <p class="para" style="opacity:1;transform:none;">그러나 그리스도께서 모든 것을 포함하신 분이시라는 것은 단지 말에 그쳐서는 안 됩니다. 이것은 단지 일종의 객관적인 가르침이어서는 안 되고, 그것이 체험적으로 우리의 존재 안에 있을 때 우리의 존재의 일부가 되어야 합니다. 내일 아침 우리가 주님의 상 집회에 올 때, 우리는 이번 주에 우리가 체험하고 누린 그리스도의 풍성을 가지고 올 것입니다. 내일 주님의 상 집회에 빈손으로 오지 않을 것입니다.</p>
+      <p class="para" style="opacity:1;transform:none;">우리는 모든 것을 포함하신 그리스도로 점점 더 적셔지고 있습니다. 그러나 저는 그리스도에 대한 제 체험 가운데 가장 좋은 부분을 하나님 아버지와 아들께 가져오기 위해 남겨 둡니다. 이것이 모든 교회들 안에서 모든 주님의 날에 주님께서 기다리고 계시는 것입니다. 어떤 의미에서 우리는 이것이 그분의 소망이라고 말할 수 있습니다. 대다수의 성도들이 빈손으로 오는 대신에 말입니다.</p>
+      <p class="para" style="opacity:1;transform:none;">그래서 우리가 달리 무엇을 해야 할지 모르면, “찬송 한 곡 부릅시다. 또 한 곡 부릅시다. 또 한 곡.” 다섯 곡이나 여섯 곡의 찬송을 부릅니다. 그것이 우리의 기도 집회, 곧 주님의 상 집회가 되어 버립니다.</p>
+      <p class="para" style="opacity:1;transform:none;">그러나 주님께서 원하시는 것은 우리가 세 번째 단계를 통하여, 우리의 영을 훈련하고, 우리에게 실재가 된 그리스도를 가져오는 것입니다. 그리고 가장 높은 부분을 저는 하나님께 가져갑니다 — 그리스도 예수님을.</p>
+      <p class="para" style="opacity:1;transform:none;">그런 다음 서로 나누는 시간에 모든 것을 포함하신 그리스도께서 나에게 어떤 분이신지 서로 나눌 수 있습니다.</p>
+    </div>
+
+    <p class="para">네 번째 요점입니다. 히브리 믿는 이들은 그들의 히브리 종교를 어떻게 해야 할지 생각 속에서 망설이고 있었습니다.</p>
+    <p class="para">그리고 그들의 생각 속에서의 이러한 방황은 그들의 혼 안에서의 방황이었으며, 그들의 영 안에서 그리스도를 체험하는 것이 아니었습니다.</p>
+    <p class="para">혼 안에서 방황하는 것. 그것은 아주 좋은 표현입니다. 여러분은 이리저리 방황하고 있습니다.</p>
+    <p class="para">여러분의 생각은 여기저기 돌아다닙니다. 여기로 올라갔다가 저 방향으로 갑니다. “나는 그것에 대해 생각하고 있어.” “아, 나는 내일 아침 이것을 해야겠다.”</p>
+    <p class="para">이것은 혼이 독립적으로 기능하면서 방황하는 것이며, 우리의 영 안에서 그리스도를 체험하는 것이 아닙니다.</p>
+    <p class="para">그러므로 다시 말씀드리지만, 오늘 저녁이 끝나고 잠들 준비가 되었을 때 이렇게 말하십시오.</p>
+
+    <div class="prayer-quote">
+      “주님, 저는 이제 당신과 함께 안식하고 싶습니다. 그러나 제가 깨어날 때 내일 아침 상 집회에 가져갈 당신의 어떤 것을 갖기 원합니다.” 우리 수백 명이 집회에 그렇게 오기를 바랍니다.
+    </div>
+
+    <p class="para">여러분이 무엇인가 말할 수 있든 없든, 여러분의 존재 안에서는 최근 며칠 동안 여러분에게 실재적이고 실제적이셨던 그리스도로 충만하여 올 것입니다.</p>
+    <p class="para">그리고 이렇게 말하기에 아직 늦지 않았습니다.</p>
+
+    <div class="prayer-quote">
+      “주님, 저는 몸의 한 지체로서 오기를 원합니다. 왜냐하면 지금 저는 적어도 어느 정도 두 영역 안에서 살고 있기 때문입니다. 그리고 신성한 방면에서 제가 있었던 그 영역은 당신에 대한 저의 체험과 당신에 대한 저의 누림을 산출했습니다. 이제 저는 저의 체험과 누림 가운데 가장 좋은 것을 가져와 주님의 상에서 하나님을 경배합니다.”
+    </div>
+
+  </section>
+
+  <!-- ===== ZONE 4 : HEAVEN'S GATE / LADDER / GRACE THRONE ===== -->
+  <section class="content" id="zone-4">
+
+    <div class="outline-item">
+      <p><span class="label">B.</span> 히브리서의 저자는 히브리 믿는 이들에게 혼의 방황 가운데서 머뭇거리지 말고, 하늘에 속한 그리스도께 참여하고 그분을 누리기 위해 그들의 영 안으로 힘써 나아가라고 권면했다.</p>
+    </div>
+    <div class="sub-outline">
+      <p>하늘의 보좌에 앉아 계신 바로 그 그리스도(롬 8:34)께서 지금 또한 우리 안에(10절), 곧 하나님의 거처가 있는 우리의 영 안에 계신다(딤후 4:22) — 엡 2:22.</p>
+      <p>하나님의 집이자 하나님의 거처이며 하늘의 문인 벧엘에서 그리스도는 땅을 하늘에 연결하고 하늘을 땅에 가져오는 사다리이시다 — 창 28:12-17; 요 1:51.</p>
+      <p>오늘 우리의 영은 하나님의 거처가 있는 곳이므로 이제 하늘의 문이다. 여기에서 그리스도는 땅에 있는 사람들인 우리를 하늘에 연결하시고 하늘을 우리에게 가져오시는 사다리이시다.</p>
+      <p>그러므로 언제든지 우리가 우리의 영으로 돌이킬 때, 우리는 하늘의 문을 통해 들어가 하늘에 속한 사다리이신 그리스도를 통해 하늘에 있는 은혜의 보좌를 접촉한다 — 히 4:16.</p>
+      <p>우유부단한 히브리 믿는 이들은 혼 안에서 방황하며 그들의 영을 소홀히 했지만, 신약은 전적으로 우리의 혼이 아니라 우리의 영 안에 있는 문제이다 — 롬 8:16; 딤후 4:22; 갈 6:18.</p>
+    </div>
+
+    <p class="para">히브리서의 저자는 히브리 믿는 이들에게 그들의 혼의 방황 가운데서 비틀거리며 흔들리지 말고, 그들의 영 안으로 전진하여 하늘에 속한 그리스도께 참여하고 그분을 누리라고 권했습니다.</p>
+    <p class="para">하늘에 속한 그리스도께 참여하십시오. 하늘에 속한 그리스도를 누리십시오.</p>
+    <p class="para">하늘에 속한 그리스도. 그분은 하늘에 계시면서 동시에 우리 안에 계십니다.</p>
+    <p class="para">그리고 하늘에 있는 것이 우리 안으로 분배되어 우리의 체험과 누림이 됩니다. 하늘의 보좌에 앉아 계시는 바로 그 그리스도께서 지금 또한 우리 안에 계십니다. 즉 하나님의 거처가 있는 우리의 영 안에 계십니다.</p>
+    <p class="para">우리는 잠시 이 문장에 초점을 맞출 필요가 있습니다. 하늘의 보좌에 앉아 계시는 바로 그 그리스도. 이분은 하나님-사람이신 그리스도이십니다.</p>
+    <p class="para">우리는 마태복음 마지막 부분에서, 그 책의 끝에서 주님께서 성도들에게 자신을 알리셨을 때 이렇게 말씀하셨다는 것을 압니다. “하늘과 땅의 모든 권위가 나에게 주어졌습니다.” 그러므로 주님은 보좌 위에 계십니다. 아멘.</p>
+    <p class="para">그런데 이기는 이들의 의미에서 말하자면, 주님께서 오셔서 우리를 휴거하실 때 우리는 그분과 함께 보좌 위에 있게 될 것입니다. 그러나 지금 우리는 하늘에 있는 그분의 신성한 보좌 아래 있으며, 그것은 지금 우리 안에 있습니다. 즉 우리의 영 안에 있습니다. 그러므로 하늘에 있는 보좌는 하나님의 거처가 있는 우리의 영 안에서 체험됩니다. 따라서 바로 이 순간 우리는 그분과 함께 보좌 위에 있으며, 하나님의 거처 안에서 그 영이신 그리스도와 하나입니다.</p>
+    <p class="para">벧엘, 곧 하나님의 집이며 하나님의 거처이고 하늘의 문인 곳에서, 그리스도는 땅을 하늘에 연결하고 하늘을 땅으로 가져오는 사다리이십니다.</p>
+    <p class="para">여러분 가운데 많은 분은 이것을 전에 한 번도 들어 보지 못했을 것입니다. 이것은 매우 놀랍습니다.</p>
+    <p class="para">하늘의 문. 그리스도는 땅과 하늘을 연결하고 하늘을 땅으로 가져오는 사다리이십니다. 아멘.</p>
+    <p class="para">그러므로 우리 존재 안에서 내적으로 — 이것이 이상하게 들릴 수도 있지만 — 우리의 영 안에서 한 면으로 체험적으로 우리는 보좌로 이끌려 가며, 또한 보좌 위에 계신 분께서 여기 땅에 있는 우리를 받아들이십니다.</p>
+    <p class="para">이것은 하나님의 거처가 있는 우리의 영 안에 있습니다. 벧엘, 하나님의 집, 하나님의 거처, 곧 하늘의 문입니다. 이것이 제가 지금 초점을 맞추고 있는 것입니다. 뒤로 돌아가는 대신 앞으로 가겠습니다. 좋습니다.</p>
+    <p class="para">그리스도는 사다리이십니다. 이것을 잠시 생각해 봅시다. 지금 그리스도는 사다리이십니다. 그러므로 그분은 우리를 보좌로 올려 보내시는 사다리이시며, 또한 보좌에서 우리가 있는 땅으로 그분 자신을 가져오시는 사다리이십니다. 그리스도는 땅을 하늘에 연결하고 하늘을 땅으로 가져오는 사다리이십니다.</p>
+    <p class="para">이것은 다음 시대에 일어날 것입니다. 그러나 지금 내적으로, 영적으로 우리는 하늘들로 이끌려 가며, 하늘은 내적으로 그리고 체험적으로 우리에게 내려옵니다.</p>
+    <p class="para">오늘날 우리의 영은 하나님의 거처가 있는 곳이므로, 우리의 영은 이제 하늘의 문이며 그곳에서 그리스도는 사다리이십니다.</p>
+
+    <div class="verse">
+      <span class="ref">히브리서 4:16</span>
+      <p>그러므로 우리가 우리의 영으로 돌이킬 때마다, 우리는 하늘의 문을 통하여 들어가며, 하늘에 속한 사다리이신 그리스도를 통하여 하늘에 있는 은혜의 보좌를 접촉한다.</p>
+    </div>
+
+    <p class="para">이것을 살펴봅시다. 우리가 우리의 영으로 돌이킬 때마다, 이런 일이 일어날 때마다 항상 같은 일이 일어납니다. 우리가 우리의 영으로 돌아갈 때마다 우리는 하늘의 문을 통하여 들어갑니다. 왜냐하면 그리스도께서 문이시기 때문입니다. 그분은 모든 것을 포함하신 분이십니다. 그분은 하늘의 문이시며, 하늘의 문이신 그리스도를 통하여, 그리고 하늘에 속한 사다리이신 그리스도를 통하여 하늘에 있는 은혜의 보좌를 접촉합니다.</p>
+    <p class="para">그러므로 히브리서 4장 16절이 분명하게 보여 주는 것처럼 이것이 일어나고 있습니다.</p>
+    <p class="para">그러나 이것은 우리 대부분에게 새로운 것입니다. 그리스도는 사다리로서 매우 활발하게 활동하고 계십니다.</p>
+    <p class="para">하늘에서 오는 것을 그분께서 사다리로서 우리에게 내려 가져오십니다.</p>
+    <p class="para">다른 한편으로 그분은 사다리를 통하여 우리를 하늘에 속한 것으로 이끌어 가십니다. 그리고 이것의 초점은 은혜의 보좌입니다. 그러므로 보좌는 단지 여러분 위에 있는 강력한 권위만이 아닙니다.</p>
+    <p class="para">그 보좌는 참으로 은혜의 보좌입니다. 잠시 멈추어 보겠습니다.</p>
+    <p class="para">은혜. 성경의 마지막 구절은, “은혜가 여러분 모두에게 있기를 바랍니다. 아멘.”입니다.</p>
+    <p class="para">이것이 우리 모두에게 주시는 하나님의 마지막 말씀입니다. 은혜를 가지라는 것입니다. 그래서 다시 한번, 제가 부드러운 방식으로 이렇게 묘사한 적이 있습니다. 매일 새로운 날이 시작될 때 이렇게 말해 보시겠습니까?</p>
+
+    <div class="prayer-quote">
+      “주님, 오늘의 은혜의 분량을 저에게 주십시오.”
+    </div>
+
+    <p class="para">은혜는 모든 것을 포함하신 그리스도께서 우리의 체험과 누림을 위하여 우리에게 모든 것이 되시는 것입니다.</p>
+    <p class="para">흔들리던 히브리 믿는 이들은 그들의 혼 안에서 방황하며 그들의 영을 소홀히 했습니다.</p>
+    <p class="para">그러나 신약은 전적으로 우리의 혼이 아니라 우리의 영에 관한 문제입니다.</p>
+    <p class="para">저는 여러분 가운데 많은 분이 아무 각주도 없이 오직 성경 구절만 있는 신약성경, 특히 하드커버로 된 것을 구하기를 바랍니다. 그리고 한 달 동안 신약 전체를 읽을 수 있다면 좋겠습니다.</p>
+    <p class="para">만약 전체 분량이 약 450페이지 정도라면 아침에 5페이지, 오후에 5페이지, 저녁 일찍 5페이지를 읽는 것입니다.</p>
+
+    <div class="testimony">
+      <span class="tag">간증</span>
+      <p class="para" style="opacity:1;transform:none;">아마 25년 전쯤에 저는 이것을 일 년 동안 했습니다. 신약 전체를 열두 번 통독했습니다. 그것은 전체 신성한 회복에 대한 폭넓은 조망을 갖고, 신약이 전적으로 우리의 영에 관한 문제라는 것을 깨닫기 위한 것이었습니다. 한 면에서 우리는 하루에 한두 구절을 기도로 읽을 필요가 있습니다.</p>
+      <p class="para" style="opacity:1;transform:none;">그러나 동시에 신약 전체에 대한 조망을 가져야 합니다. 한 달 동안 각주 없이 단지 통독할 수 있다면, 읽으면서 이렇게 깨닫게 됩니다. “나는 이제 이것의 일부이다.”</p>
+      <p class="para" style="opacity:1;transform:none;">그리고 모든 것을 포함하신 그리스도께서 참으로 모든 것을 포함하신다는 느낌을 갖게 됩니다.</p>
+      <p class="para" style="opacity:1;transform:none;">제가 읽는 모든 곳에서 저는 빛 비춤을 받고 그리스도께서 기능하고 계십니다. 보십시오.</p>
+    </div>
+
+  </section>
+
+  <!-- ===== ZONE 5 : THE BREAKING ===== -->
+  <section class="content" id="zone-5">
+
+    <div class="outline-item">
+      <p><span class="label">C.</span> 히브리 믿는 이들의 혼은 우유부단한 생각과 하나님의 구원의 길에 관한 의심과 자기 이익을 고려하는 것과 함께, 살아 있고 효력이 있으며 찔러 쪼개는 하나님의 말씀으로 파쇄되어야 했다. 이것은 그들의 영과 혼을 분리시키기 위한 것이었다.</p>
+    </div>
+    <div class="sub-outline">
+      <p>골수가 관절 깊숙한 곳에 감추어져 있는 것처럼, 영은 혼 깊은 곳에 있다 — 시 51:6; 벧전 3:4.</p>
+      <p>골수를 관절에서 분리하려면 주로 관절을 파쇄해야 하는 것처럼, 영을 혼에서 분리하려면 혼이 파쇄되어야 한다.</p>
+    </div>
+
+    <p class="para">히브리 믿는 이들의 혼에는 망설이며 생각하는 생각, 하나님의 구원의 길에 대한 의심, 그리고 자기 자신의 이익에 대한 고려가 있었습니다.</p>
+    <p class="para">그들의 영이 혼에서 분리될 수 있도록 이러한 혼은 살아 있고 효력이 있으며 찔러 쪼개는 하나님의 말씀에 의해 파쇄되어야 했습니다.</p>
+    <p class="para">살아 있고 효력이 있으며 찔러 쪼개는 하나님의 말씀에 의해 파쇄되는 것입니다. 이제 준비하십시오.</p>
+    <p class="para">“파쇄됨(broken)”이라는 이 단어를 주목하십시오. 때가 오면 우리 각 사람에게 주님께서 내적으로 우리를 파쇄하시고 참으로 우리의 혼을 우리의 영에서 분리하실 것입니다. 우리는 이런 방식으로 파쇄됩니다.</p>
+    <p class="para">그리고 이것이 혼에서 분리되는 길을 엽니다. 단지 말들을 가지고 있는 문제가 아닙니다.</p>
+    <p class="para">우리의 혼을 우리의 영에서 분리하기 위해서는 무엇인가가 우리 존재의 핵심을 만져야 합니다.</p>
+    <p class="para">골수가 관절 깊숙한 곳에 감추어져 있는 것처럼 영은 혼 깊숙한 곳에 있습니다. 그러므로 이것은 바로 이 순간에도 일어나고 있습니다. 우리의 영은 혼 깊숙한 곳에 있습니다.</p>
+    <p class="para">골수를 관절에서 분리하려면 주로 관절을 깨뜨리는 것이 필요한 것처럼, 영을 혼에서 분리하려면 혼의 파쇄가 필요합니다.</p>
+    <p class="para">여기서 잠깐 멈추겠습니다.</p>
+
+    <div class="testimony">
+      <span class="tag">간증 — 겉사람의 파쇄</span>
+      <p class="para" style="opacity:1;transform:none;">제가 주님의 회복 안에 들어왔을 때 읽을 수 있는 작은 책자들이 그리 많지 않았습니다.</p>
+      <p class="para" style="opacity:1;transform:none;">그러나 저는 이 문제, 곧 워치만 니(Watchman Nee)의 『자아의 파쇄와 영의 해방(The Breaking of the Outer Man)』에 관한 작은 책 한 권을 가지고 있었습니다.</p>
+      <p class="para" style="opacity:1;transform:none;">워치만 니의 대표적인 영성 고전인 『자아의 파쇄와 영의 해방』(원제: The Breaking of the Outer Man and the Release of the Spirit)에 대한 주요 연도는 다음과 같습니다. 메시지 선포(사역 연도): 1948년 워치만 니는 1948년 5월 25일부터 28일까지 중국 푸저우(Fuzhou) 커스텀스 레인(Customs Lane)에서 열린 집회에서 이 핵심 메시지들을 선포했습니다.</p>
+      <p class="para" style="opacity:1;transform:none;">저는 그 작은 책을 읽는 것이 상당히 흥미로웠습니다. 몇 년 뒤인 1970년에 기회가 있었을 때 저는 이렇게 말했습니다. “저는 이 형제님, 니 형제님의 『자아의 파쇄』에 관한 책을 읽고 기도로 읽어 왔습니다. 정말 영적입니다.” 그때 리 형제님이 하신 말씀을 저는 결코 잊지 못합니다.</p>
+      <p class="prayer-quote" style="margin:1.6rem 0;">“영성은 몸의 문제입니다(Spirituality is a Body matter).”</p>
+      <p class="para" style="opacity:1;transform:none;">그분은 제가 무엇을 하려고 하는지 알고 계셨습니다. 몸은 몸의 영입니다. 이 믿음은 몸의 영입니다.</p>
+      <p class="para" style="opacity:1;transform:none;">그래서 저는 그것을 한쪽에 내려놓았습니다. 제가 하고 있던 방식으로 해서는 안 된다는 것을 깨달았습니다.</p>
+      <p class="para" style="opacity:1;transform:none;">그러나 그로부터 12년 뒤인 1982년 여름 어느 목요일 저녁에 제가 결코 일어날 것이라고 생각하지 못했던 일이 일어났던 것을 기억합니다. 물론 주님은 보이지 않으셨지만 그분께서 오셔서 겉사람을 매우 철저하게 파쇄하셨습니다. 단지 표면적으로 조금 깨뜨리신 것이 아니라, 그것을 파쇄하셨습니다. 그 일이 일어나는 동안 저는 주님께 이렇게 부르짖었습니다. “저를 죽이지만 마십시오. 그냥 여기 있게 해 주십시오.”</p>
+      <p class="para" style="opacity:1;transform:none;">물론 그분께는 저를 데려가실 의도가 없으셨습니다. 그러나 저는 그때를 기억합니다. 제가 그것에 관하여 배우고 있을 때, 사실 그것은 주님께서 그분의 방식으로 그분의 때에 하고자 하셨던 일을 하시는 것을 오히려 방해하고 있었습니다. 그래서 제가 그것을 내려놓았을 때, 그분의 때에, 그분의 방식으로 그분께서 오셔서 겉사람을 파쇄하셨습니다. 그러나 그 후 저는 이것에 관해 절대로 말해서는 안 된다는 느낌이 있었습니다.</p>
+      <p class="para" style="opacity:1;transform:none;">그래서 수십 년 동안 한 번도 말하지 않았습니다. 그런데 그 체험이 있었던 목요일 저녁으로부터 아마 2주 정도 후에 리 형제님이 약 40명의 형제들과 함께 모임을 갖고 있었습니다. 우리는 함께 저녁을 먹었고 저는 그분 아주 가까이에 앉아 있었습니다. 그때 그분께서 저를 바라보시며 말씀하셨습니다.</p>
+      <p class="prayer-quote" style="margin:1.6rem 0;">“란, 이제 자네 자신을 더 이상 신뢰하지 않지?”</p>
+      <p class="para" style="opacity:1;transform:none;">무언가가 일어났습니다. 이제 여러분은 오직 모든 것을 포함하신 그리스도만 신뢰합니다.</p>
+      <p class="para" style="opacity:1;transform:none;">그때 저는 한 가지를 깨달았습니다. 80대의 아주 연로한 두 자매님이 있었습니다. 두 분 모두 수십 년 동안 결혼생활을 했지만 남편들이 세상을 떠났습니다. 제가 일하는 곳에서 리 형제님의 집으로 걸어가거나 그분과 함께 일하러 갈 때, 길가에서 그 자매님들을 자주 보았습니다. 그러면 저는 멈추고 그 자매님도 멈춥니다. 저는 아무 말도 하지 않습니다. 그러나 그 자매님의 존재에서 무엇인가가 그냥 흘러나옵니다.</p>
+      <p class="para" style="opacity:1;transform:none;">리 형제님의 자매님에게서도 같은 일이 일어났습니다. 그때 저는 큰 감사와 함께 깨달았습니다.</p>
+      <p class="prayer-quote" style="margin:1.6rem 0;">“당신은 나의 상태를 알고 있었고, 오직 주님만 하실 수 있는 것을 위해 기도하셨군요.”</p>
+      <p class="para" style="opacity:1;transform:none;">그 자매님은 제 상태를 알고 있었습니다. 제 자아를 알고 있었습니다. 저의 타고난 것들을 알고 있었습니다.</p>
+      <p class="para" style="opacity:1;transform:none;">그 자매님은 저를 비판하고 있었던 것이 아닙니다. 그 자매님은 주님께서 그것을 처리하시고 제가 점점 더 자라서 결국 성숙에 이르도록 기도하고 있었습니다.</p>
+    </div>
+
+    <p class="para">그러므로 혼의 파쇄가 있게 될 것입니다. 사실 여러분은 그것을 위해 기도할 필요도 없습니다.</p>
+    <p class="para">두려워할 것도 없습니다. 다만 여러분이 생명 안에서 자라고 있을 때, 주님께서 언제 오셔서 겉사람을 파쇄하실지를 알고 계신다는 것을 깨달으십시오. 이것이 혼의 파쇄입니다.</p>
+    <p class="para">그러면 이제 여러분의 혼은 영을 통하여 기능하게 될 것입니다.</p>
+
+    <div class="outline-item">
+      <p><span class="label">D.</span> 우리가 성경을 읽을 때마다 말씀은 우리의 혼과 영을 분리하고 우리의 생각과 의도를 분별할 만큼 살아 있고, 힘 있게 운행하며, 날카로워야 한다. 그리하여 어떤 것이 자아에서 나오고 자아를 위한 것이며 어떤 것이 하나님에게서 나오고 하나님을 위한 것인지 드러내야 한다.</p>
+    </div>
+    <div class="sub-outline">
+      <p>말씀이 살아 있고 효력이 있으려면 우리는 영 안에서 모든 기도로 말씀과 믿음을 결합해야 한다 — 히 4:2; 엡 6:17-18.</p>
+      <p>하나님의 살아 있는 말씀은 우리의 존재를 찔러 들어와, 우유부단한 생각과 방황하는 혼에서 우리를 구출하여 우리의 영 안에서 안식일의 안식이신 그리스도 안으로 이끌어야 한다.</p>
+    </div>
+
+    <p class="para">그때 영은 혼을 통하여 나올 수 있고, 우리 자신의 내적 존재로부터 오는 어떤 제한도 없이 표현될 수 있습니다. 우리가 성경을 읽을 때마다 성경은 반드시 살아 있고, 활력을 주며, 우리의 혼을 우리의 영에서 분리할 만큼 예리해야 하고, 우리의 생각과 의도를 분별하여 어떤 것이 자아에서 나온 것이며 자아를 위한 것인지, 어떤 것이 하나님에게서 나온 것이며 하나님을 위한 것인지를 드러내야 합니다.</p>
+    <p class="para">자아와 혼으로부터의 이러한 분리가 필요합니다. 사실 우리는 마태복음 16장에서 이것을 알고 있습니다.</p>
+    <p class="para">자아는 실재로 사탄으로 적셔져 있습니다. 그러므로 우리는 자아에 초점을 맞추어서는 안 됩니다.</p>
+    <p class="para">사실 일단 이것이 자아라는 것을 알게 되면 우리는 자아에 십자가를 적용합니다. 그럴 때 우리는 이제 하나님을 위한 사람이 됩니다. 자아를 위한 것이 아니라 하나님을 위한 것입니다.</p>
+    <p class="para">그러나 바로 이 순간 우리 각 사람에게 그것은 무엇입니까? 자아입니까, 아니면 하나님입니까? 자아입니까, 아니면 그리스도입니까? 자아입니까, 아니면 생명 주시는 영입니까?</p>
+    <p class="para">우리는 우리의 영을 훈련하며 하나님에게서 나오고 하나님을 위한 사람들이 됩니다. 말씀이 살아 있고 효력이 있게 되도록 우리는 영 안에서 온갖 기도로 말씀을 믿음과 결합해야 합니다. 영 안에서 온갖 기도로 말씀이 살아 있고 효력이 있게 해야 합니다. 아멘.</p>
+    <p class="para">하나님의 살아 있는 말씀은 우리의 존재 안으로 찔러 들어와야 하며, 우리를 망설이며 생각하는 생각과 방황하는 혼에서 구출하여, 우리의 영 안에서 안식일의 안식이신 그리스도 안으로 들어가게 해야 합니다.</p>
+    <p class="para">그러므로 이것이 개요 자체입니다. 그러나 제 몫은 아직 끝나지 않았습니다. 아직 15분이 더 있습니다.</p>
+
+    <div class="prayer-quote">
+      이제 제가 이 세 메시지에 근거하여 나누고 싶은 것은, 다시 한번 매우 조심스러운 방식으로 여러분에게 묻는 저의 교통입니다. 저는 모든 사람에게 동시에 말씀드리고 있습니다.<br><br>
+      여러분은 “생명의 체험”의 “세 번째 단계”를 통과하고 있습니까? 여러분의 일상생활에서 지금 그 단계에 있습니까? 여러분은 생명 안에서 자라는 과정에서 자신이 어디에 있는지 알고 있습니까?
+    </div>
+
+    <p class="para">만일 주님께서 여러분 안에서 빛 비추시고 여러분에게 이것을 알려 주셨다면, “너는 나에게 헌신되었고, 나는 네가 바로 지금 여기에서 생명 안에서 자라 성숙에 이르기를 원한다.”라고 하실 것입니다.</p>
+    <p class="para">그리고 그것은 여러분이 아주 젊었을 때, 25년 전에 했던 기도였을 수도 있습니다. 그러나 저는 그것을 기억했습니다. 그런데 성도들이 주님의 회복 안에 30년뿐 아니라 40년, 50년 동안 있으면서도 생명의 체험의 세 번째 단계를 통과하지 않은 것을 볼 때 제 마음은 아픕니다.</p>
+    <p class="para">그래서 약 12년 전에 남부 캘리포니아의 동역자들이 이제 보스턴에 자료가 있고 추구하는 성도들을 위한 3년 차 과정이 있다고 결정했습니다. 매년 적은 수, 아마 15명이나 20명 정도가 갑니다.</p>
+    <p class="para">다른 사람들은 또 다른 방식으로 주님을 따르고 있습니다. 그들이 교통을 시작했을 때, 가을에는 생명의 체험의 세 번째 단계에 관한 수업을 갖는다고 말했습니다. 이것이 바로 지금 여기에서 여러분이 반드시 통과해야 할 단계라는 것을 깨닫기 위한 것입니다. 그것이 여러분이 성숙에 이르고 오는 시대에 공동 왕(co-king)이 되는 유일한 길입니다. 그래서 그것이 훈련의 일부입니다.</p>
+    <p class="para">그리고 저는 전체 학기 동안 매주 사용할 개요를 작성했습니다. 그 자료는 그들에게 속해 있습니다.</p>
+    <p class="para">그러나 제 편에서도 세 번째 단계가 무엇인지 알고 싶어 하는 사람들을 위해 그 모든 자료를 가지고 있습니다. 단지 이해를 갖는 것이 아니라 여러분이 세 번째 단계를 반드시 통과해야 한다는 것을 깨달아야 합니다.</p>
+    <p class="para">유일한 질문은 이것입니다. “언제인가?” 언제입니까? 여기 있는 우리 중 누구에게도 너무 늦지 않았습니다. 제가 전에 말씀드렸듯이 너무 이른 것도 아닙니다.</p>
+    <p class="para">그래서 제가 거듭거듭 이것을 말하는 것입니다. 여러분은 주님과 개인적인 관계를 가져야 합니다.</p>
+    <p class="para">그러나 세 번째 단계가 무엇인지 모르거나 세 번째 단계에 관한 자료를 어떻게 얻는지 모른다면, 찾을 수 없다면 저에게 이메일을 보내십시오. 그리고 며칠 후에 다시 한번 이메일을 보내십시오.</p>
+    <p class="para">제가 첫 번째 이메일을 읽고도 잊어버릴 수도 있기 때문에 저에게 기억나게 해 주십시오.</p>
+    <p class="para">왜냐하면 여러분 모두가 바로 지금 여기에서 성숙에 이르도록 자라기를 바라는 사랑의 돌봄이 제게 있기 때문입니다. 그러나 그것에는 6년에서 8년이 걸릴 것입니다. 우리에게는 시간이 있습니다.</p>
+    <p class="para">이것이 바로 우리에게 이런 종류의 상황이 필요한 이유입니다.</p>
+    <p class="para">이 시간을 활용해 분위기를 전환하고 새로운 단계로 진행하고자 합니다. 여러분은 말하는 시간에 앞에서 다룬 내용을 그대로 반복하지 않아도 됩니다.</p>
+    <p class="para">저는 단지 이 시간을 사용하고 있는 것입니다. 좋습니다. 이제 기도, 기도입니다.</p>
+
+    <div class="testimony">
+      <span class="tag">기도에 관하여</span>
+      <p class="para" style="opacity:1;transform:none;">최근에 저는 리 형제님이 쓰신 어떤 자료를 다시 읽었습니다. 그분은 1982년에 2주 동안 훈련을 하셨고, 모든 형제들에게 다음 날 아침 30분 일찍 와서 기도하는 시간을 가지라고 요청하셨습니다. 우리는 왔고 그분도 그곳에 계셨습니다. 그런 다음 그분께서 이렇게 말씀하셨습니다.</p>
+      <p class="prayer-quote" style="margin:1.6rem 0;">“나는 여러분의 기도 안으로 들어갈 수 없었습니다. 여러분 모두의 기도는 독립적이었습니다. 여러분이 무엇을 하고 있었는지 모르겠습니다. 이쪽으로 갔다가 저쪽으로 갔다가, 이것 했다가 저것 했다가 했습니다.”</p>
+      <p class="para" style="opacity:1;transform:none;">저는 어떤 곳에서는 일주일에 한 번 기도로 읽는 시간이 있다는 것을 알고 있고, 저도 대부분 그런 시간에 참여합니다. 그러나 제 깊은 속에는 리 형제님과 니 형제님을 따르면서 이런 깨달음이 있습니다.</p>
+      <p class="para" style="opacity:1;transform:none;">기도이지만 기도가 아닌 기도들이 있습니다.</p>
+      <p class="para" style="opacity:1;transform:none;">저는 모든 성도들이 『기도에 관한 메시지(Messages on Prayer)』라는 책을 갖기를 바랍니다.</p>
+      <p class="para" style="opacity:1;transform:none;">그 책의 중요성은 말로 표현할 수 없을 정도입니다. 그 책을 통해 여러분은 기도가 참으로 무엇인지를 알게 됩니다. 그래서 이것이 점점 더 발전되기를 바랍니다. 그리고 우리 모두가, 특히 자매님들이, 적어도 일주일에 한 번은 한두 명의 다른 자매님들과 함께 기도로 읽을 수 있기를 바랍니다. 그리하여 온 땅에서 멈추지 않는 기도가 있게 되기를 바랍니다. 진정한 기도입니다.</p>
+      <p class="para" style="opacity:1;transform:none;">이제 마지막으로 한 가지를 말씀드리겠습니다.</p>
+      <p class="para" style="opacity:1;transform:none;">그러나 제가 이것에 대해 말하는 것을 들었다고 해서 그냥 해보려고 하지 않기를 바랍니다.</p>
+      <p class="para" style="opacity:1;transform:none;">저는 매일의 시작과 끝에서 주님을 찬양합니다. 아멘.</p>
+      <p class="para" style="opacity:1;transform:none;">단지 기도하는 것만이 아니라 주님을 찬양하는 것입니다.</p>
+    </div>
+
+  </section>
+
+  <!-- ===== MESSAGE 6 DIVIDER ===== -->
+  <div class="msg-divider">
+    <div class="line"></div>
+    <div class="num">Message Six</div>
+    <h2>하나님의 맏아들이신<br>그리스도의 형제들</h2>
+  </div>
+
+  <!-- ===== ZONE 6 : PRAISE / FIRSTBORN ===== -->
+  <section class="content" id="zone-6">
+
+    <h3 style="font-family:'Noto Serif KR',serif;color:var(--gold-bright);margin:1rem 0 1.6rem;">Ⅴ. 하나님의 목적은 그분의 표현을 위해 그분의 맏아들의 많은 형제들을 산출하시는 것이다</h3>
+
+    <div class="outline-item">
+      <p><span class="label">G.</span> 시편 22편 22절을 인용한 히브리서 2장 12절은 “내가 주님의 이름을 내 형제들에게 선포하며, 내가 교회 가운데서 주님을 찬양하는 노래를 부르겠습니다.”라고 말한다.</p>
+    </div>
+
+    <div class="footnote-box"><span class="num">[2]</span> 이것은 맏아들께서 교회 집회에서, 아버지의 많은 아들들 안에서 아버지를 찬양하시는 것이다.</div>
+
+    <p class="para">하나님의 많은 아들들인 우리가 교회로 모여 아버지를 찬양할 때에 맏아들은 우리의 찬양 안에서 아버지를 찬양하신다. 그분은 우리를 떠나 홀로 아버지를 찬양하시는 것이 아니라, 우리의 찬양을 통해 우리 안에서, 우리와 함께 찬양하신다. 우리가 노래를 부를 때에 그분도 아버지를 찬양하는 노래를 부르신다.</p>
+    <p class="para">그러므로 우리가 노래하지 않으면 어떻게 그분께서 노래하실 수 있으시겠는가?</p>
+    <p class="para">우리가 아버지께 노래하면 할수록 더욱더 우리는 그분께서 우리 안에서 나타나시고 움직이시는 것과 기름 부으시고 생명 분배하시는 것을 누린다. 그리하여 우리는 그분 안에서 자라며, 어떤 것보다 뛰어난, 그분께서 얻으신 영광 안으로 이끌릴 것이다.</p>
+    <p class="para">여러분은 그분께서 여러분에게 무엇인가를 주시거나 무엇인가를 해 주시기를 기다리는 것이 아닙니다.</p>
+    <p class="para">다만 그분께서 참으로 모든 것을 포함하신 분이라는 것을 깨닫는 것입니다. 저는 제 온 존재를 삼일 하나님께 집중하고 있습니다. 그리고 우리는 그분의 인도를 따릅니다. 우리는 진정한 기도, 실재적인 기도를 하도록 훈련받고 있습니다. 그러나 그것을 넘어서는 무언가가 있습니다. 그것은 당신을 찬양하는 것입니다.</p>
+    <p class="para">아멘.</p>
+    <p class="para">이제 저는 삼일 하나님과 개인적으로 사는 데 있어서 그분께 기도하고 그분과 교통하는 것 외에 다른 어떤 길도 알지 못합니다. 그러나 그것을 넘어서는 것은 단순히 그분을 찬양하는 것입니다. 이것을 말씀드려도 괜찮기를 바랍니다. 제 아내와 제가 점심시간에 집으로 가거나 봉사를 마치고 하루가 끝나 집으로 갈 때 빨간 신호등 앞에 서게 됩니다. 그 신호가 2분 20초 동안 지속될 것이라는 것을 압니다.</p>
+    <p class="para">그러면 그 2분 20초 동안 무엇을 합니까? 주님을 찬양합니다. 그러나 이것은 우리 존재의 일부가 되어야 합니다. 그렇지 않으면 오늘 밤 제가 말하는 것을 들었기 때문에 주님을 찬양하고, 가까운 장래 어느 때 다시 기억할 수도 있지만, 그 후에는 사라져 버릴 것입니다.</p>
+    <p class="para">그러나 우리가 삼일 하나님을 철저하게 알기 시작할 때 이것은 우리 존재의 일부가 되어야 합니다.</p>
+    <p class="para">우리는 그분과 교통할 수 있다는 것을 압니다. 우리는 그분과 함께 기도합니다. 그리고 마침내 단지 이렇게 말하는 지점에 이릅니다.</p>
+
+    <div class="prayer-quote">
+      “온 땅에서 당신을 찬양합니다. 당신은 참으로 모든 것을 포함하신 분이십니다.”
+    </div>
+
+    <p class="para">이제 다른 한 가지 요점만 더 말씀드리겠습니다. 아직 시간이 있습니다. 그러므로 이것이 마지막 요점이 될 것입니다.</p>
+
+    <div class="divider"></div>
+
+    <h3 style="font-family:'Noto Serif KR',serif;color:var(--gold-bright);margin:2rem 0 1rem;">마지막 때에 관한 나눔</h3>
+
+    <p class="para">이란이라는 나라는 모든 유대인이 있는 다른 나라를 미워합니다. 그들은 그 나라가 존재에서 제거되기를 원합니다. 그것이 그들의 의도입니다. 그들은 이스라엘을 미워합니다.</p>
+    <p class="para">그런데 어떤 일이 일어나겠습니까? 그들이 그들의 영적인 군대(spiritual army)를 보냅니다.</p>
+    <p class="para">그들의 의도는 그 나라를 파괴하는 것이지만, 그 대신 그것이 예루살렘의 성전산(Temple Mount)을 폭파해 버립니다. 그러면 무슨 일이 일어나겠습니까? 수백 명의 유대인 믿는 이들이 그곳에서 성전을 재건하기 위해 주님을 찬양하고 있습니다. 그리고 그들은 이미 모든 재료를 준비해 두었다는 것을 깨닫습니다.</p>
+    <p class="para">그러나 한 가지 특별한 동물이 필요합니다. 그들은 그것을 어떻게 구할지도 알고 있습니다.</p>
+    <p class="para">그것은 한 살이 넘지 않은 것입니다.</p>
+
+    <div class="verse">
+      <span class="ref">민수기 19:2</span>
+      <p>“이것은 여호와가 명령하는 율법의 율례이다. 이스라엘 자손에게 말하여, 결함이 없는 붉은 암송아지 한 마리를 너희에게 끌어오게 하여라. 그것은 흠이 없고 한 번도 멍에를 멘 적 없는 것이어야 한다.”</p>
+    </div>
+
+    <p class="para">그리고 그들은 성전을 재건할 준비가 되어 있습니다. 그러나 그들은 다른 나라들이 모두 함께 우리를 공격하고 우리와 싸울 것이라는 것을 깨닫습니다. “우리는 결코 그들을 이길 수 없다.” 그래서 그들은 유럽에 있는 한 강력한 사람에게 갈 것입니다. 그 사람은 결국 적그리스도가 될 사람입니다. 그가 겉으로 보기에 죽임을 당하고 부활한 후에 말입니다. 그러나 그것은 3년 반 뒤의 일입니다. 그리고 그들은 3년 반 후에 성전산을 재건할 것입니다.</p>
+    <p class="para">그리고 저는 이것을 휴거와 연결해서 보고 있습니다. 그 3년 반 동안 휴거될 이기는 성도들이 그곳에서 기능하고 있을 것입니다. 그리고 첫 번째 3년 반이 끝나면 그들이 휴거되어 떠나게 됩니다.</p>
+    <p class="para">그리고 이제 적그리스도가 나타나서 성전에 앉아 자신이 하나님이라고 선언하며 여러분의 경배를 요구합니다.</p>
+    <p class="para">그것은 땅 위에서 최악의 3년 반이 될 것입니다. 그러나 우리는 이것을 깨달아야 합니다. 우리가 접할 수 있는 어떤 종류의 뉴스에서든 이것이 분명해질 것입니다.</p>
+    <p class="para">“이스라엘에서 이런 일이 일어났는가? 성전산이 무너졌는가?” 그런 일이 일어난다면 우리 모두는 일곱째 해가 시작되었다는 것을 깨달아야 합니다. 그 7년입니다.</p>
+    <p class="para">그러면 우리 모두는 생명 안에서 성숙하기까지 우리에게 3년 반이 남아 있다는 것을 깨닫게 될 것입니다.</p>
+
+    <div class="prayer-quote">
+      저는 여러분에게 간청합니다. 제발 낭비하지 마십시오. 기다리지 마십시오. 죄송합니다. 낭비하지 마십시오. 기다리지 마십시오. 그런 뉴스를 들을 때까지 기다리지 마십시오. 다만 우리가 이 시대의 끝에 있다는 것을 깨달으십시오. 우리는 정확히 언제가 끝인지는 모릅니다. 그러나 우리가 끝에 가까이 있다는 것은 알고 있습니다. 왜 주님께서 여러분의 겉사람을 파쇄하시도록 허락하지 않겠습니까?
+    </div>
+
+    <p class="para">왜 주님께서 여러분을 인도하여 세 번째 단계와 네 번째 단계까지 자라게 하심으로써 여러분이 휴거를 위해 준비되게 하지 않겠습니까? 우리는 이 시대의 끝에 있습니다.</p>
+    <p class="para">뉴스에서 그런 소식을 들을 때까지 기다리지 마십시오. 다만 우리가 시대의 끝에 있다는 사실을 받아들이십시오. 그리고 저는 마지막 때에 주님께서 이기는 성도들을 휴거하실 때 모든 연령대의 형제자매들이 있을 것이라는 데 의심이 없습니다. 저는 솔직히 12살인 사람도 있을 것이라고 믿습니다.</p>
+    <p class="para">그들은 그렇게 어리지만 주님께 빛 비춤을 받았고 주님께서 그들을 휴거하실 것입니다.</p>
+    <p class="para">아멘.</p>
+
+    <div class="prayer-quote">
+      그러므로 성도 여러분, 우리는 이것을 여러분 앞에 놓아드립니다. 주님은 우리에게 성숙에 이르도록 자랄 기회를 주고 계십니다. 그분은 우리에게 그분을 체험하고, 그분을 누리고, 그분을 찬양할 시간과 길을 주고 계십니다. 우리가 하루하루 시간을 구속하기를 바랍니다. 왜냐하면 주님께서 속히 오시며 신부가 자신을 준비했기 때문입니다.<br><br>
+      사랑하는 성도 여러분, 그리스도와 그분의 신부의 결혼 잔치에 오십시오. 그때는 얼마나 놀라운 때이겠습니까! 그러므로 가까이에 있는 누군가와 함께 기도하십시오. 그런 다음 두 형제님이 무엇인가를 나눌 것입니다. 그리고 그 후 여러분에게는 여러분을 만진 것을 나눌 수 있는 25분이 있을 것입니다. 그것을 억누르지 마십시오. 여러분에게는 다른 누구에게도 없는 그리스도의 한 몫이 있습니다. 그러므로 그분께서 여러분에게서 흘러나와 우리 안으로 흘러 들어오시게 하십시오.<br><br>
+      아멘.
+    </div>
+
+  </section>
+
+  <footer>메시지 3 · 혼과 영의 분리 / 메시지 6 · 하나님의 맏아들이신 그리스도의 형제들</footer>
+
+</div>
+
+<script>
+  // ---------- Canvas background: drifting light particles + sword-of-light streak ----------
+  const canvas = document.getElementById('bgcanvas');
+  const ctx = canvas.getContext('2d');
+  let w, h;
+  function resize(){ w = canvas.width = window.innerWidth; h = canvas.height = document.documentElement.scrollHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const particles = [];
+  const PCOUNT = Math.min(90, Math.floor(window.innerWidth/14));
+  for(let i=0;i<PCOUNT;i++){
+    particles.push({
+      x: Math.random()*w,
+      y: Math.random()*h,
+      r: Math.random()*1.6+0.4,
+      vy: Math.random()*0.18+0.04,
+      vx: (Math.random()-0.5)*0.06,
+      a: Math.random()*0.5+0.15
+    });
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    for(const p of particles){
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle = `rgba(227,180,100,${p.a})`;
+      ctx.fill();
+      p.y -= p.vy;
+      p.x += p.vx;
+      if(p.y < -10){ p.y = h+10; p.x = Math.random()*w; }
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+
+  // ---------- Scroll-linked background color transition ----------
+  const stops = [
+    {sel:'#zone-1', color:[24,16,34]},
+    {sel:'#zone-1b', color:[24,16,34]},
+    {sel:'#zone-2', color:[36,26,18]},
+    {sel:'#zone-3', color:[36,26,18]},
+    {sel:'#zone-4', color:[15,26,44]},
+    {sel:'#zone-5', color:[42,20,20]},
+    {sel:'#zone-6', color:[36,22,8]}
+  ];
+  const els = stops.map(s => ({el: document.querySelector(s.sel), color: s.color}));
+
+  function lerp(a,b,t){ return a + (b-a)*t; }
+
+  function updateBg(){
+    const scrollMid = window.scrollY + window.innerHeight*0.45;
+    let current = els[0], next = els[els.length-1], t = 0;
+    for(let i=0;i<els.length-1;i++){
+      const top = els[i].el.offsetTop;
+      const bottom = els[i+1].el.offsetTop;
+      if(scrollMid >= top && scrollMid <= bottom){
+        current = els[i]; next = els[i+1];
+        t = (scrollMid - top) / Math.max(1,(bottom - top));
+        break;
+      }
+      if(i === els.length-2 && scrollMid > bottom){
+        current = els[i+1]; next = els[i+1]; t = 0;
+      }
+    }
+    const c = [0,1,2].map(k => Math.round(lerp(current.color[k], next.color[k], t)));
+    document.body.style.backgroundColor = `rgb(${c[0]},${c[1]},${c[2]})`;
+  }
+  window.addEventListener('scroll', updateBg, {passive:true});
+  updateBg();
+
+  // ---------- Scroll reveal ----------
+  const revealEls = document.querySelectorAll('.section-title, .outline-item, .para');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+  revealEls.forEach(el=>io.observe(el));
+
+  window.addEventListener('load', resize);
+</script>
+
+</body>
+</html>
