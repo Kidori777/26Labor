@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026년 노동절 특별집회 | 휴거와 주님 안에 거함</title>
+<meta name="description" content="2026년 노동절 특별집회 — 휴거와 주님 안에 거함. 대환란 전 휴거, 이기는 믿는 이들의 휴거, 혼과 영의 분리, 비밀한 휴거와 주님 안에 거함, 네 메시지를 담았습니다.">
+<meta property="og:title" content="2026년 노동절 특별집회 | 휴거와 주님 안에 거함">
+<meta property="og:description" content="대환란 전 휴거, 이기는 믿는 이들의 휴거, 혼과 영의 분리, 비밀한 휴거와 주님 안에 거함 — 네 메시지로 살펴보는 휴거와 주님 안에 거함.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-base: #141a3a;
+    --bg-deep: #0e1330;
+    --card-bg: #1c2350;
+    --card-bg-hover: #232b62;
+    --gold: #c9a86a;
+    --gold-bright: #e3c98f;
+    --lavender: #9195c9;
+    --ink: #f3f1e6;
+    --ink-dim: #c7c9e2;
+    --rule: rgba(201,168,106,0.28);
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior: smooth; }
+  body{
+    background: var(--bg-deep);
+    color: var(--ink);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    line-height: 1.75;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, .serif{ font-family: 'Noto Serif KR', serif; font-style: normal; }
+
+  /* ---------- background canvas ---------- */
+  #stars{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.55;
+  }
+
+  /* ---------- layout shell ---------- */
+  .wrap{
+    position: relative;
+    z-index: 1;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 28px 80px;
+    background: radial-gradient(ellipse 80% 60% at 50% 20%, rgba(48,58,120,0.55), transparent 70%);
+  }
+  .hero .year{
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(15px, 2vw, 17px);
+    color: var(--gold-bright);
+    letter-spacing: 0.12em;
+    margin-bottom: 22px;
+  }
+  .hero h1{
+    font-size: clamp(34px, 6vw, 58px);
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.35;
+    max-width: 14ch;
+  }
+  .hero .sub{
+    margin-top: 26px;
+    font-size: clamp(15px, 1.8vw, 18px);
+    color: var(--ink-dim);
+    font-weight: 300;
+    max-width: 46ch;
+    line-height: 1.9;
+  }
+  .hero .refs{
+    margin-top: 18px;
+    font-size: 14px;
+    color: var(--lavender);
+    letter-spacing: 0.02em;
+  }
+  .scrolldown{
+    margin-top: 64px;
+    width: 1px;
+    height: 54px;
+    background: linear-gradient(to bottom, transparent, var(--gold));
+    position: relative;
+    opacity: 0.7;
+  }
+
+  /* ---------- section heading ---------- */
+  .section-intro{
+    padding: 90px 0 46px;
+    text-align: center;
+  }
+  .section-intro h2{
+    font-size: clamp(24px, 3.2vw, 30px);
+    font-weight: 600;
+  }
+  .section-intro p{
+    margin-top: 18px;
+    color: var(--ink-dim);
+    font-size: 16px;
+    max-width: 52ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ---------- overview card (main theme) ---------- */
+  .overview{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--rule);
+    background: linear-gradient(160deg, rgba(201,168,106,0.10), rgba(28,35,80,0.65));
+    border-radius: 4px;
+    padding: 46px 40px;
+    margin-bottom: 90px;
+    transition: border-color 0.35s ease, background 0.35s ease;
+    position: relative;
+  }
+  .overview:hover{
+    border-color: var(--gold);
+    background: linear-gradient(160deg, rgba(201,168,106,0.16), rgba(28,35,80,0.75));
+  }
+  .overview .tag{
+    font-family: 'Noto Serif KR', serif;
+    font-size: 13px;
+    color: var(--gold-bright);
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+  }
+  .overview h3{
+    font-size: clamp(24px, 3vw, 30px);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .overview p{
+    color: var(--ink-dim);
+    font-size: 15.5px;
+    max-width: 62ch;
+  }
+  .overview .goto{
+    margin-top: 26px;
+    font-size: 14px;
+    color: var(--gold);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* ---------- message grid ---------- */
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    padding-bottom: 120px;
+  }
+  @media (max-width: 720px){
+    .grid{ grid-template-columns: 1fr; }
+  }
+  .card{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--card-bg);
+    border: 1px solid rgba(145,149,201,0.18);
+    border-radius: 4px;
+    padding: 34px 30px;
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  }
+  .card:hover{
+    background: var(--card-bg-hover);
+    border-color: var(--gold);
+    transform: translateY(-3px);
+  }
+  .card .num{
+    font-family: 'Noto Serif KR', serif;
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    margin-bottom: 14px;
+  }
+  .card h4{
+    font-family: 'Noto Serif KR', serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+  .card .verse{
+    font-size: 13.5px;
+    color: var(--lavender);
+    line-height: 1.7;
+  }
+
+  /* ---------- reveal animation ---------- */
+  .reveal{
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.in{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    text-align: center;
+    padding: 50px 28px 80px;
+    color: var(--lavender);
+    font-size: 13px;
+    border-top: 1px solid rgba(145,149,201,0.15);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition: none !important; animation: none !important; }
+    html{ scroll-behavior: auto; }
+  }
+
+  a:focus-visible, .overview:focus-visible, .card:focus-visible{
+    outline: 2px solid var(--gold-bright);
+    outline-offset: 3px;
+  }
+</style>
+</head>
+<body>
+
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<section class="hero">
+  <div class="year">2026년 노동절 특별집회</div>
+  <h1>휴거와<br>주님 안에 거함</h1>
+  <p class="sub">
+    노동절을 맞아 준비된 이번 특별집회는 마지막 때 성도가 붙들어야 할 소망,<br class="brline">
+    곧 휴거와 주님 안에 거하는 삶을 네 편의 메시지로 이어 나눕니다.
+  </p>
+  <div class="scrolldown"></div>
+</section>
+
+<div class="wrap">
+
+  <div class="section-intro reveal">
+    <h2>전체 메시지 안내</h2>
+    <p>메인 개요 &lsquo;휴거와 주님 안에 거함&rsquo;을 중심으로, 네 편의 메시지가 대환란과 휴거, 그리고 주님 안에 거하는 삶을 각기 다른 본문으로 풀어냅니다.</p>
+  </div>
+
+  <a class="overview reveal" href="휴거와 주님안에 거함.html">
+    <div class="tag">메인 개요</div>
+    <h3>휴거와 주님 안에 거함</h3>
+    <p>이번 특별집회 전체를 관통하는 주제입니다. 아래 네 메시지에 앞서 먼저 읽어보시기를 권합니다.</p>
+    <div class="goto">전체 개요 읽기 &nbsp;›</div>
+  </a>
+
+  <div class="grid">
+    <a class="card reveal" href="메시지1 대환란전에 휴거됨.html">
+      <div class="num">메시지 1</div>
+      <h4>대환란 전에 휴거됨</h4>
+    </a>
+
+    <a class="card reveal" href="메시지2 이기는 믿는이들의 휴거.html">
+      <div class="num">메시지 2</div>
+      <h4>이기는 믿는 이들의 휴거</h4>
+      <div class="verse">마 24:42, 44 · 눅 21:36 · 딤후 4:8 · 계 3:10, 12:5</div>
+    </a>
+
+    <a class="card reveal" href="메시지3 혼과 영의 분리.html">
+      <div class="num">메시지 3</div>
+      <h4>혼과 영의 분리</h4>
+      <div class="verse">히 3:12-13 · 4:1-2, 12-13</div>
+    </a>
+
+    <a class="card reveal" href="메시지4 비밀한휴거와 주님안에거함.html">
+      <div class="num">메시지 4</div>
+      <h4>비밀한 휴거와 주님 안에 거함</h4>
+      <div class="verse">마 24:40-41 · 요일 2:27-28</div>
+    </a>
+  </div>
+
+</div>
+
+<footer>2026년 노동절 특별집회 &middot; 휴거와 주님 안에 거함</footer>
+
+<script>
+  // Star field canvas — subtle, kept quiet behind content
+  const canvas = document.getElementById('stars');
+  const ctx = canvas.getContext('2d');
+  let w, h, stars;
+
+  function initStars(){
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight * 2.2;
+    const count = Math.floor((w * h) / 9000);
+    stars = Array.from({ length: count }, () => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      r: Math.random() * 1.2 + 0.2,
+      baseAlpha: Math.random() * 0.5 + 0.15,
+      phase: Math.random() * Math.PI * 2,
+      speed: Math.random() * 0.006 + 0.002
+    }));
+  }
+
+  function draw(t){
+    ctx.clearRect(0, 0, w, h);
+    for(const s of stars){
+      const twinkle = Math.sin(t * s.speed + s.phase) * 0.35 + 0.65;
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(227,201,143,${(s.baseAlpha * twinkle).toFixed(3)})`;
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+
+  initStars();
+  requestAnimationFrame(draw);
+  window.addEventListener('resize', initStars);
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
